@@ -3,12 +3,14 @@ AddCSLuaFile()
 SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
+--SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_smg") or "Submachine Guns"
+SWEP.ARC9WeaponCategory = 3
 
 SWEP.PrintName = "FSS Hurricane"
 
-SWEP.Class = "Submachine Gun"
+SWEP.Class = ARC9:GetPhrase("mw19_class_weapon_smg") or "Submachine Gun"
 SWEP.Trivia = {
     ["Country of Origin"] = "United States",
     ["Manufacturer"] = "Tempus Armament",
@@ -37,9 +39,11 @@ SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_fss.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-12, 6, -7.5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-7, 5, -1.5),
+    TPIKPos = Vector(-7, 4, -4),
     TPIKAng = Angle(-9, 0, 175),
-    Scale = 1
+    Scale = 1,
+	
+	TPIKPosSightOffset = Vector(0.5, 1.25, -2.5),
 }
 
 -------------------------- DAMAGE PROFILE
@@ -47,7 +51,7 @@ SWEP.WorldModelOffset = {
 SWEP.DamageMax = 24 -- Damage done at point blank range
 SWEP.DamageMin = 15 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
 SWEP.RangeMin = 2000 -- How far bullets retain their maximum damage for.
 SWEP.RangeMax = 8000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
@@ -72,7 +76,7 @@ SWEP.ClipSize = 50 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 10 -- Amount of reserve UBGL magazines you can take.
 
-SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
+SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 SWEP.DrawCrosshair = true
 SWEP.Crosshair = true
 
@@ -190,9 +194,6 @@ SWEP.IronSights = {
 
 SWEP.ViewModelFOVBase = 65
 
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
-
 SWEP.SprintMidPoint = {
     Pos = Vector(0, -1, -0.15),
     Ang = Angle(0, 0, 0)
@@ -212,9 +213,13 @@ SWEP.MovingAng = Angle(0, 0, -8)
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
+SWEP.SprintPos = Vector(0, 0, 0)
+SWEP.SprintAng = Angle(0, 0, 0)
+
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(15, 30, 3)
-SWEP.CustomizeSnapshotFOV = 90
+SWEP.CustomizePos = Vector(12, 35, 3)
+SWEP.CustomizeRotateAnchor = Vector(13, -3, -4)
+SWEP.CustomizeSnapshotFOV = 80
 SWEP.CustomizeSnapshotPos = Vector(-1, 7, 5)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = false
@@ -222,12 +227,14 @@ SWEP.CustomizeNoRotate = false
 SWEP.PeekPos = Vector(-1, 1.5, -3)
 SWEP.PeekAng = Angle(0, 0.4, -45)
 
+SWEP.PeekMaxFOV = 65
 -------------------------- HoldTypes
 
-SWEP.HoldType = "rpg"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeNPC = "ar2"
 SWEP.HoldTypeSprint = "rpg"
-SWEP.HoldTypeHolstered = "rpg"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldTypeSights = "ar2"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 
@@ -237,17 +244,18 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "AC_muzzle_rifle_fp"
-SWEP.AfterShotParticle = "AC_muzzle_smoke_barrel"
+SWEP.MuzzleParticle = "muzzleflash_smg"
+SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
 
 SWEP.CamQCA = 4
 SWEP.CamQCA_Mult = 1
 
-SWEP.ShellModel = "models/weapons/cod2019/shared/shell_762_hr.mdl"
+SWEP.ShellModel = "models/weapons/cod2019/shared/shell_pi_57x28.mdl"
+SWEP.ShellSounds = ARC9.COD2019_308_Table
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
-SWEP.ShellScale = 0.05
+SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShouldDropMag = false
@@ -661,16 +669,36 @@ SWEP.AttachmentElements = {
 -- end
 
 SWEP.Attachments = {
-    {
-        PrintName = "Barrels",
-        DefaultAttName = "Standard Barrel",
+    { -- 1
+        PrintName = ARC9:GetPhrase("mw19_category_muzzle"),
+        Category = "cod2019_muzzle",
+        DefaultIcon = Material("entities/defattachs/muzzle-ar.png", "mips smooth"),
+        Bone = "tag_silencer",
+        Pos = Vector(1.3, 0.02, 0.12),
+        --Ang = Angle(0, 0, 0),
+		InstalledElements = {"muzzle"},
+		Scale = 1,
+    },
+    { -- 2
+        PrintName = ARC9:GetPhrase("mw19_category_barrel"),
+		DefaultIcon = Material("entities/defattachs/barrel-ar.png", "mips smooth"),
+        --DefaultAttName = "Standard Barrel",
         Category = "cod2019_fss_barrel",
         Bone = "tag_attachments",
         Pos = Vector(12.5, 0, -0.55),
         Ang = Angle(0, 0, 0),
     },
-    {
-        PrintName = "Optics",
+    { -- 3
+        PrintName = ARC9:GetPhrase("mw19_category_laser"),
+		DefaultIcon = Material("entities/defattachs/laser-ar.png", "mips smooth"),
+        Category = "cod2019_tac",
+        Bone = "tag_laser_attach",
+        Pos = Vector(8, 1, -1.1),
+        Ang = Angle(0, 0, -90),
+    },
+    { -- 4
+        PrintName = ARC9:GetPhrase("mw19_category_optic"),
+		DefaultIcon = Material("entities/defattachs/optic.png", "mips smooth"),
         Bone = "tag_holo",
         Pos = Vector(1.5, 0, -0.1),
         Ang = Angle(0, 0, 0),
@@ -678,96 +706,87 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(0, 0, 0),
 		InstalledElements = {"sight"},
     },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Category = "cod2019_muzzle",
-        Bone = "tag_silencer",
-        Pos = Vector(1.3, 0, 0.1),
-        Ang = Angle(0, 0, 0),
-		InstalledElements = {"muzzle"},
-		Scale = 1,
-    },
-    {
-        PrintName = "Tactical",
-        DefaultAttName = "Default",
-        Category = "cod2019_tac",
-        Bone = "tag_laser_attach",
-        Pos = Vector(8, 1, -1),
-        Ang = Angle(0, 0, -90),
-    },
-    {
-        PrintName = "Grips",
-        DefaultAttName = "Default",
-        Category = "cod2019_grip",
-        Bone = "tag_grip_attach",
-        Pos = Vector(-1, 0, 0.1),
-        Ang = Angle(0, 0, 180),
-		Scale = 1,
-    },
-    {
-        PrintName = "Stock",
-        DefaultAttName = "Standard Stock",
+    { -- 5
+        PrintName = ARC9:GetPhrase("mw19_category_stock"),
+		DefaultIcon = Material("entities/defattachs/stock-ar.png", "mips smooth"),
+        --DefaultAttName = "Standard Stock",
         Category = {"cod2019_tube"},
         Bone = "tag_stock_attach",
         Pos = Vector(0, 0, 0.03),
         Ang = Angle(0, 0, 0),
 		--InstalledElements = {"stock"},
     },
-    {
-        PrintName = "Ammo",
-        Bone = "j_mag1",
-        Category = {"cod2019_ammo"},
-        Pos = Vector(0, 0, -1.5),
-        Ang = Angle(0, 0, 0),
+    { -- 6
+        PrintName = ARC9:GetPhrase("mw19_category_underbarrel"),
+		DefaultIcon = Material("entities/defattachs/grip.png", "mips smooth"),
+        --DefaultAttName = "Default",
+        Category = "cod2019_grip",
+        Bone = "tag_grip_attach",
+        Pos = Vector(0.35, 0, 0),
+        Ang = Angle(0, 0, 180),
+		Scale = 1,
     },
-    {
-        PrintName = "Mag",
+    { -- 7
+        PrintName = ARC9:GetPhrase("mw19_category_magazine"),
+		DefaultIcon = Material("entities/defattachs/magazine-ar.png", "mips smooth"),
 		Bone = "j_mag1",
         Category = {"cod2019_mag"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
-    {
-        PrintName = "Perk",
+    { -- 8
+        PrintName = ARC9:GetPhrase("mw19_category_ammo"),
+		DefaultIcon = Material("arc9/def_att_icons/ammotype.png", "mips smooth"),
+        Bone = "j_mag1",
+        Category = {"cod2019_ammo"},
+        Pos = Vector(0, 0, -1.5),
+        Ang = Angle(0, 0, 0),
+    },
+
+	-- Unofficial
+    { -- 10
+        PrintName = ARC9:GetPhrase("mw19_category_perk"),
         Category = {"cod2019_perks","cod2019_perks_soh"}
     },
+
+	-- Cosmetics
     {
-        PrintName = "Skins",
+        PrintName = ARC9:GetPhrase("mw19_category_skins"),
         --Bone = "v_weapon.Clip",
         Category = "cod2019_skins_fss",
 		CosmeticOnly = true,
     },
     {
-        PrintName = "Cosmetic",
+        PrintName = ARC9:GetPhrase("mw19_category_camouflage"),
         Category = {"universal_camo"},
         CosmeticOnly = true,
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/smg_fss_decal_a.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/smg_fss_decal_b.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/smg_fss_decal_c.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Charm",
-        Category = "charm",
+        PrintName = ARC9:GetPhrase("mw19_category_charm"),
+        CosmeticOnly = true,
+        Category = {"charm"},
         Bone = "tag_attachments",
         Pos = Vector(7, -1.5, 0.55),
         Ang = Angle(0, 0, 0),
 		Scale = 1.5,
     },
     {
-        PrintName = "Stats",
+        PrintName = ARC9:GetPhrase("mw19_category_stats"),
         Category = {"killcounter","killcounter2"},
         Bone = "tag_attachments",
         Pos = Vector(3, -1.38, 0.55),
