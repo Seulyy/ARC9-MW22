@@ -272,7 +272,7 @@ SWEP.DropMagazineSounds = {
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
 SWEP.DropMagazineTime = 0.4
 SWEP.DropMagazineQCA = 3
-SWEP.DropMagazineAng = Angle(0, -90, 0)
+SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
 
@@ -321,34 +321,25 @@ SWEP.HideBones  = {
     [1] = "j_mag2",
 }
 
+SWEP.ReloadHideBoneTables  = {
+    [1] = {
+	"j_mag1",
+	}
+}
+
 SWEP.Animations = {
     ["fire"] = {
         Source = "shoot1",
     },
     ["reload"] = {
         Source = "reload_short",
-		MinProgress = 0.8,
+		MinProgress = 0.65,
+		MagSwapTime = 1.6,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.8,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.8, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path2 .. "vm_p01_sm_alpha57_reload_adjust.ogg", t = 0/30},
@@ -357,68 +348,20 @@ SWEP.Animations = {
 			{s = path2 .. "vm_p01_sm_alpha57_reload_maghit.ogg", t = 60/30},
 			{s = path2 .. "vm_p01_sm_alpha57_reload_magin.ogg", t = 67/30},
 			{s = path2 .. "vm_p01_sm_alpha57_reload_end.ogg", t = 83/30},
-        },
-    },
-    ["reload_fast"] = {
-        Source = "reload_fast",
-		MinProgress = 0.8,
-		DropMagAt = 0.8,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.6,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-        EventTable = {
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_mvmnt.ogg", t = 0/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_swing.ogg", t = 8/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magout.ogg", t = 8/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_maghit.ogg", t = 40/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magin.ogg", t = 41/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_end.ogg", t = 53/30},
+			{hide = 1, t = 1.2},
+			{hide = 0, t = 1.65},
         },
     },
     ["reload_empty"] = {
         Source = "reload",
-		MinProgress = 0.9,
-		DropMagAt = 1.5,
+		MinProgress = 0.775,
+		MagSwapTime = 1.6,
+		DropMagAt = 1.2,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_adjust.ogg", t = 0/30},
@@ -428,33 +371,40 @@ SWEP.Animations = {
 			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_magin.ogg", t = 67/30},
 			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_charge.ogg", t = 85/30},
 			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_end.ogg", t = 97/30},
+			{hide = 1, t = 1.2},
+			{hide = 0, t = 1.65},
+        },
+    },
+    ["reload_fast"] = {
+        Source = "reload_fast",
+		MinProgress = 0.6,
+		DropMagAt = 0.75,
+        IKTimeLine = {
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.6, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 1, rhik = 1 },
+        },
+        EventTable = {
+			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_mvmnt.ogg", t = 0/30},
+			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_swing.ogg", t = 8/30},
+			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magout.ogg", t = 8/30},
+			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_maghit.ogg", t = 40/30},
+			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magin.ogg", t = 41/30},
+			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_end.ogg", t = 53/30},
+			{hide = 1, t = 0.75},
+			{hide = 0, t = 1},
         },
     },
     ["reload_fast_empty"] = {
         Source = "reload_fast_empty",
-		MinProgress = 0.8,
-		DropMagAt = 0.8,
+		MinProgress = 0.725,
+		DropMagAt = 0.75,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.6,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.6, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_mvmnt.ogg", t = 0/30},
@@ -464,31 +414,17 @@ SWEP.Animations = {
 			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magin.ogg", t = 41/30},
 			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_boltrelease.ogg", t = 57/30},
 			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_end.ogg", t = 60/30},
+			{hide = 1, t = 0.75},
+			{hide = 0, t = 1},
         },
     },
     ["ready"] = {
         Source = "draw",
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.5,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.5, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_charge.ogg", t = 11/30},
@@ -527,26 +463,10 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.15,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 1.1,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.15, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 1.1, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path2 .. "vm_p01_sm_alpha57_inspect_up.ogg", t = 6/30},
@@ -558,26 +478,10 @@ SWEP.Animations = {
     ["bash"] = {
         Source = {"melee","melee2","melee3"},
 	    IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.1,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.6,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.1, lhik = 0, rhik = 0 },
+            { t = 0.6, lhik = 0, rhik = 0 },
+            { t = 0.85, lhik = 1, rhik = 1 },
         },
     },
     ["firemode_1"] = {
