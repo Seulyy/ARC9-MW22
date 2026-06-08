@@ -5,7 +5,7 @@
     "$phongexponenttexture" "models\mw22\m4\m4_pistol_grip_e"
 
     /////////////////
-    "$color2" "[0.8 0.8 0.8]"                                     //do not touch this
+    "$color2" "[1 1 1]"                                     //do not touch this
     "$blendtintbybasealpha" "1"                             //do not touch this
     /////////////////
 
@@ -22,13 +22,23 @@
     "$envmap" "env_cubemap"
     "$envmaptint" "[0.098 0.098 0.098]"                 
 
+    "$detailblendmode" "4"
+    "$detailblendfactor" "0.7"
+
     "Proxies"
      {
         "Arc9EnvMapTint"
         {
-            "specularity" "0.5"
             "min" "0"
             "max" "0.1"
+            "color" "[0.098 0.098 0.098]"
+        }
+        "CustomCamo" 
+        {
+	"camoTexture" $detail
+	"camoScale" $detailscale
+	"blend" $detailblendfactor
+	"color2" "[0.8 0.8 0.8]"
         }
      }
 }

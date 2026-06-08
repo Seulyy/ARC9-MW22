@@ -40,5 +40,12 @@
             "max" "0.2"
             "color" "[0.102 0.102 0.102]"
         }
+        "CustomCamo" 
+        {
+	"camoTexture" $detail
+	"camoScale" $detailscale
+	"blend" $detailblendfactor
+	"color2" "[0.8 0.8 0.8]"
+        }
     }
 }
