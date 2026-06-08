@@ -4,7 +4,8 @@ SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = "Assault Rifles"
+SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_ar") or "Assault Rifles"
+SWEP.ARC9WeaponCategory = 4
 
 SWEP.PrintName = "M4"
 
@@ -221,7 +222,7 @@ SWEP.MovingAng = Angle(0, 0, -9)
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.PeekPos = Vector(-1, 1, -3.5)
+SWEP.PeekPos = Vector(-1, 4, -3.5)
 SWEP.PeekAng = Angle(0, 0, -45)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)

@@ -4,7 +4,8 @@ SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = "Light Machine Guns"
+SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_lmg") or "Light Machine Guns"
+SWEP.ARC9WeaponCategory = 4
 
 SWEP.PrintName = "SAKIN MG38"
 

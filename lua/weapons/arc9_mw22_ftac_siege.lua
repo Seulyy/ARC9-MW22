@@ -4,7 +4,8 @@ SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_smg") or "Submachine Guns"
+SWEP.ARC9WeaponCategory = 3
 
 SWEP.PrintName = "FTAC Siege"
 

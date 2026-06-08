@@ -4,7 +4,8 @@ SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = "Shotguns"
+SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_shotgun") or "Shotguns"
+SWEP.ARC9WeaponCategory = 2
 
 SWEP.PrintName = "Expedite 12"
 
