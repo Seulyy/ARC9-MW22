@@ -22,7 +22,7 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle/AidenTheZapperGuy/Nekyo-ko/ZeR0-N/ola ola/box/Firmeteran",
+    Author = "ARC9 MW2022 Team",
     Assets = "Infinity Ward/Sledgehammer Games/Activision"
 }
 

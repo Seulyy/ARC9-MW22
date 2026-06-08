@@ -21,7 +21,7 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle/Viper/Mushroom/Pacagma/Firmeteran",
+    Author = "ARC9 MW2022 Team",
     Assets = "Infinity Ward/Valve/New World Interactive"
 }
 SWEP.Description = [[The belt-fed SAKIN MG38 light machine gun delivers devastating 7.62 rounds at a high fire rate thanks to a short-stroke gas piston.]]

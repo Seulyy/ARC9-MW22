@@ -21,7 +21,7 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle/Firmeteran",
+    Author = "ARC9 MW2022 Team",
     Assets = "Infinity Ward/Valve/New World Interactive"
 }
 
@@ -272,13 +272,13 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/cod2019/mp7/"
+local path = "weapons/mw22/ftacsiege/"
 
 SWEP.ShootSound = "MW22.FTACS.Fire"
 SWEP.ShootSoundIndoor = "MW22.FTACS.Fire"
 
-SWEP.ShootSoundSilenced = "MW22.Lachmann.Fire.S"
-SWEP.ShootSoundSilencedIndoor = "MW22.Lachmann.Fire.S"
+SWEP.ShootSoundSilenced = "MW22.FTACS.Fire.S"
+SWEP.ShootSoundSilencedIndoor = "MW22.FTACS.Fire.S"
 
 -- Non-Silenced
 SWEP.LayerSound = "Layer_Pistol.Outside"
@@ -295,8 +295,8 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = path .. "weap_sm_mpapa7_ads_up.ogg"
-SWEP.ExitSightsSound = path .. "weap_sm_mpapa7_ads_down.ogg"
+SWEP.EnterSightsSound = path .. "p49_pi_tango9_raise_quick.ogg"
+SWEP.ExitSightsSound = path .. "p49_pi_tango9_drop_quick.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_bullet01",
@@ -351,13 +351,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_lift.ogg", t = 0/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_mag_release.ogg", t = 10/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_magout.ogg", t = 19/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_magin_v2_01.ogg", t = 33/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_magin_v2_02.ogg", t = 41/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_mvmnt.ogg", t = 46/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_end.ogg", t = 49/30},
+			{s = path .. "p49_pi_tango9_reload_raise.ogg", t = 1/30},
+			{s = path .. "p49_pi_tango9_reload_arm.ogg", t = 20/30},
+			{s = path .. "p49_pi_tango9_reload_magout.ogg", t = 22/30},
+			{s = path .. "p49_pi_tango9_reload_mvmnt.ogg", t = 35/30},
+			{s = path .. "p49_pi_tango9_reload_maghit.ogg", t = 47/30},
+			{s = path .. "p49_pi_tango9_reload_magin.ogg", t = 53/30},
+			{s = path .. "p49_pi_tango9_reload_end.ogg", t = 58/30},
         },
     },
     ["reload_empty"] = {
@@ -387,14 +387,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_lift.ogg", t = 0/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magout.ogg", t = 7/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_mvmnt.ogg", t = 14/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magin_v2_01.ogg", t = 25/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magin_v2_02.ogg", t = 36/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_bolt_release.ogg", t = 45/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_mvmnt.ogg", t = 49/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_end.ogg", t = 58/30},
+			{s = path .. "p49_pi_tango9_reload_empty_raise.ogg", t = 1/30},
+			{s = path .. "p49_pi_tango9_reload_empty_magout.ogg", t = 14/30},
+			{s = path .. "p49_pi_tango9_reload_empty_arm.ogg", t = 16/30},
+			{s = path .. "p49_pi_tango9_reload_empty_mvmnt1.ogg", t = 28/30},
+			{s = path .. "p49_pi_tango9_reload_empty_maghit.ogg", t = 48/30},
+			{s = path .. "p49_pi_tango9_reload_empty_magin.ogg", t = 59/30},
+			{s = path .. "p49_pi_tango9_reload_empty_mvmnt2.ogg", t = 60/30},
+			{s = path .. "p49_pi_tango9_reload_empty_mvmnt3.ogg", t = 75/30},
+			{s = path .. "p49_pi_tango9_reload_empty_boltpull.ogg", t = 78/30},
+			{s = path .. "p49_pi_tango9_reload_empty_end.ogg", t = 89/30},
         },
     },
     ["reload_fast"] = {
@@ -425,12 +427,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_lift.ogg", t = 0/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magout.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_mvmnt.ogg", t = 14/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magin_v2_01.ogg", t = 21/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magin_v2_02.ogg", t = 32/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_end.ogg", t = 41/30},
+			{s = path .. "p49_pi_tango9_reload_fast_mvmnt.ogg", t = 2/30},
+			{s = path .. "p49_pi_tango9_reload_fast_magout.ogg", t = 8/30},
+			{s = path .. "p49_pi_tango9_reload_fast_mvmnt1.ogg", t = 26/30},
+			{s = path .. "p49_pi_tango9_reload_fast_maghit.ogg", t = 33/30},
+			{s = path .. "p49_pi_tango9_reload_fast_magin.ogg", t = 42/30},
+			{s = path .. "p49_pi_tango9_reload_fast_end.ogg", t = 44/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -460,14 +462,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_lift.ogg", t = 0/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magout.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_mvmnt.ogg", t = 10/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magin_v2_01.ogg", t = 22/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_magin_v2_02.ogg", t = 33/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_bolt_release.ogg", t = 52/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_mvmnt.ogg", t = 50/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_end.ogg", t = 45/30},
+			{s = path .. "p49_pi_tango9_reload_fast_empty_mvmnt1.ogg", t = 2/30},
+			{s = path .. "p49_pi_tango9_reload_fast_empty_magout.ogg", t = 8/30},
+			{s = path .. "p49_pi_tango9_reload_fast_empty_mvmnt2.ogg", t = 29/30},
+			{s = path .. "p49_pi_tango9_reload_fast_empty_maghit.ogg", t = 33/30},
+			{s = path .. "p49_pi_tango9_reload_fast_empty_magin.ogg", t = 43/30},
+			{s = path .. "p49_pi_tango9_reload_fast_empty_boltgrab.ogg", t = 53/30},
+			{s = path .. "p49_pi_tango9_reload_fast_empty_charge.ogg", t = 56.5/30},
+			{s = path .. "p49_pi_tango9_reload_fast_empty_end.ogg", t = 63/30},
         },
     },
     ["reload_drum"] = {
@@ -641,9 +643,9 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_sm_mpapa7_raise_first_lift.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_sm_mpapa7_raise_first_charge.ogg", t = 12/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_raise_first_end.ogg", t = 21/30},
+            {s = path .. "p49_pi_tango9_raise_first_lift.ogg", t = 0/30},
+            {s = path .. "p49_pi_tango9_raise_first_boltpull.ogg", t = 13/30},
+			{s = path .. "p49_pi_tango9_raise_first_end.ogg", t = 21/30},
         },
     },
     ["draw"] = {
@@ -663,7 +665,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_sm_mpapa7_raise.ogg", t = 0/30},
+            {s = path .. "p49_pi_tango9_raise.ogg", t = 0/30},
         },
     },
     ["holster"] = {
@@ -681,7 +683,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_sm_mpapa7_drop.ogg", t = 0/30},
+            {s = path .. "p49_pi_tango9_drop.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -725,12 +727,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_sm_mpapa7_inspect_01.ogg", t = 0/30},
-			{s = path .. "wfoly_sm_mpapa7_inspect_02.ogg", t = 30/30},
-			{s = path .. "wfoly_sm_mpapa7_inspect_03.ogg", t = 58/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_magout.ogg", t = 130/30},
-			{s = path .. "wfoly_sm_mpapa7_inspect_04.ogg", t = 97/30},
-			{s = path .. "wfoly_sm_mpapa7_inspect_04.ogg", t = 109/30},
+            {s = path .. "p49_pi_tango9_inspect_raise.ogg", t = 4/30},
+			{s = path .. "p49_pi_tango9_inspect_regrip.ogg", t = 29/30},
+			{s = path .. "p49_pi_tango9_inspect_mvmnt1.ogg", t = 62/30},
+			{s = path .. "p49_pi_tango9_inspect_lower.ogg", t = 79/30},
+			{s = path .. "p49_pi_tango9_inspect_mvmnt2.ogg", t = 127/30},
+			{s = path .. "p49_pi_tango9_inspect_magout.ogg", t = 131/30},
+			{s = path .. "p49_pi_tango9_inspect_magmvmnt.ogg", t = 164/30},
+			{s = path .. "p49_pi_tango9_inspect_maghit.ogg", t = 181/30},
+			{s = path .. "p49_pi_tango9_inspect_magin.ogg", t = 189/30},
+			{s = path .. "p49_pi_tango9_inspect_end.ogg", t = 194/30},
         },
     },
     ["inspect_empty"] = {
@@ -760,12 +766,22 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_sm_mpapa7_inspect_01.ogg", t = 0/30},
-			{s = path .. "wfoly_sm_mpapa7_inspect_02.ogg", t = 30/30},
-			{s = path .. "wfoly_sm_mpapa7_inspect_03.ogg", t = 58/30},
-			{s = path .. "wfoly_plr_sm_mpapa7_reload_magout.ogg", t = 130/30},
-			{s = path .. "wfoly_sm_mpapa7_inspect_04.ogg", t = 97/30},
-			{s = path .. "wfoly_sm_mpapa7_inspect_04.ogg", t = 109/30},
+            {s = path .. "p49_pi_tango9_inspect_empty_raise.ogg", t = 7/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_regrip.ogg", t = 30/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_mvmnt1.ogg", t = 63/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_lower.ogg", t = 82/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_handbolt.ogg", t = 120/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_boltpull.ogg", t = 134/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_boltlock.ogg", t = 156/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_handgrab.ogg", t = 160/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_triggerboltclose.ogg", t = 176/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_mvmnt3.ogg", t = 213/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_bolthit.ogg", t = 213/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_grabbolt1.ogg", t = 224/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_boltpullhard.ogg", t = 240/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_boltgrab2.ogg", t = 265/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_boltcheck.ogg", t = 267/30},
+			{s = path .. "p49_pi_tango9_inspect_empty_end.ogg", t = 291/30},
         },
     },
     ["inspect_drum"] = {

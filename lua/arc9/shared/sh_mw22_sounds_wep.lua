@@ -171,12 +171,37 @@ sound.Add( {
 ---- FTAC Siege ----
 sound.Add( {
     name = "MW22.FTACS.Fire",
-    channel = CHAN_WEAPON,
+    channel = CHAN_WEAPON or 1,
     level = 140,
     volume = 1,
+    pitch = {100,100},
     sound = {
-		"^weapons/mw22/ftac_siege/tec9_01.ogg",
-		"^weapons/mw22/ftac_siege/tec9_02.ogg"
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_01.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_02.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_03.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_04.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_05.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_06.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_07.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_08.wav"
+    }
+} )
+
+sound.Add( {
+    name = "MW22.FTACS.Fire.S",
+    channel = CHAN_WEAPON or 1,
+    level = 140,
+    volume = 1,
+	pitch = {100,100},
+    sound = {
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_01.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_02.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_03.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_04.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_05.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_06.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_07.wav",
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_08.wav"
     }
 } )
 
