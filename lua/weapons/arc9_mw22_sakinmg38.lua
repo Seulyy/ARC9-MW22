@@ -295,13 +295,13 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/negev/"
+local path = "weapons/mw22/sakinmg38/"
 
-SWEP.ShootSound = "MW22.NEGEV.Fire"
-SWEP.ShootSoundIndoor = "MW22.NEGEV.Fire"
+SWEP.ShootSound = "MW22.MG38.Fire"
+SWEP.ShootSoundIndoor = "MW22.MG38.Fire"
 
-SWEP.ShootSoundSilenced = "MW22.NEGEV.Fire.S"
-SWEP.ShootSoundSilencedIndoor = "MW22.NEGEV.Fire.S"
+SWEP.ShootSoundSilenced = "MW22.MG38.Fire.S"
+SWEP.ShootSoundSilencedIndoor = "MW22.MG38.Fire.S"
 
 -- Non-Silenced Outside
 SWEP.LayerSound = "Layer_AR.Outside"
@@ -363,15 +363,12 @@ SWEP.TriggerDelay = 0.1 -- Set to > 0 to play the "trigger" animation before sho
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.1 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/holger/weap_mgolf36_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/holger/weap_mgolf36_disconnector_plr_01.ogg"
+SWEP.TriggerDownSound = path .. "weap_ngolf7_fcg_prefire_plr_01.wav"
+SWEP.TriggerUpSound = path .. "weap_ngolf7_fcg_dryfire_plr_01.wav"
 
 SWEP.Animations = {
     ["fire"] = {
         Source = "shoot1",
-        EventTable = {
-			{s = "weapons/mw22/negev/weap_ngolf7_fire_plr_lfe.ogg",v = 0.5, t = 0/30},
-        },
     },
     ["reload"] = {
         Source = "reload",
@@ -401,19 +398,18 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoley_ngolf7_reload_adjust.ogg", t = 3/30},
+			{s = path .. "wfoley_ngolf7_reload_down.ogg", t = 3/30},
 			{s = path .. "wfoley_ngolf7_reload_coveropen.ogg", t = 25/30},
-			{s = path .. "wfoley_ngolf7_reload_clear_01.ogg", t = 41/30},
+			{s = path .. "wfoley_ngolf7_reload_clear_01.ogg", t = 38/30},
 			{s = path .. "wfoley_ngolf7_reload_clear_02.ogg", t = 52/30},
-			{s = path .. "wfoley_ngolf7_reload_mvmnt.ogg", t = 74/30},
-			{s = path .. "wfoley_ngolf7_reload_magout.ogg", t = 79/30},
-			{s = path .. "wfoley_ngolf7_reload_adjust.ogg", t = 92/30},
-			{s = path .. "wfoley_ngolf7_reload_magin.ogg", t = 115/30},
-			{s = path .. "wfoley_ngolf7_reload_maghit.ogg", t = 131/30},
-			{s = path .. "wfoley_ngolf7_reload_load.ogg", t = 144/30},
-			{s = path .. "wfoley_ngolf7_reload_mvmnt.ogg", t = 162/30},
-			{s = path .. "wfoley_ngolf7_reload_coverclose.ogg", t = 186/30},
-			{s = path .. "wfoley_ngolf7_reload_end.ogg", t = 200/30},
+            {s = path .. "wfoley_ngolf7_reload_magout.ogg", t = 74/30},
+            {s = path .. "wfoley_ngolf7_reload_adjust.ogg", t = 92/30},
+            {s = path .. "wfoley_ngolf7_reload_maghit.ogg", t = 115/30},
+            {s = path .. "wfoley_ngolf7_reload_magin.ogg", t = 129/30},
+			{s = path .. "wfoley_ngolf7_reload_mvmnt.ogg", t = 130/30},
+			{s = path .. "wfoley_ngolf7_reload_load.ogg", t = 148/30},
+			{s = path .. "wfoley_ngolf7_reload_coverclose.ogg", t = 187/30},
+			{s = path .. "wfoley_ngolf7_reload_end.ogg", t = 191/30},
         },
     },
     ["reload_empty"] = {
@@ -446,15 +442,14 @@ SWEP.Animations = {
 			{s = path .. "wfoley_ngolf7_reload_empty_down.ogg", t = 2/30},
 			{s = path .. "wfoley_ngolf7_reload_empty_charge.ogg", t = 23/30},
 			{s = path .. "wfoley_ngolf7_reload_empty_coveropen.ogg", t = 61/30},
-			{s = path .. "wfoley_ngolf7_reload_clear_01.ogg", t = 74/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_clear_01.ogg", t = 87/30},
-			{s = path .. "wfoley_ngolf7_reload_clear_01.ogg", t = 75/30},
+            {s = path .. "wfoley_ngolf7_reload_empty_clear_01.ogg", t = 75/30},
+			{s = path .. "wfoley_ngolf7_reload_clear_02.ogg", t = 88/30},
 			{s = path .. "wfoley_ngolf7_reload_empty_magout.ogg", t = 107/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_adjust.ogg", t = 127/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_magin.ogg", t = 153/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_maghit.ogg", t = 167/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_load.ogg", t = 182/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_coverclose.ogg", t = 221/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_adjust.ogg", t = 131/30},
+            {s = path .. "wfoley_ngolf7_reload_empty_maghit.ogg", t = 151/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_magin.ogg", t = 159/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_load.ogg", t = 180/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_coverclose.ogg", t = 223/30},
 			{s = path .. "wfoley_ngolf7_reload_empty_end.ogg", t = 237/30},
         },
     },
@@ -486,17 +481,15 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoley_ngolf7_reload_down.ogg", t = 5/30},
-			{s = path .. "wfoley_ngolf7_reload_coveropen.ogg", t = 21/30},
-			{s = path .. "wfoley_ngolf7_reload_clear_01.ogg", t = 33/30},
-			{s = path .. "wfoley_ngolf7_reload_clear_02.ogg", t = 36/30},
-			{s = path .. "wfoley_ngolf7_reload_magout.ogg", t = 47/30},
-			{s = path .. "wfoley_ngolf7_reload_adjust.ogg", t = 65/30},
-			{s = path .. "wfoley_ngolf7_reload_magin.ogg", t = 89/30},
-			{s = path .. "wfoley_ngolf7_reload_maghit.ogg", t = 93/30},
-			{s = path .. "wfoley_ngolf7_reload_load.ogg", t = 105/30},
-			{s = path .. "wfoley_ngolf7_reload_coverclose.ogg", t = 137/30},
-			{s = path .. "wfoley_ngolf7_reload_end.ogg", t = 150/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_down.ogg", t = 2/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_coveropen.ogg", t = 21/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_clear.ogg", t = 35/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_adjust.ogg", t = 54/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_maghit.ogg", t = 79/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_magin.ogg", t = 91/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_load.ogg", t = 102/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_coverclose.ogg", t = 138/30},
+			{s = path .. "wfoley_ngolf7_reload_fast_end.ogg", t = 138/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -527,17 +520,17 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoley_ngolf7_reload_empty_down.ogg", t = 5/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_charge.ogg", t = 20/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_coveropen.ogg", t = 53/30},
-			{s = path .. "wfoley_ngolf7_reload_mvmnt.ogg", t = 60/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_magout.ogg", t = 75/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_adjust.ogg", t = 90/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_magin.ogg", t = 112/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_maghit.ogg", t = 121/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_load.ogg", t = 134/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_coverclose.ogg", t = 163/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_end.ogg", t = 177/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_down.ogg", t = 3/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_charge.ogg", t = 18/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_coveropen.ogg", t = 50/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_magout.ogg", t = 66/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_clear.ogg", t = 72/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_adjust.ogg", t = 91/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_maghit.ogg", t = 106/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_magin.ogg", t = 117/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_load.ogg", t = 133/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_end.ogg", t = 164/30},
+			{s = path .. "wfoley_ngolf7_reload_empty_fast_coverclose.ogg", t = 165/30},
         },
     },
     ["ready"] = {
@@ -565,9 +558,10 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoley_ngolf7_raise.ogg", t = 0/30},
-            {s = path .. "wfoley_ngolf7_reload_empty_charge.ogg", t = 30/30},
-			{s = path .. "wfoley_ngolf7_reload_empty_adjust.ogg", t = 64/30},
+            {s = path .. "wfoley_ngolf7_raise_first_up.ogg", t = 0/30},
+            {s = path .. "wfoley_ngolf7_raise_first_charge.ogg", t = 33/30},
+            {s = path .. "wfoley_ngolf7_raise_first_mvmnt.ogg", t = 36/30},
+            {s = path .. "wfoley_ngolf7_raise_first_end.ogg", t = 47/30},
         },
     },
     ["draw"] = {
@@ -655,11 +649,11 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "wfoley_ngolf7_inspect_up.ogg", t = 5/30},
-            {s = path .. "wfoley_ngolf7_inspect_down.ogg", t = 85/30},
-			{s = path .. "wfoley_ngolf7_inspect_coveropen.ogg", t = 110/30},
-			{s = path .. "wfoley_ngolf7_inspect_coverclose.ogg", t = 147/30},
-			{s = path .. "wfoley_ngolf7_inspect_rotate.ogg", t = 165/30},
-			{s = path .. "wfoley_ngolf7_inspect_end.ogg", t = 233/30},
+            {s = path .. "wfoley_ngolf7_inspect_down.ogg", t = 86/30},
+			{s = path .. "wfoley_ngolf7_inspect_coveropen.ogg", t = 106/30},
+			{s = path .. "wfoley_ngolf7_inspect_coverclose.ogg", t = 148/30},
+			{s = path .. "wfoley_ngolf7_inspect_rotate.ogg", t = 155/30},
+			{s = path .. "wfoley_ngolf7_inspect_end.ogg", t = 229/30},
         },
     },
     ["bash"] = {
