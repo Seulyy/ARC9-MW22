@@ -363,7 +363,7 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "p12_sh_mike1014_reload_start_rotate.ogg", t = 0/30},
-			{s = path .. "p12_sh_mike1014_reload_start_loadshell.ogg", t = 19/30},
+			{s = path .. "p12_sh_mike1014_reload_start_loadshell.ogg", t = 23/30},
         },
     },
     ["reload_insert"] = {
@@ -381,7 +381,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "MW22.Expendite.ShellIn", t = 14/30},
+            {s = "MW22.Expendite.ShellIn", t = 21/30},
         },
     },
     ["reload_finish"] = {
@@ -458,8 +458,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p12_sh_mike1014_reload_fast_start_rotate.ogg", t = 0},
-            {s = path .. "p12_sh_mike1014_reload_fast_start_loadshell.ogg", t = 12/30},
+            {s = path .. "p12_sh_mike1014_reload_fast_start_rotate.ogg", t = 1/30},
+            {s = path .. "p12_sh_mike1014_reload_fast_start_loadshell.ogg", t = 15/30},
         },
     },
     ["reload_insert_fast"] = {
@@ -477,7 +477,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "MW22.Expendite.ShellIn_Fast", t = 8/30},
+            {s = "MW22.Expendite.ShellIn_Fast", t = 14/30},
         },
     },
     ["reload_finish_fast"] = {
@@ -502,7 +502,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p12_sh_mike1014_reload_fast_end.ogg", t = 1/30},
+			{s = path .. "p12_sh_mike1014_reload_fast_end.ogg", t = 0/30},
         },
     },
     ["reload_start_fast_empty"] = {
@@ -555,9 +555,10 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p12_sh_mike1014_raise.ogg", t = 0/30},
-            {s = path .. "p12_sh_mike1014_inspect_charge.ogg", t = 21/30},
-            {s = path .. "p12_sh_mike1014_reload_end.ogg", t = 25/30},
+            {s = path .. "p12_sh_mike1014_raise_first_raise.ogg", t = 0/30},
+            {s = path .. "p12_sh_mike1014_raise_first_charge.ogg", t = 14/30},
+            {s = path .. "p12_sh_mike1014_raise_first_grab.ogg", t = 16/30},
+            {s = path .. "p12_sh_mike1014_raise_first_end.ogg", t = 24/30},
         },
     },
     ["draw"] = {
@@ -577,7 +578,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p12_sh_mike1014_raise_quick.ogg", t = 0/30},
+            {s = path .. "p12_sh_mike1014_raise.ogg", t = 0/30},
         },
     },
     ["holster"] = {
@@ -646,15 +647,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p12_sh_mike1014_inspect_raise.ogg", t = 5/30},
-			{s = path .. "p12_sh_mike1014_inspect_adjust.ogg", t = 27/30},
-			{s = path .. "p12_sh_mike1014_inspect_turn.ogg", t = 79/30},
-			{s = path .. "p12_sh_mike1014_inspect_boltpull.ogg", t = 103/30},
-			{s = path .. "p12_sh_mike1014_inspect_shelleject.ogg", t = 100/30},
-			{s = path .. "p12_sh_mike1014_inspect_charge.ogg", t = 170/30},
-			{s = path .. "p12_sh_mike1014_reload_fast_empty_chamber_start_loadshell.ogg", t = 184/30},
-			{s = path .. "p12_sh_mike1014_reload_fast_empty_chamber_start_boltrelease.ogg", t = 188/30},
-			{s = path .. "p12_sh_mike1014_inspect_end.ogg", t = 198/30},
+            {s = path .. "p12_sh_mike1014_inspect_raise.ogg", t = 1/30},
+			{s = path .. "p12_sh_mike1014_inspect_adjust.ogg", t = 25/30},
+			{s = path .. "p12_sh_mike1014_inspect_drop.ogg", t = 75/30},
+            {s = path .. "p12_sh_mike1014_inspect_shelleject.ogg", t = 100/30},
+			{s = path .. "p12_sh_mike1014_inspect_turn.ogg", t = 165/30},
+			{s = path .. "p12_sh_mike1014_inspect_boltpull.ogg", t = 172/30},
+			{s = path .. "p12_sh_mike1014_inspect_charge.ogg", t = 182/30},
+			{s = path .. "p12_sh_mike1014_inspect_end.ogg", t = 195/30},
         },
     },
     ["inspect_empty"] = {
@@ -684,10 +684,9 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p12_sh_mike1014_inspect_raise.ogg", t = 5/30},
-			{s = path .. "p12_sh_mike1014_inspect_adjust.ogg", t = 27/30},
-			{s = path .. "p12_sh_mike1014_inspect_turn.ogg", t = 79/30},
-			{s = path .. "p12_sh_mike1014_inspect_end.ogg", t = 100/30},
+            {s = path .. "p12_sh_mike1014_inspect_empty_raise.ogg", t = 0/30},
+			{s = path .. "p12_sh_mike1014_inspect_empty_adjust.ogg", t = 23/30},
+			{s = path .. "p12_sh_mike1014_inspect_empty_end.ogg", t = 72/30},
         },
     },
     ["bash"] = {
