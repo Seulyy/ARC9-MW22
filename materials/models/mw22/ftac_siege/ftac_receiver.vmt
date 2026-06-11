@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models\mw22\ftac_siege\ftac_barrel_rgb"
-    "$bumpmap" "models\mw22\ftac_siege\ftac_barrel_n"
-    "$phongexponenttexture" "models\mw22\ftac_siege\ftac_barrel_e"
+    "$basetexture" "models\mw22\ftac_siege\ftac_receiver_rgb"
+    "$bumpmap" "models\mw22\ftac_siege\ftac_receiver_n"
+    "$phongexponenttexture" "models\mw22\ftac_siege\ftac_receiver_e"
 
     /////////////////
     "$color2" "[1 1 1]"                                     //do not touch this
@@ -20,7 +20,7 @@
     /////////////////
 
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.098 0.098 0.098]"                 
+    "$envmaptint" "[0.106 0.106 0.102]"                 
 
     "$detailblendmode" "4"
     "$detailblendfactor" "0.7"
@@ -30,10 +30,9 @@
     {
         "Arc9EnvMapTint"
         {
-//            "specularity" "0.5"
             "min" "0"
             "max" "0.2"
-            "color" "[0.098 0.098 0.098]"
+            "color" "[0.106 0.106 0.102]"
         }
         "CustomCamo" 
         {

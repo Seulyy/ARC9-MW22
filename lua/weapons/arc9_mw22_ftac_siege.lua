@@ -3,6 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
+--SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_smg") or "Submachine Guns"
 SWEP.ARC9WeaponCategory = 3
@@ -38,9 +39,11 @@ SWEP.WorldModelMirror = "models/weapons/mw22/c_smg_ftac_siege.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-12, 6, -7.5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-9, 5, -1.5),
+    TPIKPos = Vector(-9, 5, -2.5),
     TPIKAng = Angle(-9, 0, 175),
-    Scale = 1
+    Scale = 1,
+	
+	TPIKPosSightOffset = Vector(2, 0.75, -3.5),
 }
 
 -------------------------- DAMAGE PROFILE
@@ -48,7 +51,7 @@ SWEP.WorldModelOffset = {
 SWEP.DamageMax = 22 -- Damage done at point blank range
 SWEP.DamageMin = 13 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
 SWEP.RangeMin = 1000 -- How far bullets retain their maximum damage for.
 SWEP.RangeMax = 6000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
@@ -68,7 +71,7 @@ SWEP.PhysBulletDrag = 1.15
 
 SWEP.Ammo = "smg1" -- What ammo type this gun uses.
 
-SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
+SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 32 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 10 -- Amount of reserve UBGL magazines you can take.
@@ -192,13 +195,13 @@ SWEP.IronSights = {
 
 SWEP.ViewModelFOVBase = 65
 
-SWEP.SprintPos = Vector(0, -2, -1)
-SWEP.SprintAng = Angle(0, 0, 0)
-
 SWEP.SprintMidPoint = {
     Pos = Vector(0, -1, -0.15),
     Ang = Angle(0, 0, 0)
 }
+
+SWEP.SprintPos = Vector(0, -2, -1)
+SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -215,8 +218,9 @@ SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(15, 30, 3)
-SWEP.CustomizeSnapshotFOV = 90
+SWEP.CustomizePos = Vector(13, 32, 3)
+SWEP.CustomizeRotateAnchor = Vector(13, -3.5, -4)
+SWEP.CustomizeSnapshotFOV = 80
 SWEP.CustomizeSnapshotPos = Vector(-1, 7, 5)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = false
@@ -224,12 +228,14 @@ SWEP.CustomizeNoRotate = false
 SWEP.PeekPos = Vector(-1, 3, -4.5)
 SWEP.PeekAng = Angle(-0.3, 0, -45)
 
+SWEP.PeekMaxFOV = 65
 -------------------------- HoldTypes
 
-SWEP.HoldType = "rpg"
-SWEP.HoldTypeSprint = "rpg"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeNPC = "ar2"
+SWEP.HoldTypeSprint = "ar2"
 SWEP.HoldTypeHolstered = "rpg"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldTypeSights = "ar2"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 
@@ -240,23 +246,23 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "AC_muzzle_rifle_fp"
-SWEP.AfterShotParticle = "AC_muzzle_smoke_barrel"
+SWEP.MuzzleParticle = "muzzleflash_smg"
+SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
 
 SWEP.CamQCA = 4
 SWEP.CamQCA_Mult = 1
 
-SWEP.ShellModel = "models/weapons/cod2019/shared/shell_9mm_hr.mdl"
-SWEP.ShellSounds = ARC9.PistolShellSoundsTable
-SWEP.ShellCorrectAng = Angle(0, 0, 0)
-SWEP.ShellScale = 0.08
+SWEP.ShellModel = "models/weapons/cod2019/shared/shell_pi_9mm.mdl"
+SWEP.ShellSounds = ARC9.COD2019_9mm_Table
+SWEP.ShellCorrectAng = Angle(0, -90, 0)
+SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
-SWEP.DropMagazineModel = "models/weapons/cod2019/mags/w_smg_mp7_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/mw22/mags/w_smg_ftacsiege_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_smg_metal_concrete_01.ogg",
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_smg_metal_concrete_02.ogg",
@@ -268,7 +274,7 @@ SWEP.DropMagazineSounds = {
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
 SWEP.DropMagazineTime = 0.4
 SWEP.DropMagazineQCA = 3
-SWEP.DropMagazineAng = Angle(0, -90, 0)
+SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
 
@@ -298,11 +304,18 @@ SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
 SWEP.EnterSightsSound = path .. "p49_pi_tango9_raise_quick.ogg"
 SWEP.ExitSightsSound = path .. "p49_pi_tango9_drop_quick.ogg"
 
+SWEP.TriggerDelay = 0.015 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
+SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
+SWEP.TriggerDelayTime = 0.015 -- Time until weapon fires.
+
+SWEP.TriggerDownSound = "weapons/cod2019/mp7/weap_mpapa7_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = "weapons/cod2019/mp7/weap_golf21_disconnector_plr_01.ogg"
+
 SWEP.BulletBones = {
-    [1] = "j_bullet01",
-    [2] = "j_bullet02",
-	[3] = "j_bullet03",
-	[4] = "j_bullet04",
+    [1] = "j_ammo_02",
+    [2] = "j_ammo_03",
+	[3] = "j_ammo_04",
+	[4] = "j_ammo_05",
 }
 
 --SWEP.ReloadHideBonesFirstPerson = true
@@ -310,12 +323,28 @@ SWEP.HideBones  = {
     [1] = "j_mag2",
 }
 
-SWEP.TriggerDelay = 0.015 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
-SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
-SWEP.TriggerDelayTime = 0.015 -- Time until weapon fires.
-
-SWEP.TriggerDownSound = "weapons/cod2019/mp7/weap_mpapa7_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/mp7/weap_golf21_disconnector_plr_01.ogg"
+SWEP.ReloadHideBoneTables  = {
+    [1] = {
+	"j_mag2",
+	},
+	[2] = {
+	"j_mag1",
+	"j_follower",
+	"j_ammo_02",
+	"j_ammo_03",
+	"j_ammo_04",
+	"j_ammo_05",
+	},
+	[3] = {
+	"j_mag2",
+	"j_mag1",
+	"j_follower",
+	"j_ammo_02",
+	"j_ammo_03",
+	"j_ammo_04",
+	"j_ammo_05",
+	},
+}
 
 SWEP.Animations = {
     ["fire"] = {
@@ -326,29 +355,13 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-		MinProgress = 0.8,
+		MinProgress = 0.65,
 		MagSwapTime = 3.5,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p49_pi_tango9_reload_raise.ogg", t = 1/30},
@@ -358,33 +371,21 @@ SWEP.Animations = {
 			{s = path .. "p49_pi_tango9_reload_maghit.ogg", t = 47/30},
 			{s = path .. "p49_pi_tango9_reload_magin.ogg", t = 53/30},
 			{s = path .. "p49_pi_tango9_reload_end.ogg", t = 58/30},
+			{hide = 1, t = 0},
+			{hide = 0, t = 0.4},
+			{hide = 2, t = 2.125},
+			{hide = 1, t = 2.425},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-		MinProgress = 0.9,
-		DropMagAt = 0.65,
+		MinProgress = 0.75,
+		DropMagAt = 0.85,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p49_pi_tango9_reload_empty_raise.ogg", t = 1/30},
@@ -397,34 +398,21 @@ SWEP.Animations = {
 			{s = path .. "p49_pi_tango9_reload_empty_mvmnt3.ogg", t = 75/30},
 			{s = path .. "p49_pi_tango9_reload_empty_boltpull.ogg", t = 78/30},
 			{s = path .. "p49_pi_tango9_reload_empty_end.ogg", t = 89/30},
+			{hide = 1, t = 0},
+			{hide = 3, t = 0.85},
+			{hide = 1, t = 1.1},
         },
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-		MinProgress = 0.8,
-		MagSwapTime = 1.5,
-		DropMagAt = 0.5,
+		MinProgress = 0.65,
+		MagSwapTime = 0.5,
+		DropMagAt = 0.4,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.85, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p49_pi_tango9_reload_fast_mvmnt.ogg", t = 2/30},
@@ -433,33 +421,20 @@ SWEP.Animations = {
 			{s = path .. "p49_pi_tango9_reload_fast_maghit.ogg", t = 33/30},
 			{s = path .. "p49_pi_tango9_reload_fast_magin.ogg", t = 42/30},
 			{s = path .. "p49_pi_tango9_reload_fast_end.ogg", t = 44/30},
+			{hide = 1, t = 0},
+			{hide = 3, t = 0.4},
+			{hide = 1, t = 0.6},
         },
     },
     ["reload_fast_empty"] = {
         Source = "reload_fast_empty",
-		MinProgress = 0.9,
-		DropMagAt = 0.5,
+		MinProgress = 0.7,
+		DropMagAt = 0.4,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p49_pi_tango9_reload_fast_empty_mvmnt1.ogg", t = 2/30},
@@ -470,6 +445,9 @@ SWEP.Animations = {
 			{s = path .. "p49_pi_tango9_reload_fast_empty_boltgrab.ogg", t = 53/30},
 			{s = path .. "p49_pi_tango9_reload_fast_empty_charge.ogg", t = 56.5/30},
 			{s = path .. "p49_pi_tango9_reload_fast_empty_end.ogg", t = 63/30},
+			{hide = 1, t = 0},
+			{hide = 3, t = 0.4},
+			{hide = 1, t = 0.6},
         },
     },
     ["reload_drum"] = {
@@ -477,26 +455,10 @@ SWEP.Animations = {
 		MinProgress = 0.8,
 		MagSwapTime = 3.5,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "wfoly_plr_sm_mpapa7_reload_lift.ogg", t = 0/30},
@@ -513,26 +475,10 @@ SWEP.Animations = {
 		MinProgress = 0.9,
 		DropMagAt = 0.65,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_lift.ogg", t = 0/30},
@@ -551,26 +497,10 @@ SWEP.Animations = {
 		MagSwapTime = 1.5,
 		DropMagAt = 0.5,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.85, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_lift.ogg", t = 0/30},
@@ -586,26 +516,10 @@ SWEP.Animations = {
 		MinProgress = 0.9,
 		DropMagAt = 0.5,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "wfoly_plr_sm_mpapa7_reload_empty_lift.ogg", t = 0/30},
@@ -621,26 +535,10 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "draw",
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.5,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.5, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p49_pi_tango9_raise_first_lift.ogg", t = 0/30},
@@ -653,16 +551,8 @@ SWEP.Animations = {
 		MinProgress = 0.2,
 		FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.5,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 0, rhik = 0 },
+            { t = 0.5, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p49_pi_tango9_raise.ogg", t = 0/30},
@@ -671,16 +561,8 @@ SWEP.Animations = {
     ["holster"] = {
         Source = "holster",
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.4,
-                lhik = 0,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 1 },
+            { t = 0.4, lhik = 0, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p49_pi_tango9_drop.ogg", t = 0/30},
@@ -705,26 +587,10 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.1,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 1.1,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.1, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 1.1, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p49_pi_tango9_inspect_raise.ogg", t = 4/30},
@@ -744,26 +610,10 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.1,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 1.1,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.1, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 1.1, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p49_pi_tango9_inspect_empty_raise.ogg", t = 7/30},
@@ -789,26 +639,10 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.1,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 1.1,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.1, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 1.1, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "wfoly_sm_mpapa7_inspect_01.ogg", t = 0/30},
@@ -822,26 +656,10 @@ SWEP.Animations = {
     ["bash"] = {
         Source = {"melee_hit_01", "melee_hit_02", "melee_hit_03"},
 	    IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.1,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.6,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.1, lhik = 0, rhik = 0 },
+            { t = 0.6, lhik = 0, rhik = 0 },
+            { t = 0.85, lhik = 1, rhik = 1 },
         },
     },
 }
@@ -931,102 +749,110 @@ SWEP.AttachmentElements = {
 -- end
 
 SWEP.Attachments = {
-    {
-        PrintName = "Barrels",
-        DefaultAttName = "Standard Barrel",
-        Category = "cod2019_ftacs_barrel",
-        Bone = "tag_barrel_attach",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Category = "cod2019_muzzle",
-        Bone = "tag_silencer",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
+    { -- 1
+		PrintName = ARC9:GetPhrase("mw19_category_muzzle"),
+		Category = "cod2019_muzzle",
+		DefaultIcon = Material("entities/defattachs/muzzle-ar.png", "mips smooth"),
+		Bone = "tag_silencer",
+		Pos = Vector(0, 0, 0),
+		Ang = Angle(0, 0, 0),
 		InstalledElements = {"muzzle_none"},
 		Scale = 1,
     },
-    {
-        PrintName = "Optics",
-        Bone = "tag_holo",
-        Pos = Vector(-4.5, 0, -0.1),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod2019_optic",},
-        CorrectiveAng = Angle(0, 0, 0),
-		InstalledElements = {"mount_sight"},
+    { -- 2
+		PrintName = ARC9:GetPhrase("mw19_category_barrel"),
+		DefaultIcon = Material("entities/defattachs/barrel-ar.png", "mips smooth"),
+		Category = "cod2019_ftacs_barrel",
+		Bone = "tag_barrel_attach",
+		Pos = Vector(0, 0, 0),
+		Ang = Angle(0, 0, 0),
     },
-    {
-        PrintName = "Tactical",
-        DefaultAttName = "Default",
+    { -- 3
+        PrintName = ARC9:GetPhrase("mw19_category_laser"),
+        DefaultIcon = Material("entities/defattachs/laser-ar.png", "mips smooth"),
         Category = "cod2019_tac",
         Bone = "tag_laser_attach",
-        Pos = Vector(2, 0, 0),
+        Pos = Vector(2, 0, 0.05),
         Ang = Angle(0, 0, 0),
 		InstalledElements = {"mount_laser"},
     },
-    -- {
-        -- PrintName = "Stock",
-        -- DefaultAttName = "Standard Stock",
-        -- Category = {"stock_retract","cod2019_tube"},
-        -- Bone = "tag_stock_attach",
-        -- Pos = Vector(0, 0, 0),
-        -- Ang = Angle(0, 0, 0),
+    { -- 4
+		PrintName = ARC9:GetPhrase("mw19_category_optic"),
+		DefaultIcon = Material("entities/defattachs/optic.png", "mips smooth"),
+		Bone = "tag_holo",
+		Pos = Vector(-4.5, 0, -0.1),
+		Ang = Angle(0, 0, 0),
+		Category = {"cod2019_optic",},
+		CorrectiveAng = Angle(0, 0, 0),
+		InstalledElements = {"mount_sight"},
+    },
+    -- { -- 5
+		-- PrintName = ARC9:GetPhrase("mw19_category_stock"),
+		-- DefaultIcon = Material("entities/defattachs/stock-ar.png", "mips smooth"),
+		-- Category = {"stock_retract","cod2019_tube"},
+		-- Bone = "tag_stock_attach",
+		-- Pos = Vector(0, 0, 0),
+		-- Ang = Angle(0, 0, 0),
 		-- InstalledElements = {"stock_adapter"},
     -- },
-    {
-        PrintName = "Ammo",
-        Bone = "j_mag1",
-        Category = {"cod2019_ammo"},
-        Pos = Vector(0, 0, -1.5),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Mag",
+    { -- 6
+		PrintName = ARC9:GetPhrase("mw19_category_magazine"),
+		DefaultIcon = Material("entities/defattachs/magazine-ar.png", "mips smooth"),
 		Bone = "j_mag1",
-        Category = {"cod2019_mag"},
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
+		Category = {"cod2019_mag"},
+		Pos = Vector(0, 0, 0),
+		Ang = Angle(0, 0, 0),
     },
-    {
-        PrintName = "Perk",
+    { -- 7
+		PrintName = ARC9:GetPhrase("mw19_category_ammo"),
+		DefaultIcon = Material("arc9/def_att_icons/ammotype.png", "mips smooth"),
+		Bone = "j_mag1",
+		Category = {"cod2019_ammo"},
+		Pos = Vector(0, 0, -1.5),
+		Ang = Angle(0, 0, 0),
+    },
+
+	-- Unofficial
+    { -- 10
+        PrintName = ARC9:GetPhrase("mw19_category_perk"),
         Category = {"cod2019_perks","cod2019_perks_soh"}
     },
+
+	-- Cosmetics
     {
-        PrintName = "Skins",
-        --Bone = "v_weapon.Clip",
-        Category = "cod2019_ftacs_skin",
+		PrintName = ARC9:GetPhrase("mw19_category_skins"),
+		--Bone = "v_weapon.Clip",
+		Category = "cod2019_ftacs_skin",
 		CosmeticOnly = true,
     },
     {
-        PrintName = "Cosmetic",
-        Category = {"universal_camo"},
-        CosmeticOnly = true,
+		PrintName = ARC9:GetPhrase("mw19_category_camouflage"),
+		Category = {"universal_camo"},
+		CosmeticOnly = true,
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/smg_mp7_decal_a.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/smg_mp7_decal_b.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/smg_mp7_decal_c.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/smg_mp7_decal_d.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Charm",
+        PrintName = ARC9:GetPhrase("mw19_category_charm"),
+		CosmeticOnly = true,
         Category = "charm",
         Bone = "tag_cosmetic",
         Pos = Vector(0.5, 0, 0),
@@ -1034,7 +860,7 @@ SWEP.Attachments = {
 		Scale = 1.5,
     },
     {
-        PrintName = "Stats",
+        PrintName = ARC9:GetPhrase("mw19_category_stats"),
         Category = {"killcounter","killcounter2"},
         Bone = "tag_cosmetic",
         Pos = Vector(-2, 0, 0.3),
