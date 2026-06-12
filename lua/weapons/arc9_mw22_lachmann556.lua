@@ -273,13 +273,14 @@ SWEP.DropMagazineQCA = 3
 
 -------------------------- SOUNDS
 
-local path = "weapons/cod2019/g3a3/"
+local path = "weapons/mw22/lachmann556/"
+local path2 = "weapons/mw22/m4/"
 
-SWEP.ShootSound = "COD2019.G3A3.Fire"
-SWEP.ShootSoundIndoor = "COD2019.G3A3.Fire"
+SWEP.ShootSound = "MW22.L556.Fire"
+SWEP.ShootSoundIndoor = "MW22.L556.Fire"
 
-SWEP.ShootSoundSilenced = "COD2019.G3A3.Fire.S"
-SWEP.ShootSoundSilencedIndoor = "COD2019.G3A3.Fire.S"
+SWEP.ShootSoundSilenced = "MW22.L556.Fire.S"
+SWEP.ShootSoundSilencedIndoor = "MW22.L556.Fire.S"
 
 -- Non-Silenced
 SWEP.LayerSound = "Layer_AR.Outside"
@@ -296,8 +297,8 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = "weapons/cod2019/weap_ar_falima_ads_up.ogg"
-SWEP.ExitSightsSound = "weapons/cod2019/weap_ar_falima_ads_down.ogg"
+SWEP.EnterSightsSound = path2 .. "wfoly_ar_mike4_ads_up.ogg"
+SWEP.ExitSightsSound = path2 .. "wfoly_ar_mike4_ads_down.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_ammo_01",
@@ -342,8 +343,8 @@ SWEP.TriggerDelay = 0.01 -- Set to > 0 to play the "trigger" animation before sh
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.01 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/m13/weap_mcharlie_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/m4a1/weap_mike4_fire_plr_disconnector_01.ogg"
+SWEP.TriggerDownSound = "weapons/cod2019/weap_mcharlie_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = "weapons/cod2019/weap_mike4_fire_plr_disconnector_01.ogg"
 
 SWEP.Animations = {
     ["fire"] = {
@@ -377,13 +378,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_xmag_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_xmag_rattle.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magout_01.ogg", t = 17/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magin_v2_01.ogg", t = 37/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magin_v2_02.ogg", t = 45/30},
-			{s = path .. "wfoly_plr_ar_falima_raise_start.ogg", t = 61/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_end.ogg", t = 63/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_bolt_back.ogg", t = 6/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_pivot.ogg", t = 17/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_grab_mag.ogg", t = 24/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_mag_out.ogg", t = 34/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_mag_in.ogg", t = 50/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_turn.ogg", t = 70/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_bolt_release.ogg", t = 78/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 83/30},
         },
     },
     ["reload_empty"] = {
@@ -412,14 +414,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_start.ogg", t = 0/30},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 6/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magout_01.ogg", t = 25/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_rattle.ogg", t = 44/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magin_v2_01.ogg", t = 52/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magin_v2_02.ogg", t = 63/30},
-			{s = path .. "g3_boltpullreleasesoh.ogg", t = 78/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_end.ogg", t = 94/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_tilt.ogg", t = 1/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_bolt_back.ogg", t = 3/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_raise.ogg", t = 14/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_mag_out.ogg", t = 22/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_grab_mag.ogg", t = 41/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_mag_in.ogg", t = 51/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_mag_bang.ogg", t = 71/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_arm_chop.ogg", t = 74/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_bolt_release.ogg", t = 85/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_end.ogg", t = 96/30},
         },
     },
     ["reload_fast"] = {
@@ -449,12 +453,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_rattle.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magout_01.ogg", t = 9/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magin_v2_01.ogg", t = 30/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magin_v2_02.ogg", t = 38/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_end.ogg", t = 48/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_roll.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_grab_mag.ogg", t = 11/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_out.ogg", t = 20/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_hit.ogg", t = 36/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_in.ogg", t = 44/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_end.ogg", t = 47/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -484,13 +488,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_start.ogg", t = 0},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 0.13},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magout_01.ogg", t = 0.7},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magin_v2_01.ogg", t = 1.37},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magin_v2_02.ogg", t = 1.57},
-			{s = path .. "g3_boltpullrelease.ogg", t = 2.0},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_end.ogg", t = 2.3},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_empty_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_empty_grab_mag.ogg", t = 11/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_mag_out.ogg", t = 20/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_maghit.ogg", t = 37/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_magin.ogg", t = 45/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_bolt_charge.ogg", t = 56/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_end.ogg", t = 68/30},
         },
     },
     ["reload_xmag"] = {
@@ -518,13 +522,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_xmag_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_xmag_rattle.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magout_01.ogg", t = 17/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magin_v2_01.ogg", t = 37/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magin_v2_02.ogg", t = 45/30},
-			{s = path .. "wfoly_plr_ar_falima_raise_start.ogg", t = 61/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_end.ogg", t = 63/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_bolt_back.ogg", t = 6/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_raise.ogg", t = 15/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_grab_mag.ogg", t = 25/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_mag_hit.ogg", t = 35/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_mag_out.ogg", t = 40/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_mag_find_well.ogg", t = 54/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_mag_in.ogg", t = 60/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_tilt.ogg", t = 84/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_bolt_release.ogg", t = 90/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_end.ogg", t = 96/30},
         },
     },
     ["reload_xmag_xmags"] = {
@@ -553,14 +560,19 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_start.ogg", t = 0/30},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 6/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magout_01.ogg", t = 25/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_rattle.ogg", t = 44/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magin_v2_01.ogg", t = 52/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magin_v2_02.ogg", t = 63/30},
-			{s = path .. "g3_boltpullreleasesoh.ogg", t = 78/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_end.ogg", t = 94/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_tilt.ogg", t = 1/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_bolt_back.ogg", t = 7/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_raise.ogg", t = 15/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_hand_on_mag.ogg", t = 22/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_mag_out.ogg", t = 28/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_roll.ogg", t = 41/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_grab_mag.ogg", t = 41/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_mag_find_well.ogg", t = 57/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_mag_in.ogg", t = 64/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_mag_bang.ogg", t = 83/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_arm_chop.ogg", t = 87/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_bolt_release.ogg", t = 97/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_end.ogg", t = 105/30},
         },
     },
     ["reload_xmag_fast"] = {
@@ -589,12 +601,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_rattle.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magout_01.ogg", t = 9/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magin_v2_01.ogg", t = 30/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magin_v2_02.ogg", t = 38/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_end.ogg", t = 48/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_grab_mag.ogg", t = 17/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_mag_out.ogg", t = 27/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_maghit.ogg", t = 44/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_magin.ogg", t = 55/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_end.ogg", t = 63/30},
         },
     },
     ["reload_xmag_fast_empty"] = {
@@ -623,13 +635,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_start.ogg", t = 0},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 0.13},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magout_01.ogg", t = 0.7},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magin_v2_01.ogg", t = 1.37},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magin_v2_02.ogg", t = 1.57},
-			{s = path .. "g3_boltpullrelease.ogg", t = 2.0},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_end.ogg", t = 2.3},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_grab_mag.ogg", t = 17/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_mag_out.ogg", t = 26/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_maghit.ogg", t = 43/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_magin.ogg", t = 55/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_bolt_charge.ogg", t = 68/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_end.ogg", t = 80/30},
         },
     },
     ["ready"] = {
@@ -657,11 +669,10 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_raise_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_raise_settle.ogg", t = 3/30},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 15/30},
-			{s = path .. "mp5-submachinegun-foley-bolt-lock-back-1.ogg", t = 33/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_end.ogg", t = 65/30},
+            {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 1/30},
+            {s = path .. "vm_p02_ar_kilo53_inspect_bolt_back.ogg", t = 6/30},
+            {s = path .. "vm_p02_ar_kilo53_inspect_bolt_release.ogg", t = 22/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 30/30}
         },
     },
     ["draw"] = {
@@ -679,8 +690,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_raise_start.ogg", t = 0/30},
-			{s = path .. "wfoly_plr_ar_falima_raise_settle.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 0/30},
         },
     },
     ["holster"] = {
@@ -698,7 +708,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_drop_down.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_drop.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -742,11 +752,15 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_ar_falima_inspect_01.ogg", t = 0/30},
-			{s = path .. "wfoly_ar_falima_inspect_02.ogg", t = 38/30},
-			{s = path .. "wfoly_ar_falima_inspect_03.ogg", t = 67/30},
-			{s = path .. "wfoly_ar_falima_inspect_04.ogg", t = 101/30},
-			{s = path .. "wfoly_ar_falima_inspect_05.ogg", t = 119/30},
+            {s = path .. "vm_p02_ar_kilo53_inspect_raise.ogg", t = 0/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_mag_out.ogg", t = 12/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_mvmnt.ogg", t = 45/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_mag_in.ogg", t = 47/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_rotate.ogg", t = 61/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_bolt_back.ogg", t = 70/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_chest.ogg", t = 78/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_bolt_release.ogg", t = 90/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_end.ogg", t = 99/30},
         },
     },
     ["bash"] = {
@@ -777,19 +791,22 @@ SWEP.Animations = {
     ["firemode_1"] = {
         Source = "semi_on",
         EventTable = {
-            {s = path .. "weap_kilo433_selector_off.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_on_mvmnt.ogg", t = 2/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_on_switch.ogg", t = 5/30},
         },
     },
     ["firemode_2"] = {
         Source = "semi_off",
         EventTable = {
-            {s = path .. "weap_kilo433_selector_on.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_off_mvmnt.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_off_switch.ogg", t = 6/30},
         },
     },
     ["switchsights"] = {
         Source = "semi_on",
         EventTable = {
-            {s = path .. "wfoly_ar_falima_inspect_02.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_on_mvmnt.ogg", t = 2/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_on_switch.ogg", t = 5/30},
         },
     },
 }

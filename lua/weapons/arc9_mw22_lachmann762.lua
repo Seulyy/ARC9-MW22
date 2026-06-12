@@ -27,14 +27,14 @@ SWEP.Credits = {
 
 SWEP.Description = [[A delayed blowback 7.62 receiver with equal parts power and control. Select fire allows precise semi-auto shots and short bursts of devastating full-auto firepower.]]
 
-SWEP.ViewModel = "models/weapons/mw22/c_rif_lachmann_762.mdl"
+SWEP.ViewModel = "models/weapons/mw22/c_rif_lachmann762.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 
 SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_lachmann_762.mdl"
+SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_lachmann762.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9.5, 6.2, -5.5),
     Ang = Angle(-7, 0, 180),

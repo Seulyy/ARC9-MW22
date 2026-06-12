@@ -1,5 +1,32 @@
 -------- Assault Rifles --------
 
+---- Lachmann 556 ---
+sound.Add( {
+    name = "MW22.L556.Fire",
+    channel = CHAN_WEAPON,
+    level = 140,
+    volume = 1,
+    pitch = {100},
+    sound = {
+		"weapons/mw22/lachmann556/lynx_fire1.wav",
+		"weapons/mw22/lachmann556/lynx_fire2.wav",
+		"weapons/mw22/lachmann556/lynx_fire3.wav"
+    }
+} )
+
+sound.Add( {
+    name =  "MW22.L556.Fire.S",
+    channel = CHAN_WEAPON,
+    level = 140,
+    volume = 1,
+    pitch = {100},
+    sound = {
+		"weapons/mw22/lachmann556/weap_kilo53_sup_plr_shot_01.wav",
+		"weapons/mw22/lachmann556/weap_kilo53_sup_plr_shot_02.wav",
+		"weapons/mw22/lachmann556/weap_kilo53_sup_plr_shot_03.wav"
+    }
+} )
+
 ---- Lachmann 762 ---
 sound.Add( {
     name = "MW22.Lachmann.Fire",
