@@ -276,9 +276,8 @@ SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
 
-local path = "weapons/cod2019/m4a1/"
-local path2 = "weapons/mw22/fss/"
-local path3 = "weapons/cod2019/p90/"
+local path = "weapons/mw22/fss/"
+local path2 = "weapons/mw22/m4/"
 
 SWEP.ShootSound = "MW22.FSS.Fire"
 SWEP.ShootSoundIndoor = "MW22.FSS.Fire"
@@ -301,15 +300,15 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = path3 .. "wfoly_sm_papa90_ads_up.ogg"
-SWEP.ExitSightsSound = path3 .. "wfoly_sm_papa90_ads_down.ogg"
+SWEP.EnterSightsSound = path2 .. "wfoly_ar_mike4_ads_up.ogg"
+SWEP.ExitSightsSound = path2 .. "wfoly_ar_mike4_ads_down.ogg"
 
 SWEP.TriggerDelay = 0.025 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.025 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/p90/weap_papa90_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/p90/weap_papa90_disconnector_plr_01.ogg"
+SWEP.TriggerDownSound = "weapons/cod2019/weap_papa90_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = "weapons/cod2019/weap_papa90_disconnector_plr_01.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_bullet1",
@@ -342,12 +341,12 @@ SWEP.Animations = {
             { t = 0.8, lhik = 1, rhik = 1 },
         },
         EventTable = {
-			{s = path2 .. "vm_p01_sm_alpha57_reload_adjust.ogg", t = 0/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_magout.ogg", t = 22/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_adjust.ogg", t = 37/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_maghit.ogg", t = 60/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_magin.ogg", t = 67/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_end.ogg", t = 83/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_down.ogg", t = 4/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_magout.ogg", t = 23/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_adjust.ogg", t = 61/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_magin.ogg", t = 67/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_maghit.ogg", t = 69/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_end.ogg", t = 80/30},
 			{hide = 1, t = 1.2},
 			{hide = 0, t = 1.65},
         },
@@ -364,13 +363,14 @@ SWEP.Animations = {
             { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
-			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_adjust.ogg", t = 0/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_magout.ogg", t = 22/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_mvmnt.ogg", t = 22/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_maghit.ogg", t = 60/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_magin.ogg", t = 67/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_charge.ogg", t = 85/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_end.ogg", t = 97/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_down.ogg", t = 4/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_magout.ogg", t = 22/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_adjust.ogg", t = 59/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_magin.ogg", t = 67/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_maghit.ogg", t = 69/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_rattle.ogg", t = 76/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_charge.ogg", t = 86/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_end.ogg", t = 97/30},
 			{hide = 1, t = 1.2},
 			{hide = 0, t = 1.65},
         },
@@ -386,12 +386,12 @@ SWEP.Animations = {
             { t = 0.7, lhik = 1, rhik = 1 },
         },
         EventTable = {
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_mvmnt.ogg", t = 0/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_swing.ogg", t = 8/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magout.ogg", t = 8/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_maghit.ogg", t = 40/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magin.ogg", t = 41/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_end.ogg", t = 53/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_mvmnt.ogg", t = 3/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_swing.ogg", t = 5/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_magout.ogg", t = 9/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_magin.ogg", t = 41/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_maghit.ogg", t = 43/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_end.ogg", t = 54/30},
 			{hide = 1, t = 0.75},
 			{hide = 0, t = 1},
         },
@@ -407,13 +407,14 @@ SWEP.Animations = {
             { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_mvmnt.ogg", t = 0/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_swing.ogg", t = 8/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magout.ogg", t = 8/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_maghit.ogg", t = 40/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_magin.ogg", t = 41/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_boltrelease.ogg", t = 57/30},
-			{s = path2 .. "vm_p01_sm_alpha57_reload_fast_end.ogg", t = 60/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_empty_rattle.ogg", t = 3/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_empty_swing.ogg", t = 7/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_empty_magout.ogg", t = 11/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_empty_magin.ogg", t = 41/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_empty_maghit.ogg", t = 43/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_empty_arm.ogg", t = 52/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_empty_boltrelease.ogg", t = 56/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_fast_empty_end.ogg", t = 64/30},
 			{hide = 1, t = 0.75},
 			{hide = 0, t = 1},
         },
@@ -427,21 +428,23 @@ SWEP.Animations = {
             { t = 0.7, lhik = 1, rhik = 1 },
         },
         EventTable = {
-			{s = path2 .. "vm_p01_sm_alpha57_reload_empty_charge.ogg", t = 11/30},
-            {s = path2 .. "vm_p01_sm_alpha57_raise.ogg", t = 17/30},
+			{s = path .. "vm_p01_sm_alpha57_raise_quick.ogg", t = 1/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_charge.ogg", t = 11/30},
+			{s = path .. "vm_p01_sm_alpha57_reload_empty_adjust.ogg", t = 23/30},
+            {s = path .. "vm_p01_sm_alpha57_reload_empty_mvmnt.ogg", t = 27/30},
         },
     },
     ["draw"] = {
         Source = "draw_short",
         EventTable = {
-            {s = path2 .. "vm_p01_sm_alpha57_raise.ogg", t = 0/30},
+            {s = path .. "vm_p01_sm_alpha57_raise.ogg", t = 0/30},
         },
     },
     ["holster"] = {
         Source = "holster",
 		--Mult = 0.8,
         EventTable = {
-            {s = path2 .. "vm_p01_sm_alpha57_reload_down.ogg", t = 0/30},
+            {s = path .. "vm_p01_sm_alpha57_drop.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -469,10 +472,10 @@ SWEP.Animations = {
             { t = 1.1, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path2 .. "vm_p01_sm_alpha57_inspect_up.ogg", t = 6/30},
-			{s = path2 .. "vm_p01_sm_alpha57_inspect_rotate.ogg", t = 91/30},
-			{s = path2 .. "vm_p01_sm_alpha57_inspect_drop.ogg", t = 177/30},
-			{s = path2 .. "vm_p01_sm_alpha57_inspect_end.ogg", t = 202/30},
+            {s = path .. "vm_p01_sm_alpha57_inspect_up.ogg", t = 1/30},
+			{s = path .. "vm_p01_sm_alpha57_inspect_drop.ogg", t = 86/30},
+			{s = path .. "vm_p01_sm_alpha57_inspect_rotate.ogg", t = 181/30},
+			{s = path .. "vm_p01_sm_alpha57_inspect_end.ogg", t = 201/30},
         },
     },
     ["bash"] = {

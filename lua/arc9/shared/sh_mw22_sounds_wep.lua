@@ -31,7 +31,7 @@ sound.Add( {
 		"^weapons/mw22/lachmann/weap_kilo53_sup_plr_shot_05.ogg",
 		"^weapons/mw22/lachmann/weap_kilo53_sup_plr_shot_06.ogg",
 		"^weapons/mw22/lachmann/weap_kilo53_sup_plr_shot_07.ogg",
-		"^weapons/mw22/lachmann/weap_kilo53_sup_plr_shot_08.ogg",
+		"^weapons/mw22/lachmann/weap_kilo53_sup_plr_shot_08.ogg"
     }
 } )
 
@@ -42,14 +42,7 @@ sound.Add( {
     level = 140,
     volume = 1,
     sound = {
-		"weapons/mw22/m4/weap_iw9_mike4b_fire_plr_01.ogg",
-		"weapons/mw22/m4/weap_iw9_mike4b_fire_plr_02.ogg",
-		"weapons/mw22/m4/weap_iw9_mike4b_fire_plr_03.ogg",
-		"weapons/mw22/m4/weap_iw9_mike4b_fire_plr_04.ogg",
-		"weapons/mw22/m4/weap_iw9_mike4b_fire_plr_05.ogg",
-		"weapons/mw22/m4/weap_iw9_mike4b_fire_plr_06.ogg",
-		"weapons/mw22/m4/weap_iw9_mike4b_fire_plr_07.ogg",
-		"weapons/mw22/m4/weap_iw9_mike4b_fire_plr_08.ogg",
+		"weapons/mw22/m4/weap_iw9_mike4_fire_plr_01.wav"
     }              
 } )
 
@@ -59,14 +52,7 @@ sound.Add( {
     level = 140,
     volume = 1,
     sound = {
-		"weapons/mw22/m4/weap_mike4_sup_plr_shot_01.ogg",
-		"weapons/mw22/m4/weap_mike4_sup_plr_shot_02.ogg",
-		"weapons/mw22/m4/weap_mike4_sup_plr_shot_03.ogg",
-		"weapons/mw22/m4/weap_mike4_sup_plr_shot_04.ogg",
-		"weapons/mw22/m4/weap_mike4_sup_plr_shot_05.ogg",
-		"weapons/mw22/m4/weap_mike4_sup_plr_shot_06.ogg",
-		"weapons/mw22/m4/weap_mike4_sup_plr_shot_07.ogg",
-		"weapons/mw22/m4/weap_mike4_sup_plr_shot_08.ogg",
+		"weapons/mw22/m4/weap_iw9_mike4_sup_plr_01.wav"
     }              
 } )
 
@@ -85,7 +71,7 @@ sound.Add( {
 		"^weapons/mw22/p890/weap_papa220_fire_plr_shot_03.ogg",
 		"^weapons/mw22/p890/weap_papa220_fire_plr_shot_04.ogg",
 		"^weapons/mw22/p890/weap_papa220_fire_plr_shot_05.ogg",
-		"^weapons/mw22/p890/weap_papa220_fire_plr_shot_06.ogg",
+		"^weapons/mw22/p890/weap_papa220_fire_plr_shot_06.ogg"
     }              
 } )
 
@@ -100,7 +86,7 @@ sound.Add( {
 		"^weapons/mw22/p890/weap_papa220_sup_plr_shot_03.ogg",
 		"^weapons/mw22/p890/weap_papa220_sup_plr_shot_04.ogg",
 		"^weapons/mw22/p890/weap_papa220_sup_plr_shot_05.ogg",
-		"^weapons/mw22/p890/weap_papa220_sup_plr_shot_06.ogg",
+		"^weapons/mw22/p890/weap_papa220_sup_plr_shot_06.ogg"
     }              
 } )
 
@@ -141,12 +127,9 @@ sound.Add( {
     volume = 1,
     pitch = {100,100},
     sound = {
-		"weapons/mw22/fss/weap_alpha57_fire_plr_shot_01.ogg",
-        "weapons/mw22/fss/weap_alpha57_fire_plr_shot_02.ogg",
-        "weapons/mw22/fss/weap_alpha57_fire_plr_shot_03.ogg",
-        "weapons/mw22/fss/weap_alpha57_fire_plr_shot_04.ogg",
-        "weapons/mw22/fss/weap_alpha57_fire_plr_shot_05.ogg",
-        "weapons/mw22/fss/weap_alpha57_fire_plr_shot_06.ogg"
+		"weapons/mw22/fss/weap_alpha57_fire_plr_shot_01.wav",
+        "weapons/mw22/fss/weap_alpha57_fire_plr_shot_02.wav",
+        "weapons/mw22/fss/weap_alpha57_fire_plr_shot_03.wav"
     }              
 } )
 
@@ -157,12 +140,9 @@ sound.Add( {
     volume = 1,
     pitch = {100,100},
     sound = {
-		"weapons/mw22/fss/weap_alpha57_sup_plr_shot_01.ogg",
-        "weapons/mw22/fss/weap_alpha57_sup_plr_shot_02.ogg",
-        "weapons/mw22/fss/weap_alpha57_sup_plr_shot_03.ogg",
-        "weapons/mw22/fss/weap_alpha57_sup_plr_shot_04.ogg",
-        "weapons/mw22/fss/weap_alpha57_sup_plr_shot_05.ogg",
-        "weapons/mw22/fss/weap_alpha57_sup_plr_shot_06.ogg"
+		"weapons/mw22/fss/weap_alpha57_sup_plr_shot_01.wav",
+        "weapons/mw22/fss/weap_alpha57_sup_plr_shot_02.wav",
+        "weapons/mw22/fss/weap_alpha57_sup_plr_shot_03.wav"
     }              
 } )
 
@@ -176,12 +156,7 @@ sound.Add( {
     sound = {
 		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_01.wav",
 		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_02.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_03.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_04.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_05.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_06.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_07.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_08.wav"
+		"weapons/mw22/ftacsiege/weap_tango9_fire_plr_shot_03.wav"
     }
 } )
 
@@ -194,12 +169,7 @@ sound.Add( {
     sound = {
 		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_01.wav",
 		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_02.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_03.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_04.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_05.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_06.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_07.wav",
-		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_08.wav"
+		"weapons/mw22/ftacsiege/weap_tango9_sup_plr_shot_03.wav"
     }
 } )
 
@@ -207,52 +177,52 @@ sound.Add( {
 
 ---- Expedite 12 ----
 sound.Add( {
-    name = "MW22.Expendite.Fire",
+    name = "MW22.Expedite.Fire",
     channel = CHAN_WEAPON,
     level = 140,
     volume = 1,
 	pitch = {80,100},
     sound = {
-		"^weapons/mw22/expendite12/weap_mike1014_fire_plr_shot_01.wav"
+		"^weapons/mw22/expedite12/weap_mike1014_fire_plr_shot_01.wav"
     }              
 } )
 
 sound.Add( {
-    name =  "MW22.Expendite.Fire.S",
+    name =  "MW22.Expedite.Fire.S",
     channel = CHAN_WEAPON,
     level = 140,
     volume = 1,
 	pitch = {80,100},
     sound = {
-		"^weapons/mw22/expendite12/weap_mike1014_sup_plr_shot_01.wav"
+		"^weapons/mw22/expedite12/weap_mike1014_sup_plr_shot_01.wav"
     }              
 } )
 
 sound.Add( {
-    name = "MW22.Expendite.ShellIn",
+    name = "MW22.Expedite.ShellIn",
     channel = 143 + 5,
 	volume = 1,
 	pitch = {100,100},
     sound = {
-        "weapons/mw22/expendite12/p12_sh_mike1014_reload_loop_loadshell01.ogg",
-        "weapons/mw22/expendite12/p12_sh_mike1014_reload_loop_loadshell02.ogg",
-        "weapons/mw22/expendite12/p12_sh_mike1014_reload_loop_loadshell03.ogg",
-        "weapons/mw22/expendite12/p12_sh_mike1014_reload_loop_loadshell04.ogg",
-        "weapons/mw22/expendite12/p12_sh_mike1014_reload_loop_loadshell05.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_reload_loop_loadshell01.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_reload_loop_loadshell02.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_reload_loop_loadshell03.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_reload_loop_loadshell04.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_reload_loop_loadshell05.ogg"
     }
 } )
 
 sound.Add( {
-    name = "MW22.Expendite.ShellIn_Fast",
+    name = "MW22.Expedite.ShellIn_Fast",
     channel = 143 + 5,
 	volume = 1,
 	pitch = {100,100},
     sound = {
-        "weapons/mw22/expendite12/p12_sh_mike1014_fast_loop_loadshell01.ogg",
-        "weapons/mw22/expendite12/p12_sh_mike1014_fast_loop_loadshell02.ogg",
-        "weapons/mw22/expendite12/p12_sh_mike1014_fast_loop_loadshell03.ogg",
-        "weapons/mw22/expendite12/p12_sh_mike1014_fast_loop_loadshell04.ogg",
-        "weapons/mw22/expendite12/p12_sh_mike1014_fast_loop_loadshell05.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_fast_loop_loadshell01.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_fast_loop_loadshell02.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_fast_loop_loadshell03.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_fast_loop_loadshell04.ogg",
+        "weapons/mw22/expedite12/p12_sh_mike1014_fast_loop_loadshell05.ogg"
     }
 } )
 
@@ -261,12 +231,34 @@ sound.Add( {
 
 ---- FJX Imperium ----
 sound.Add( {
+    name = "MW22.Imperium.Fire",
+    channel = CHAN_WEAPON,
+    level = 140,
+	volume = 1.2,
+	pitch = {80,100},
+    sound = {
+		"weapons/mw22/imperium/weap_india_fire_plr_shot_baked.wav"
+    }              
+} )
+
+sound.Add( {
+    name =  "MW22.Imperium.Fire.S",
+    channel = CHAN_WEAPON,
+    level = 140,
+    volume = 1,
+	pitch = {80,100},
+    sound = {
+		"weapons/mw22/imperium/weap_india_sup_plr_shot_01.wav"
+    }              
+} )
+
+sound.Add( {
     name = "MW22.Imperium_Classic.Fire",
     channel = CHAN_WEAPON,
     level = 140,
     volume = 1,
     sound = {
-		"weapons/mw22/imperium/imperium_classic_fire.ogg",
+		"weapons/mw22/imperium/imperium_classic_fire.ogg"
     }              
 } )
 
@@ -276,26 +268,6 @@ sound.Add( {
     level = 140,
     volume = 1,
     sound = {
-		"weapons/mw22/imperium/imperium_classic_fire_S.ogg",
-    }              
-} )
-
-sound.Add( {
-    name = "MW22.Imperium.Fire",
-    channel = CHAN_WEAPON,
-    level = 140,
-    volume = 1,
-    sound = {
-		"^weapons/mw22/imperium/p21_sn_mromeo_fire.ogg",
-    }              
-} )
-
-sound.Add( {
-    name =  "MW22.Imperium.Fire.S",
-    channel = CHAN_WEAPON,
-    level = 140,
-    volume = 1,
-    sound = {
-		"^weapons/mw22/imperium/p21_sn_mromeo_fire_sup.ogg",
+		"weapons/mw22/imperium/imperium_classic_fire_S.ogg"
     }              
 } )

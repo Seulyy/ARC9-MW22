@@ -270,8 +270,7 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/cod2019/ax50/"
-local path2 = "weapons/mw22/imperium/"
+local path = "weapons/mw22/imperium/"
 
 SWEP.ShootSound = "MW22.Imperium.Fire"
 SWEP.ShootSoundIndoor = "MW22.Imperium.Fire"
@@ -294,15 +293,15 @@ SWEP.LayerSoundSilencedIndoor = "layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "distant_DMR_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = path .. "wfoly_sn_alpha50_ads_up.ogg"
-SWEP.ExitSightsSound = path .. "wfoly_sn_alpha50_ads_down.ogg"
+SWEP.EnterSightsSound = "weapons/cod2019/wfoly_sn_alpha50_ads_up.ogg"
+SWEP.ExitSightsSound = "weapons/cod2019/wfoly_sn_alpha50_ads_down.ogg"
 
 SWEP.TriggerDelay = 0.03 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.03 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/svd/weap_delta_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/svd/weap_delta_disconnector_plr_01.ogg"
+SWEP.TriggerDownSound = "weapons/cod2019/weap_delta_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = "weapons/cod2019/weap_delta_disconnector_plr_01.ogg"
 
 SWEP.HideBones  = {
     [1] = "j_mag2",
@@ -325,8 +324,8 @@ SWEP.Animations = {
 		--EjectAt = 0.2,
 		MinProgress = 0.8,
         EventTable = {
-            {s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 20/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 20/30},
         },
     },
     ["reload"] = {
@@ -356,11 +355,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 5/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 33/30},
-			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 60/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 80/30},
-			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 95/30},
+			{s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 5/30},
+			{s = path .. "p21_sn_mromeo_reload_magout.ogg", t = 33/30},
+			{s = path .. "p21_sn_mromeo_reload_rattle.ogg", t = 60/30},
+			{s = path .. "p21_sn_mromeo_reload_magin.ogg", t = 80/30},
+			{s = path .. "p21_sn_mromeo_reload_end.ogg", t = 95/30},
         },
     },
     ["reload_empty"] = {
@@ -396,14 +395,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 5/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 26/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 57/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 85/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 102/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 117/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 125/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 137/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 5/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 26/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 57/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 85/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 102/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 117/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 125/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_end.ogg", t = 137/30},
         },
     },
     ["reload_fast"] = {
@@ -433,12 +432,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 2/30},
-			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 11/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 15/30},
-			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 45/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 60/30},
-			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 70/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 2/30},
+			{s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 11/30},
+			{s = path .. "p21_sn_mromeo_reload_magout.ogg", t = 15/30},
+			{s = path .. "p21_sn_mromeo_reload_rattle.ogg", t = 45/30},
+			{s = path .. "p21_sn_mromeo_reload_magin.ogg", t = 60/30},
+			{s = path .. "p21_sn_mromeo_reload_end.ogg", t = 70/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -474,15 +473,15 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 27/30},
-			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 33/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 38/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 65/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 83/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 101/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 108/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 101/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 27/30},
+			{s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 33/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 38/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 65/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 83/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 101/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 108/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_end.ogg", t = 101/30},
         },
     },
     ["reload_xmag"] = {
@@ -512,11 +511,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 5/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 33/30},
-			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 60/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 80/30},
-			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 95/30},
+			{s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 5/30},
+			{s = path .. "p21_sn_mromeo_reload_magout.ogg", t = 33/30},
+			{s = path .. "p21_sn_mromeo_reload_rattle.ogg", t = 60/30},
+			{s = path .. "p21_sn_mromeo_reload_magin.ogg", t = 80/30},
+			{s = path .. "p21_sn_mromeo_reload_end.ogg", t = 95/30},
         },
     },
     ["reload_xmag_empty"] = {
@@ -552,14 +551,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 5/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 26/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 57/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 85/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 102/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 117/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 125/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 137/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 5/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 26/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 57/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 85/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 102/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 117/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 125/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_end.ogg", t = 137/30},
         },
     },
     ["reload_xmag_fast"] = {
@@ -589,12 +588,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 2/30},
-			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 11/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 15/30},
-			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 45/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 60/30},
-			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 70/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 2/30},
+			{s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 11/30},
+			{s = path .. "p21_sn_mromeo_reload_magout.ogg", t = 15/30},
+			{s = path .. "p21_sn_mromeo_reload_rattle.ogg", t = 45/30},
+			{s = path .. "p21_sn_mromeo_reload_magin.ogg", t = 60/30},
+			{s = path .. "p21_sn_mromeo_reload_end.ogg", t = 70/30},
         },
     },
     ["reload_xmag_fast_empty"] = {
@@ -630,15 +629,15 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 27/30},
-			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 33/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 38/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 65/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 83/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 101/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 108/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 101/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 27/30},
+			{s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 33/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 38/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 65/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 83/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 101/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 108/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_end.ogg", t = 101/30},
         },
     },
     ["ready"] = {
@@ -656,10 +655,10 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 7/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 7/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 18/30},
-			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 33/30},
+            {s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 7/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 7/30},
+			{s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 18/30},
+			{s = path .. "p21_sn_mromeo_reload_end.ogg", t = 33/30},
         },
     },
     ["draw"] = {
@@ -679,7 +678,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 0/30},
+            {s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 0/30},
         },
     },
     ["holster"] = {
@@ -697,7 +696,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 0/30},
+            {s = path .. "p21_sn_mromeo_reload_end.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -741,16 +740,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
-            {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
-            {s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
-            {s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
-            {s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
-            {s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
-            {s = path2 .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
-            {s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
-            {s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
-            {s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
+            {s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
+            {s = path .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
+            {s = path .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
+            {s = path .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
+            {s = path .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
         },
     },
     ["inspect_xmag"] = {
@@ -780,16 +779,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
-            {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
-            {s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
-            {s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
-            {s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
-            {s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
-            {s = path2 .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
-            {s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
-            {s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
-            {s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
+            {s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
+            {s = path .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
+            {s = path .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
+            {s = path .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
+            {s = path .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
+            {s = path .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
         },
     },
     ["inspect_empty"] = {
@@ -819,16 +818,16 @@ SWEP.Animations = {
             },
         },
         -- EventTable = {
-            -- {s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
-            -- {s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
+            -- {s = path .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
+            -- {s = path .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
+            -- {s = path .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
+            -- {s = path .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
+            -- {s = path .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
+            -- {s = path .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
+            -- {s = path .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
+            -- {s = path .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
+            -- {s = path .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
+            -- {s = path .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
         -- },
     },
     ["bash"] = {

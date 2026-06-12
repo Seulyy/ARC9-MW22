@@ -296,8 +296,8 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = path .. "weap_ar_kilo433_ads_up.ogg"
-SWEP.ExitSightsSound = path .. "weap_ar_kilo433_ads_down.ogg"
+SWEP.EnterSightsSound = "weapons/cod2019/weap_ar_kilo433_ads_up.ogg"
+SWEP.ExitSightsSound = "weapons/cod2019/weap_ar_kilo433_ads_down.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_ammo_01",
@@ -342,8 +342,8 @@ SWEP.TriggerDelay = 0.01 -- Set to > 0 to play the "trigger" animation before sh
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.01 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/mw22/lachmann/weap_kilo53_fcg_deadtrig_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/mw22/lachmann/weap_kilo53_fcg_disconnector_plr_01.ogg"
+SWEP.TriggerDownSound = path .. "weap_kilo53_fcg_deadtrig_plr_01.ogg"
+SWEP.TriggerUpSound = path .. "weap_kilo53_fcg_disconnector_plr_01.ogg"
 
 SWEP.Animations = {
     ["fire"] = {

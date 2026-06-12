@@ -5,8 +5,8 @@ SWEP.Base = "arc9_cod2019_base"
 SWEP.Spawnable = true
 --SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_smg") or "Submachine Guns"
-SWEP.ARC9WeaponCategory = 3
+SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_handgun") or "Handguns"
+SWEP.ARC9WeaponCategory = 1
 
 SWEP.PrintName = "FTAC Siege"
 
@@ -301,15 +301,15 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = path .. "p49_pi_tango9_raise_quick.ogg"
-SWEP.ExitSightsSound = path .. "p49_pi_tango9_drop_quick.ogg"
+SWEP.EnterSightsSound = path .. "p26_pi_swhiskey_raise_quick_rattle.ogg"
+SWEP.ExitSightsSound = path .. "p26_pi_swhiskey_drop_quick_rattle.ogg"
 
 SWEP.TriggerDelay = 0.015 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.015 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/mp7/weap_mpapa7_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/mp7/weap_golf21_disconnector_plr_01.ogg"
+SWEP.TriggerDownSound = "weapons/cod2019/weap_mpapa7_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = "weapons/cod2019/weap_golf21_disconnector_plr_01.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_ammo_02",
