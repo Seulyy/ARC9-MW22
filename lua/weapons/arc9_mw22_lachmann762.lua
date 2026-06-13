@@ -273,10 +273,11 @@ SWEP.DropMagazineQCA = 3
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/lachmann/"
+local path = "weapons/mw22/lachmann762/"
+local path2 = "weapons/mw22/m4/"
 
-SWEP.ShootSound = "MW22.Lachmann.Fire"
-SWEP.ShootSoundIndoor = "MW22.Lachmann.Fire"
+SWEP.ShootSound = "MW22.L762.Fire"
+SWEP.ShootSoundIndoor = "MW22.L762.Fire"
 
 SWEP.ShootSoundSilenced = "MW22.Lachmann.Fire.S"
 SWEP.ShootSoundSilencedIndoor = "MW22.Lachmann.Fire.S"
@@ -296,8 +297,8 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = "weapons/cod2019/weap_ar_kilo433_ads_up.ogg"
-SWEP.ExitSightsSound = "weapons/cod2019/weap_ar_kilo433_ads_down.ogg"
+SWEP.EnterSightsSound = path2 .. "wfoly_ar_mike4_ads_up.ogg"
+SWEP.ExitSightsSound = path2 .. "wfoly_ar_mike4_ads_down.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_ammo_01",
@@ -377,14 +378,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_kilo53_reload_bolt_back.ogg", t = 6/30},
-            {s = path .. "vm_p02_ar_kilo53_reload_grab_mag.ogg", t = 25/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_mag_out.ogg", t = 33/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_mag_in.ogg", t = 51/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_turn.ogg", t = 52/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_turn.ogg", t = 72/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_bolt_release.ogg", t = 79/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 87/30},
+            {s = path .. "vm_p02_ar_golf3_reload_carrierback.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_golf3_reload_magout.ogg", t = 21/30},
+            {s = path .. "vm_p02_ar_golf3_reload_magin.ogg", t = 50/30},
+			{s = path .. "vm_p02_ar_golf3_reload_carrierrelease.ogg", t = 73/30},
+			{s = path .. "vm_p02_ar_golf3_reload_shoulder.ogg", t = 85/30},
         },
     },
     ["reload_empty"] = {
@@ -413,14 +411,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_start.ogg", t = 0/30},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 6/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magout_01.ogg", t = 25/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_rattle.ogg", t = 44/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magin_v2_01.ogg", t = 52/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magin_v2_02.ogg", t = 63/30},
-			{s = path .. "g3_boltpullreleasesoh.ogg", t = 78/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_end.ogg", t = 94/30},
+            {s = path .. "vm_p02_ar_golf3_reload_empty_carrierback.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_golf3_reload_empty_magout.ogg", t = 17/30},
+            {s = path .. "vm_p02_ar_golf3_reload_empty_magwell.ogg", t = 45/30},
+			{s = path .. "vm_p02_ar_golf3_reload_empty_magin.ogg", t = 64/30},
+			{s = path .. "vm_p02_ar_golf3_reload_empty_slap.ogg", t = 75.5/30},
+			{s = path .. "vm_p02_ar_golf3_reload_empty_shoulder.ogg", t = 90/30},
         },
     },
     ["reload_fast"] = {
@@ -452,11 +448,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_kilo53_reload_fast_roll.ogg", t = 0/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_out.ogg", t = 13/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_hit.ogg", t = 30/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_in.ogg", t = 38/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 48/30},
+            {s = path .. "vm_p02_ar_golf3_reload_quick_mvt.ogg", t = 0/30},
+			{s = path .. "vm_p02_ar_golf3_reload_quick_magout.ogg", t = 14/30},
+			{s = path .. "vm_p02_ar_golf3_reload_quick_magwell.ogg", t = 25/30},
+			{s = path .. "vm_p02_ar_golf3_reload_quick_magin.ogg", t = 36/30},
+			{s = path .. "vm_p02_ar_golf3_reload_quick_shoulder.ogg", t = 48/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -486,13 +482,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_start.ogg", t = 0},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 0.13},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magout_01.ogg", t = 0.7},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magin_v2_01.ogg", t = 1.37},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magin_v2_02.ogg", t = 1.57},
-			{s = path .. "g3_boltpullrelease.ogg", t = 2.0},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_end.ogg", t = 2.3},
+            {s = path .. "vm_p02_ar_golf3_reload_empty_quick_magout.ogg", t = 1/30},
+            {s = path .. "vm_p02_ar_golf3_reload_empty_quick_magwell.ogg", t = 20/30},
+			{s = path .. "vm_p02_ar_golf3_reload_empty_quick_magin.ogg", t = 32/30},
+			{s = path .. "vm_p02_ar_golf3_reload_empty_quick_charge.ogg", t = 51/30},
+			{s = path .. "vm_p02_ar_golf3_reload_empty_quick_shoulder.ogg", t = 72/30},
         },
     },
     ["reload_xmag"] = {
@@ -659,10 +653,9 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 0/30},
-            {s = path .. "vm_p02_ar_kilo53_reload_bolt_back.ogg", t = 16/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_bolt_release.ogg", t = 19/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 31/30},
+            {s = path .. "vm_p02_ar_golf3_raise_first_carrierback.ogg", t = 9/30},
+            {s = path .. "vm_p02_ar_golf3_raise_first_carrierrelease.ogg", t = 16/30},
+            {s = path .. "vm_p02_ar_golf3_raise_first_shoulder.ogg", t = 28/30},
         },
     },
     ["draw"] = {
@@ -680,7 +673,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_golf3_raise_first_shoulder.ogg", t = 1/30},
         },
     },
     ["holster"] = {
@@ -698,7 +691,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_kilo53_drop.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_golf3_raise_up.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -742,13 +735,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_kilo53_inspect_mag_out.ogg", t = 9/30},
-			{s = path .. "vm_p02_ar_kilo53_inspect_mvmnt.ogg", t = 41/30},
-			{s = path .. "vm_p02_ar_kilo53_inspect_mag_in.ogg", t = 60/30},
-			{s = path .. "vm_p02_ar_kilo53_inspect_bolt_back.ogg", t = 82/30},
-			{s = path .. "vm_p02_ar_kilo53_inspect_chest.ogg", t = 108/30},
-			{s = path .. "vm_p02_ar_kilo53_inspect_bolt_release.ogg", t = 110/30},
-			{s = path .. "vm_p02_ar_kilo53_inspect_end.ogg", t = 122/30},
+            {s = path .. "vm_p02_ar_golf3_inspect_magout.ogg", t = 0/30},
+			{s = path .. "vm_p02_ar_golf3_inspect_magwellin.ogg", t = 42/30},
+			{s = path .. "vm_p02_ar_golf3_inspect_magclick.ogg", t = 64/30},
+			{s = path .. "vm_p02_ar_golf3_inspect_charginghandle.ogg", t = 82/30},
+			{s = path .. "vm_p02_ar_golf3_inspect_carrierrelease.ogg", t = 108/30},
+			{s = path .. "vm_p02_ar_golf3_inspect_shoulder.ogg", t = 121/30},
         },
     },
     ["bash"] = {
@@ -779,19 +771,19 @@ SWEP.Animations = {
     ["firemode_1"] = {
         Source = "semi_on",
         EventTable = {
-            {s = path .. "weap_kilo433_selector_off.ogg", t = 0/30},
+            {s = path .. "weap_ar_golf3_selector_on.ogg", t = 4/30},
         },
     },
     ["firemode_2"] = {
         Source = "semi_off",
         EventTable = {
-            {s = path .. "weap_kilo433_selector_on.ogg", t = 0/30},
+            {s = path .. "weap_ar_golf3_selector_off.ogg", t = 4/30},
         },
     },
     ["switchsights"] = {
         Source = "semi_on",
         EventTable = {
-            {s = path .. "vm_p02_ar_kilo53_inspect_rotate.ogg", t = 0/30},
+            {s = path .. "weap_ar_golf3_selector_on.ogg", t = 4/30},
         },
     },
 }
