@@ -69,7 +69,7 @@ sound.Add( {
     level = 140,
     volume = 1,
     sound = {
-		"weapons/mw22/m4/weap_iw9_mike4_fire_plr_01.wav"
+		")weapons/mw22/m4/weap_iw9_mike4_fire_plr_01.wav"
     }              
 } )
 
@@ -79,7 +79,7 @@ sound.Add( {
     level = 140,
     volume = 1,
     sound = {
-		"weapons/mw22/m4/weap_iw9_mike4_sup_plr_01.wav"
+		")weapons/mw22/m4/weap_iw9_mike4_sup_plr_01.wav"
     }              
 } )
 
