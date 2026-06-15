@@ -273,8 +273,8 @@ SWEP.DropMagazineQCA = 3
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/lachmann762/"
-local path2 = "weapons/mw22/m4/"
+local path = ")weapons/mw22/lachmann762/"
+local path2 = ")weapons/mw22/m4/"
 
 SWEP.ShootSound = "MW22.L762.Fire"
 SWEP.ShootSoundIndoor = "MW22.L762.Fire"

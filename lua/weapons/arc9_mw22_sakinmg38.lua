@@ -295,7 +295,7 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/sakinmg38/"
+local path = ")weapons/mw22/sakinmg38/"
 
 SWEP.ShootSound = "MW22.MG38.Fire"
 SWEP.ShootSoundIndoor = "MW22.MG38.Fire"
@@ -318,8 +318,8 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = "weapons/cod2019/wfoly_lm_slima_ads_up.ogg"
-SWEP.ExitSightsSound = "weapons/cod2019/wfoly_lm_slima_ads_down.ogg"
+SWEP.EnterSightsSound = ")weapons/cod2019/wfoly_lm_slima_ads_up.ogg"
+SWEP.ExitSightsSound = ")weapons/cod2019/wfoly_lm_slima_ads_down.ogg"
 
 SWEP.BulletBones = {
     [1] = {"j_ammo_01","j_link_01"},

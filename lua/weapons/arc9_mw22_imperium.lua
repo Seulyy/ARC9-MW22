@@ -270,7 +270,7 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/imperium/"
+local path = ")weapons/mw22/imperium/"
 
 SWEP.ShootSound = "MW22.Imperium.Fire"
 SWEP.ShootSoundIndoor = "MW22.Imperium.Fire"
@@ -293,15 +293,15 @@ SWEP.LayerSoundSilencedIndoor = "layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "distant_DMR_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = "weapons/cod2019/wfoly_sn_alpha50_ads_up.ogg"
-SWEP.ExitSightsSound = "weapons/cod2019/wfoly_sn_alpha50_ads_down.ogg"
+SWEP.EnterSightsSound = ")weapons/cod2019/wfoly_sn_alpha50_ads_up.ogg"
+SWEP.ExitSightsSound = ")weapons/cod2019/wfoly_sn_alpha50_ads_down.ogg"
 
 SWEP.TriggerDelay = 0.03 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.03 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/weap_delta_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/weap_delta_disconnector_plr_01.ogg"
+SWEP.TriggerDownSound = ")weapons/cod2019/weap_delta_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = ")weapons/cod2019/weap_delta_disconnector_plr_01.ogg"
 
 SWEP.HideBones  = {
     [1] = "j_mag2",

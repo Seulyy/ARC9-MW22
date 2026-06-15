@@ -273,8 +273,8 @@ SWEP.DropMagazineQCA = 3
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/lachmann556/"
-local path2 = "weapons/mw22/m4/"
+local path = ")weapons/mw22/lachmann556/"
+local path2 = ")weapons/mw22/m4/"
 
 SWEP.ShootSound = "MW22.L556.Fire"
 SWEP.ShootSoundIndoor = "MW22.L556.Fire"
@@ -343,8 +343,8 @@ SWEP.TriggerDelay = 0.01 -- Set to > 0 to play the "trigger" animation before sh
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.01 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/weap_mcharlie_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/weap_mike4_fire_plr_disconnector_01.ogg"
+SWEP.TriggerDownSound = ")weapons/cod2019/weap_mcharlie_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = ")weapons/cod2019/weap_mike4_fire_plr_disconnector_01.ogg"
 
 SWEP.Animations = {
     ["fire"] = {

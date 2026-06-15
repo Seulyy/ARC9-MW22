@@ -276,8 +276,8 @@ SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/fss/"
-local path2 = "weapons/mw22/m4/"
+local path = ")weapons/mw22/fss/"
+local path2 = ")weapons/mw22/m4/"
 
 SWEP.ShootSound = "MW22.FSS.Fire"
 SWEP.ShootSoundIndoor = "MW22.FSS.Fire"
@@ -307,8 +307,8 @@ SWEP.TriggerDelay = 0.025 -- Set to > 0 to play the "trigger" animation before s
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.025 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/weap_papa90_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/weap_papa90_disconnector_plr_01.ogg"
+SWEP.TriggerDownSound = ")weapons/cod2019/weap_papa90_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = ")weapons/cod2019/weap_papa90_disconnector_plr_01.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_bullet1",
