@@ -273,7 +273,7 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/p890/"
+local path = ")weapons/mw22/p890/"
 
 SWEP.ShootSound = "MW22.P890.Fire"
 SWEP.ShootSoundIndoor = "MW22.P890.Fire"
@@ -296,8 +296,8 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = "weapons/cod2019/wfoly_pi_mike1911_ads_up.ogg"
-SWEP.ExitSightsSound = "weapons/cod2019/wfoly_pi_mike1911_ads_down.ogg"
+SWEP.EnterSightsSound = ")weapons/cod2019/wfoly_pi_mike1911_ads_up.ogg"
+SWEP.ExitSightsSound = ")weapons/cod2019/wfoly_pi_mike1911_ads_down.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_ammo_01",
@@ -324,16 +324,6 @@ SWEP.TriggerUpSound =  path .. "wfoly_pi_fire_plr_fcg_disconnector_01.ogg"
 SWEP.Animations = {
     ["fire"] = {
         Source = "shoot1",
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-        EventTable = {
-			{s = path .. "weap_papa220_fire_plr_lfe_01.ogg", v = 0.7, l = 70, c = CHAN_ITEM, t = 0},
-        },
     },
     ["reload"] = {
         Source = "reload",
@@ -362,12 +352,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_pi_papa220_reload_raise.ogg", t = 0/30},
-			{s = path .. "wfoly_pi_papa220_reload_magrelease.ogg", t = 9/30},
-			{s = path .. "wfoly_pi_papa220_reload_magout.ogg", t = 17/30},
-			{s = path .. "wfoly_pi_papa220_reload_magin.ogg", t = 34/30},
-			{s = path .. "wfoly_pi_papa220_reload_maghit.ogg", t = 36/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 45/30},
+			{s = path .. "wfoly_pi_papa220_reload_raise.ogg", t = 1/30},
+			{s = path .. "wfoly_pi_papa220_reload_magrelease.ogg", t = 16/30},
+			{s = path .. "wfoly_pi_papa220_reload_magout.ogg", t = 18/30},
+			{s = path .. "wfoly_pi_papa220_reload_magin.ogg", t = 32/30},
+			{s = path .. "wfoly_pi_papa220_reload_maghit.ogg", t = 38/30},
+			{s = path .. "wfoly_pi_papa220_reload_end.ogg", t = 40/30},
         },
     },
     ["reload_empty"] = {
@@ -398,14 +388,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_pi_papa220_reload_empty_raise.ogg", t = 0/30},
-            {s = path .. "wfoly_pi_papa220_reload_empty_squeeze.ogg", t = 3/30},
-            {s = path .. "wfoly_pi_papa220_reload_empty_magrelease.ogg", t = 6/30},
-			{s = path .. "wfoly_pi_papa220_reload_empty_magout.ogg", t = 12/30},
-			{s = path .. "wfoly_pi_papa220_reload_empty_maghit.ogg", t = 33/30},
-			{s = path .. "wfoly_pi_papa220_reload_empty_magin.ogg", t = 35/30},
-            {s = path .. "wfoly_pi_papa220_inspect_slidepull.ogg", t = 36/30},
-            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 45/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_01.ogg", t = 2/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_02.ogg", t = 10/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_03.ogg", t = 12/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_04.ogg", t = 28/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_05.ogg", t = 31/30},
+            {s = path .. "wfoly_plr_pi_papa220_reload_empty_07.ogg", t = 35/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_06.ogg", t = 35/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_08.ogg", t = 44/30},
         },
     },
     ["reload_fast"] = {
@@ -436,12 +426,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_pi_papa220_reload_fast_raise.ogg", t = 0/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_raise.ogg", t = 1/30},
 			{s = path .. "wfoly_pi_papa220_reload_fast_magout.ogg", t = 6/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_mvmnt.ogg", t = 12/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_mvmnt.ogg", t = 13/30},
 			{s = path .. "wfoly_pi_papa220_reload_fast_magin.ogg", t = 18/30},
 			{s = path .. "wfoly_pi_papa220_reload_fast_maghit.ogg", t = 21/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 27/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 24/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -472,11 +462,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_empty_fast_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_magout.ogg", t = 7/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_magin.ogg", t = 25/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_charge.ogg", t = 33/30},
-			{s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 47/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_01.ogg", t = 1/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_02.ogg", t = 7/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_03.ogg", t = 12/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_04.ogg", t = 17/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_05.ogg", t = 20/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmag_07.ogg", t = 24/30},
+            {s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_06.ogg", t = 27/30},
         },
     },
     ["reload_xmag"] = {
@@ -506,11 +498,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 21/30},
-			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 34/30},
-			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 40/30},
-			{s = path .. "p01_ar_mike4_reload_end.ogg", t = 53/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmag_01.ogg", t = 1/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmag_02.ogg", t = 19/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmag_03.ogg", t = 20/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmag_04.ogg", t = 31/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmag_05.ogg", t = 33/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmag_06.ogg", t = 40/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmag_07.ogg", t = 47/30},
         },
     },
     ["reload_xmag_empty"] = {
@@ -541,12 +535,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_empty_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_empty_magout.ogg", t = 8/30},
-			{s = path .. "p01_ar_mike4_reload_empty_maghit.ogg", t = 31/30},
-			{s = path .. "p01_ar_mike4_reload_empty_magin.ogg", t = 40/30},
-			{s = path .. "p01_ar_mike4_reload_empty_charge.ogg", t = 53/30},
-			{s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 64/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmag_01.ogg", t = 0/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmag_02.ogg", t = 11/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmag_03.ogg", t = 21/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmag_04.ogg", t = 22/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmag_05.ogg", t = 32/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmag_06.ogg", t = 40/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmag_07.ogg", t = 44/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmag_08.ogg", t = 53/30},
         },
     },
     ["reload_xmag_fast"] = {
@@ -577,12 +573,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_pi_papa220_reload_fast_raise.ogg", t = 0/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_magout.ogg", t = 6/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_mvmnt.ogg", t = 12/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_magin.ogg", t = 18/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_maghit.ogg", t = 21/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 27/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmag_01.ogg", t = 0/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmag_02.ogg", t = 8/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmag_03.ogg", t = 19/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmag_04.ogg", t = 25/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmag_05.ogg", t = 31/30},
         },
     },
     ["reload_xmag_fast_empty"] = {
@@ -613,11 +608,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_empty_fast_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_magout.ogg", t = 7/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_magin.ogg", t = 25/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_charge.ogg", t = 33/30},
-			{s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 47/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmag_01.ogg", t = 0/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmag_02.ogg", t = 7/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmag_03.ogg", t = 17/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmag_04.ogg", t = 20/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmag_05.ogg", t = 26/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmag_06.ogg", t = 31/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmag_07.ogg", t = 31/30},
         },
     },
     ["reload_xmaglrg"] = {
@@ -647,11 +644,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_xmaglrg_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_xmaglrg_magout.ogg", t = 29/30},
-			{s = path .. "p01_ar_mike4_reload_xmaglrg_maghit.ogg", t = 41/30},
-			{s = path .. "p01_ar_mike4_reload_xmaglrg_magin.ogg", t = 51/30},
-			{s = path .. "p01_ar_mike4_reload_xmaglrg_end.ogg", t = 78/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmaglrg_01.ogg", t = 2/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmaglrg_02.ogg", t = 17/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmaglrg_03.ogg", t = 20/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmaglrg_04.ogg", t = 35/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmaglrg_05.ogg", t = 36/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmaglrg_06.ogg", t = 40/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_xmaglrg_07.ogg", t = 50/30},
         },
     },
     ["reload_xmaglrg_empty"] = {
@@ -682,12 +681,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_empty_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_empty_magout.ogg", t = 8/30},
-			{s = path .. "p01_ar_mike4_reload_empty_maghit.ogg", t = 31/30},
-			{s = path .. "p01_ar_mike4_reload_empty_magin.ogg", t = 40/30},
-			{s = path .. "p01_ar_mike4_reload_empty_charge.ogg", t = 53/30},
-			{s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 64/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_01.ogg", t = 1/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_02.ogg", t = 11/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_03.ogg", t = 18/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_04.ogg", t = 21/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_05.ogg", t = 36/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_06.ogg", t = 41/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_07.ogg", t = 42/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_08.ogg", t = 49.5/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_10.ogg", t = 61/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_xmaglrg_09.ogg", t = 61/30},
         },
     },
     ["reload_xmaglrg_fast"] = {
@@ -718,13 +721,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_pi_papa220_reload_fast_raise.ogg", t = 0/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_magout.ogg", t = 6/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_mvmnt.ogg", t = 12/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_magin.ogg", t = 19/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_maghit.ogg", t = 22/30},
-			{s = path .. "wfoly_pi_papa220_reload_empty_magin.ogg", t = 28/30},
-			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 30/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmaglrg_01.ogg", t = 0/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmaglrg_02.ogg", t = 7/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmaglrg_03.ogg", t = 19/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmaglrg_04.ogg", t = 21/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmaglrg_05.ogg", t = 27/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmaglrg_06.ogg", t = 33/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_fast_xmaglrg_07.ogg", t = 42/30},
         },
     },
     ["reload_xmaglrg_fast_empty"] = {
@@ -755,12 +758,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_empty_fast_xmaglrg_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_xmaglrg_magout.ogg", t = 8/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_xmaglrg_maghit.ogg", t = 34/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_xmaglrg_magin.ogg", t = 40/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_xmaglrg_charge.ogg", t = 52/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_xmaglrg_end.ogg", t = 62/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmaglrg_01.ogg", t = 0/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmaglrg_02.ogg", t = 8/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmaglrg_03.ogg", t = 18/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmaglrg_04.ogg", t = 34/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmaglrg_05.ogg", t = 41/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmaglrg_06.ogg", t = 48/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmaglrg_07.ogg", t = 62/30},
+			{s = path .. "wfoly_plr_pi_papa220_reload_empty_fast_xmaglrg_08.ogg", t = 67/30},
         },
     },
     ["ready"] = {
@@ -790,10 +795,10 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_pi_papa220_raise.ogg", t = 1/30},
-            {s = path .. "wfoly_pi_papa220_inspect_slidepull.ogg", t = 6/30},
-            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 15/30},
-            {s = path .. "wfoly_pi_papa220_inspect_end.ogg", t = 18/30},
+            {s = path .. "p27_pi_papa220_raise_first_up.ogg", t = 0/30},
+            {s = path .. "p27_pi_papa220_raise_first_slidepull.ogg", t = 7/30},
+            {s = path .. "p27_pi_papa220_raise_first_sliderelease.ogg", t = 17/30},
+            {s = path .. "p27_pi_papa220_raise_first_end.ogg", t = 22/30},
         },
     },
     ["draw"] = {
@@ -876,16 +881,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_pi_papa220_inspect_raise.ogg", t = 1/30},
-            {s = path .. "wfoly_pi_papa220_inspect_trigger.ogg", t = 17/30},
-            {s = path .. "wfoly_pi_papa220_inspect_magout.ogg", t = 45/30},
+            {s = path .. "wfoly_pi_papa220_inspect_raise.ogg", t = 5/30},
+            {s = path .. "wfoly_pi_papa220_inspect_trigger.ogg", t = 15/30},
+            {s = path .. "wfoly_pi_papa220_inspect_magout.ogg", t = 40/30},
             {s = path .. "wfoly_pi_papa220_inspect_magin.ogg", t = 78/30},
-            {s = path .. "wfoly_pi_papa220_inspect_maghit.ogg", t = 88/30},
-            {s = path .. "wfoly_pi_papa220_inspect_rotate.ogg", t = 92/30},
-            {s = path .. "wfoly_pi_papa220_inspect_slidepull.ogg", t = 101/30},
-            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 114/30},
-            {s = path .. "wfoly_pi_papa220_inspect_triggerpull.ogg", t = 128/30},
-            {s = path .. "wfoly_pi_papa220_inspect_end.ogg", t = 140/30},
+            {s = path .. "wfoly_pi_papa220_inspect_maghit.ogg", t = 83/30},
+            {s = path .. "wfoly_pi_papa220_inspect_rotate.ogg", t = 86/30},
+            {s = path .. "wfoly_pi_papa220_inspect_slidepull.ogg", t = 99/30},
+            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 112/30},
+            {s = path .. "wfoly_pi_papa220_inspect_triggerpull.ogg", t = 123.5/30},
+            {s = path .. "wfoly_pi_papa220_inspect_end.ogg", t = 125/30},
         },
     },
 	["inspect_empty"] = {
@@ -915,7 +920,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_01.ogg", t = 1/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_02.ogg", t = 14/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_03.ogg", t = 31/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_04.ogg", t = 40/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_05.ogg", t = 67/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_06.ogg", t = 82/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_07.ogg", t = 89/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_08.ogg", t = 96/30},
+            {s = path .. "p27_pi_papa220_inspect_empty_slidelock.ogg", t = 105/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_10.ogg", t = 123/30},
         },
     },
 	["inspect_xmag"] = {
@@ -945,7 +959,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+            {s = path .. "wfoly_pi_papa220_inspect_raise.ogg", t = 5/30},
+            {s = path .. "wfoly_pi_papa220_inspect_trigger.ogg", t = 15/30},
+            {s = path .. "wfoly_pi_papa220_inspect_magout.ogg", t = 40/30},
+            {s = path .. "wfoly_pi_papa220_inspect_magin.ogg", t = 78/30},
+            {s = path .. "wfoly_pi_papa220_inspect_maghit.ogg", t = 83/30},
+            {s = path .. "wfoly_pi_papa220_inspect_rotate.ogg", t = 86/30},
+            {s = path .. "wfoly_pi_papa220_inspect_slidepull.ogg", t = 99/30},
+            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 112/30},
+            {s = path .. "wfoly_pi_papa220_inspect_triggerpull.ogg", t = 123.5/30},
+            {s = path .. "wfoly_pi_papa220_inspect_end.ogg", t = 125/30},
         },
     },
 	["inspect_empty_xmag"] = {
@@ -975,7 +998,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_01.ogg", t = 1/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_02.ogg", t = 14/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_03.ogg", t = 31/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_04.ogg", t = 40/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_05.ogg", t = 67/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_06.ogg", t = 82/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_07.ogg", t = 89/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_08.ogg", t = 96/30},
+            {s = path .. "p27_pi_papa220_inspect_empty_slidelock.ogg", t = 105/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_10.ogg", t = 123/30},
         },
     },
 	["inspect_xmaglrg"] = {
@@ -1005,7 +1037,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+            {s = path .. "wfoly_pi_papa220_inspect_raise.ogg", t = 5/30},
+            {s = path .. "wfoly_pi_papa220_inspect_trigger.ogg", t = 15/30},
+            {s = path .. "wfoly_pi_papa220_inspect_magout.ogg", t = 40/30},
+            {s = path .. "wfoly_pi_papa220_inspect_magin.ogg", t = 78/30},
+            {s = path .. "wfoly_pi_papa220_inspect_maghit.ogg", t = 83/30},
+            {s = path .. "wfoly_pi_papa220_inspect_rotate.ogg", t = 86/30},
+            {s = path .. "wfoly_pi_papa220_inspect_slidepull.ogg", t = 99/30},
+            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 112/30},
+            {s = path .. "wfoly_pi_papa220_inspect_triggerpull.ogg", t = 123.5/30},
+            {s = path .. "wfoly_pi_papa220_inspect_end.ogg", t = 125/30},
         },
     },
 	["inspect_empty_xmaglrg"] = {
@@ -1035,7 +1076,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_01.ogg", t = 1/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_02.ogg", t = 14/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_03.ogg", t = 31/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_04.ogg", t = 40/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_05.ogg", t = 67/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_06.ogg", t = 82/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_07.ogg", t = 89/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_08.ogg", t = 96/30},
+            {s = path .. "p27_pi_papa220_inspect_empty_slidelock.ogg", t = 105/30},
+            {s = path .. "wfoly_plr_pi_papa220_inspect_empty_10.ogg", t = 123/30},
         },
     },
     ["bash"] = {
