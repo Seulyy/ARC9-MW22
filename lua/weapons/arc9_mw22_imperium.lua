@@ -39,9 +39,11 @@ SWEP.WorldModelMirror = "models/weapons/mw22/c_snip_imperium.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-11, 6, -2.5),
     Ang = Angle(-17, 3, 180),
-    TPIKPos = Vector(-6, 6, -2),
+    TPIKPos = Vector(-8, 6, -4),
     TPIKAng = Angle(-9, 0, 170),
-    Scale = 1
+    Scale = 1,
+	
+	TPIKPosSightOffset = Vector(1, 1.5, -2),
 }
 
 -------------------------- DAMAGE PROFILE
@@ -215,31 +217,39 @@ SWEP.SprintPos = Vector(0, -2, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(20, 40, 3)
-SWEP.CustomizeSnapshotFOV = 90
+SWEP.CustomizePos = Vector(20, 45, 3)
+SWEP.CustomizeRotateAnchor = Vector(20, -4, -3)
+SWEP.CustomizeSnapshotFOV = 65
 SWEP.CustomizeNoRotate = false
 SWEP.CustomizeSnapshotPos = Vector(0, 15, 3)
 
 SWEP.PeekPos = Vector(-1, 1.5, -5)
 SWEP.PeekAng = Angle(0, 0.4, -45)
 
+SWEP.PeekMaxFOV = 64
+
+SWEP.PeekPosReloading = Vector(0, 2, -2)
+SWEP.PeekAngReloading = Angle(-0.3, 0, -10)
+
 -------------------------- HoldTypes
 
-SWEP.HoldType = "rpg"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeNPC = "shotgun"
 SWEP.HoldTypeSprint = "rpg"
-SWEP.HoldTypeHolstered = "rpg"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldTypeSights = "ar2"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "AC_muzzle_rifle_fp"
-SWEP.AfterShotParticle = "AC_muzzle_smoke_barrel"
+SWEP.MuzzleParticle = "muzzleflash_smg"
+SWEP.AfterShotParticle = "barrel_smoke"
+SWEP.TracerEffect = "cod2019_tracer_fast"
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
 
@@ -250,11 +260,12 @@ SWEP.ShellModel = "models/weapons/cod2019/shared/shell_rytec.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellScale = 0.9
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
-SWEP.EjectDelay = 0.4
+SWEP.EjectDelay = 0.5
+SWEP.ShellSounds = ARC9.COD2019_50bmg_Table
 
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
-SWEP.DropMagazineModel = "models/weapons/cod2019/mags/w_snip_hdr_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/mw22/mags/w_snip_imperium_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_large_drum_concrete_01.ogg",
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_large_drum_concrete_02.ogg",
@@ -266,7 +277,7 @@ SWEP.DropMagazineSounds = {
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
 SWEP.DropMagazineTime = 1.6
 SWEP.DropMagazineQCA = 3
-SWEP.DropMagazineAng = Angle(0, -90, 0)
+SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
 
@@ -298,13 +309,38 @@ SWEP.ExitSightsSound = ")weapons/cod2019/wfoly_sn_alpha50_ads_down.ogg"
 
 SWEP.TriggerDelay = 0.03 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
+SWEP.TriggerDelayCancellable = false
 SWEP.TriggerDelayTime = 0.03 -- Time until weapon fires.
 
 SWEP.TriggerDownSound = ")weapons/cod2019/weap_delta_fire_first_plr_01.ogg"
 SWEP.TriggerUpSound = ")weapons/cod2019/weap_delta_disconnector_plr_01.ogg"
 
+SWEP.BulletBones = {
+    [1] = "j_ammo_02",
+    [2] = "j_ammo_03",
+	[3] = "j_ammo_04",
+	[4] = "j_ammo_05",
+	[5] = "j_ammo_06",
+}
+
 SWEP.HideBones  = {
     [1] = "j_mag2",
+}
+
+SWEP.ReloadHideBoneTables = {
+    [1] = {
+        "j_mag2",
+    },
+    [2] = {
+        "j_mag2",
+        "j_mag1",
+		"j_follower",
+		"j_ammo_02",
+		"j_ammo_03",
+		"j_ammo_04",
+		"j_ammo_05",
+		"j_ammo_06",
+    }
 }
 
 function SWEP:PrimaryAttack()
@@ -333,28 +369,11 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
 		MinProgress = 0.8,
-		DropMagAt = 1.4,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p53_sn_india_reload_raise.ogg", t = 3/30},
@@ -364,39 +383,22 @@ SWEP.Animations = {
 			{s = path .. "p53_sn_india_reload_magin.ogg", t = 86/30},
 			{s = path .. "p53_sn_india_reload_over.ogg", t = 90/30},
 			{s = path .. "p53_sn_india_reload_end.ogg", t = 108/30},
+			{hide = 1, t = 0},
+			{hide = 2, t = 1.8},
+			{hide = 1, t = 2.1},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
 		MinProgress = 0.9,
-		EjectAt = 0.35,
-		DropMagAt = 1.9,
+		EjectAt = 0.5,
+		DropMagAt = 2.6,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.23,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.9,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 1, rhik = 0 },
+            { t = 0.23, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.9, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p53_sn_india_reload_empty_boltopen.ogg", t = 7/30},
@@ -413,6 +415,9 @@ SWEP.Animations = {
 			{s = path .. "p53_sn_india_reload_empty_boltlock.ogg", t = 130/30},
 			{s = path .. "p53_sn_india_reload_empty_mvmnt4.ogg", t = 130/30},
 			{s = path .. "p53_sn_india_reload_empty_end.ogg", t = 144/30},
+			{hide = 1, t = 0},
+			{hide = 2, t = 2.6},
+			{hide = 1, t = 2.95},
         },
     },
     ["reload_fast"] = {
@@ -420,26 +425,10 @@ SWEP.Animations = {
 		MinProgress = 0.8,
 		DropMagAt = 1.5,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.75,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.75, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p53_sn_india_reload_fast_raise.ogg", t = 7/30},
@@ -456,31 +445,11 @@ SWEP.Animations = {
 		EjectAt = 0.35,
 		DropMagAt = 1.55,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.23,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.9,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 1, rhik = 0 },
+            { t = 0.23, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.9, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p53_sn_india_reload_fast_empty_boltopen.ogg", t = 8/30},
@@ -497,28 +466,11 @@ SWEP.Animations = {
     ["reload_xmag"] = {
         Source = "reload_xmag",
 		MinProgress = 0.8,
-		DropMagAt = 1.5,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p53_sn_india_reload_xmag_raise.ogg", t = 9/30},
@@ -530,6 +482,9 @@ SWEP.Animations = {
 			{s = path .. "p53_sn_india_reload_xmag_magin.ogg", t = 93.5/30},
 			{s = path .. "p53_sn_india_reload_xmag_mvmnt2.ogg", t = 97/30},
 			{s = path .. "p53_sn_india_reload_xmag_end.ogg", t = 104/30},
+			{hide = 1, t = 0},
+			{hide = 2, t = 1.8},
+			{hide = 1, t = 2.1},
         },
     },
     ["reload_xmag_empty"] = {
@@ -538,31 +493,11 @@ SWEP.Animations = {
 		EjectAt = 0.35,
 		DropMagAt = 1.9,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.23,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.9,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 1, rhik = 0 },
+            { t = 0.23, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.9, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p53_sn_india_reload_xmag_empty_boltopen.ogg", t = 6/30},
@@ -583,26 +518,10 @@ SWEP.Animations = {
 		MinProgress = 0.8,
 		DropMagAt = 1.55,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.75,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.75, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p53_sn_india_reload_xmag_fast_raise.ogg", t = 2/30},
@@ -621,31 +540,11 @@ SWEP.Animations = {
 		EjectAt = 0.35,
 		DropMagAt = 1.55,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.23,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.9,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 1, rhik = 0 },
+            { t = 0.23, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.9, lhik = 1, rhik = 1 },
         },
         EventTable = {
 			{s = path .. "p53_sn_india_reload_xmag_fast_empty_mvmnt.ogg", t = 4/30},
@@ -665,16 +564,8 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "draw",
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 1,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 0, rhik = 1 },
+            { t = 1, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p53_sn_india_first_raise_up.ogg", t = 0/30},
@@ -688,16 +579,8 @@ SWEP.Animations = {
 		MinProgress = 0.7,
 		FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.5,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 0, rhik = 0 },
+            { t = 0.5, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p53_sn_india_raise.ogg", t = 0/30},
@@ -706,16 +589,8 @@ SWEP.Animations = {
     ["holster"] = {
         Source = "holster",
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.3,
-                lhik = 0,
-                rhik = 0
-            },
+            { t = 0, lhik = 1, rhik = 1 },
+            { t = 0.3, lhik = 0, rhik = 0 },
         },
         EventTable = {
             {s = path .. "p53_sn_india_first_drop.ogg", t = 0/30},
@@ -740,26 +615,10 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.3,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.55,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.3, lhik = 0, rhik = 0 },
+            { t = 0.55, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p53_sn_india_inspect_raise.ogg", t = 1/30},
@@ -778,26 +637,10 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.3,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.55,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.3, lhik = 0, rhik = 0 },
+            { t = 0.55, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p53_sn_india_inspect_xmag_raise.ogg", t = 1/30},
@@ -816,26 +659,10 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.3,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.55,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.3, lhik = 0, rhik = 0 },
+            { t = 0.55, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "p53_sn_india_inspect_empty_raise.ogg", t = 2/30},
@@ -849,26 +676,10 @@ SWEP.Animations = {
     ["bash"] = {
         Source = {"melee_hit_01", "melee_hit_02", "melee_hit_03"},
         IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 0
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.8,
-                lhik = 1,
-                rhik = 1
-            },
+            { t = 0, lhik = 1, rhik = 0 },
+            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 0, rhik = 0 },
+            { t = 0.8, lhik = 1, rhik = 1 },
         },
     },
 }
@@ -1027,26 +838,36 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 end
 
 SWEP.Attachments = {
-    {
-        PrintName = "Barrels",
-        DefaultAttName = "Standard Barrel",
+    { -- 1
+        PrintName = ARC9:GetPhrase("mw19_category_muzzle"),
+        Category = "cod2019_muzzle",
+		DefaultIcon = Material("entities/defattachs/muzzle-ar.png", "mips smooth"),
+        Bone = "tag_silencer",
+        Pos = Vector(-0.23, 0.18, -0.03),
+        Ang = Angle(0, 0, 0),
+		InstalledElements = {"muzzle_none"},
+		Scale = 1,
+    },
+    { -- 2
+        PrintName = ARC9:GetPhrase("mw19_category_barrel"),
+		DefaultIcon = Material("entities/defattachs/barrel-ar.png", "mips smooth"),
         Category = "mw22_imperium_barrel",
         Bone = "tag_barrel_attach",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Category = "cod2019_muzzle",
-        Bone = "tag_silencer",
-        Pos = Vector(-0.23, 0, 0),
-        Ang = Angle(0, 0, 0),
-		InstalledElements = {"muzzle_none"},
-		Scale = 1,
+    { -- 3
+        PrintName = ARC9:GetPhrase("mw19_category_laser"),
+		DefaultIcon = Material("entities/defattachs/laser-ar.png", "mips smooth"),
+        Category = "cod2019_tac",
+        Bone = "tag_laser_attach",
+        Pos = Vector(-2.5, -0.5, 0),
+        Ang = Angle(0, 0, -90),
+		--InstalledElements = {"rail_laser"},
     },
-    {
-        PrintName = "Optics",
+    { -- 4
+        PrintName = ARC9:GetPhrase("mw19_category_optic"),
+		DefaultIcon = Material("entities/defattachs/optic.png", "mips smooth"),
         Bone = "tag_scope",
         Pos = Vector(1.5, 0, -0.1),
         Ang = Angle(0, 0, 0),
@@ -1056,18 +877,9 @@ SWEP.Attachments = {
 		--Installed = "cod2019_optic_scope_ax50",
         --Integral = "cod2019_optic_scope_ax50",
     },
-    {
-        PrintName = "Tactical",
-        DefaultAttName = "Default",
-        Category = "cod2019_tac",
-        Bone = "tag_laser_attach",
-        Pos = Vector(-2.5, -0.5, 0),
-        Ang = Angle(0, 0, -90),
-		--InstalledElements = {"rail_laser"},
-    },
-    {
-        PrintName = "Stock",
-        DefaultAttName = "Standard Stock",
+    { -- 5
+        PrintName = ARC9:GetPhrase("mw19_category_stock"),
+		DefaultIcon = Material("entities/defattachs/stock-ar.png", "mips smooth"),
         Category = {"mw22_imperium_stock","stock_retract"},
         Bone = "tag_stock_attach",
         Pos = Vector(0, 0, 0),
@@ -1075,7 +887,7 @@ SWEP.Attachments = {
 		--InstalledElements = {"",""},
 		Scale = 1,
     },
-    {
+    { -- 6
         PrintName = "Guard",
         DefaultAttName = "Default",
         Category = "mw22_imperium_guard",
@@ -1085,52 +897,65 @@ SWEP.Attachments = {
 		Scale = 1,
 		--InstalledElements = {""},
     },
-    {
-        PrintName = "Ammo",
-        Bone = "j_mag1",
-        Category = {"cod2019_ammo","cod2019_ammo_sniper"},
-        Pos = Vector(0, 0, -1.5),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Mag",
+    { -- 7
+        PrintName = ARC9:GetPhrase("mw19_category_magazine"),
+		DefaultIcon = Material("entities/defattachs/magazine-ar.png", "mips smooth"),
 		Bone = "j_mag1",
         Category = {"cod2019_mag","mw22_imperium_mag"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
-    {
-        PrintName = "Perk",
-        Category = {"cod2019_perks","cod2019_perks_soh"}
+    { -- 8
+        PrintName = ARC9:GetPhrase("mw19_category_ammo"),
+		DefaultIcon = Material("arc9/def_att_icons/ammotype.png", "mips smooth"),
+        Bone = "j_mag1",
+        Category = {"cod2019_ammo","cod2019_ammo_sniper"},
+        Pos = Vector(0, 0, -1.5),
+        Ang = Angle(0, 0, 0),
     },
+    { -- 9
+        PrintName = ARC9:GetPhrase("mw19_category_reargrip"),
+		DefaultIcon = Material("entities/defattachs/reargrip-ar.png", "mips smooth"),
+        Category = "mw22_imperium_grip",
+        Bone = "tag_pistolgrip_attach",
+        Pos = Vector(-1.5, 0, -2),
+    },
+    { -- 10
+        PrintName = ARC9:GetPhrase("mw19_category_perk"),
+        Category = {"cod2019_perks","cod2019_perks_soh"},
+        Bone = "tag_pistolgrip_attach",
+        Pos = Vector(2, 0, -1.5),
+    },
+
+	-- Cosmetics
     {
-        PrintName = "Skins",
+        PrintName = ARC9:GetPhrase("mw19_category_skins"),
         --Bone = "v_weapon.Clip",
         Category = "mw22_imperium_skins",
 		CosmeticOnly = true,
     },
     {
-        PrintName = "Cosmetic",
+        PrintName = ARC9:GetPhrase("mw19_category_camouflage"),
         Category = {"universal_camo"},
         CosmeticOnly = true,
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/snip_imperium_decal_a.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/snip_imperium_decal_b.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Stickers",
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
         StickerModel = "models/weapons/mw22/stickers/snip_imperium_decal_c.mdl",
         Category = "stickers",
     },
     {
-        PrintName = "Charm",
+        PrintName = ARC9:GetPhrase("mw19_category_charm"),
         Category = "charm",
         Bone = "tag_cosmetic",
         Pos = Vector(0, 0, 0),
@@ -1138,7 +963,7 @@ SWEP.Attachments = {
 		Scale = 1.5,
     },
     {
-        PrintName = "Stats",
+        PrintName = ARC9:GetPhrase("mw19_category_stats"),
         Category = {"killcounter","killcounter2"},
         Bone = "tag_cosmetic",
         Pos = Vector(0, 0, 0),
