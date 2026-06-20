@@ -257,7 +257,7 @@ SWEP.CamQCA = 4
 SWEP.CamQCA_Mult = 1
 
 SWEP.ShellModel = "models/weapons/cod2019/shared/shell_rytec.mdl"
-SWEP.ShellCorrectAng = Angle(0, 0, 0)
+SWEP.ShellCorrectAng = Angle(0, -90, 0)
 SWEP.ShellScale = 0.9
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 SWEP.EjectDelay = 0.5
@@ -368,7 +368,8 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-		MinProgress = 0.8,
+		MinProgress = 0.675,
+		MagSwapTime = 1.8,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 0, rhik = 0 },
@@ -390,8 +391,9 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-		MinProgress = 0.9,
+		MinProgress = 0.85,
 		EjectAt = 0.5,
+		MagSwapTime = 2.7,
 		DropMagAt = 2.6,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
@@ -422,8 +424,9 @@ SWEP.Animations = {
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-		MinProgress = 0.8,
-		DropMagAt = 1.5,
+		MinProgress = 0.675,
+		MagSwapTime = 1.3,
+		DropMagAt = 1.25,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 0, rhik = 0 },
@@ -437,13 +440,17 @@ SWEP.Animations = {
 			{s = path .. "p53_sn_india_reload_fast_magin.ogg", t = 66/30},
 			{s = path .. "p53_sn_india_reload_fast_mvmnt.ogg", t = 67/30},
 			{s = path .. "p53_sn_india_reload_fast_end.ogg", t = 77/30},
+			{hide = 1, t = 0},
+			{hide = 2, t = 1.25},
+			{hide = 1, t = 1.6},
         },
     },
     ["reload_fast_empty"] = {
         Source = "reload_fast_empty",
-		MinProgress = 0.9,
-		EjectAt = 0.35,
-		DropMagAt = 1.55,
+		MinProgress = 0.85,
+		EjectAt = 0.55,
+		MagSwapTime = 2.1,
+		DropMagAt = 2.05,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 1, rhik = 0 },
@@ -461,11 +468,15 @@ SWEP.Animations = {
 			{s = path .. "p53_sn_india_reload_fast_empty_boltforward.ogg", t = 109/30},
 			{s = path .. "p53_sn_india_reload_fast_empty_boltlock.ogg", t = 115/30},
 			{s = path .. "p53_sn_india_reload_fast_empty_end.ogg", t = 118/30},
+			{hide = 1, t = 0},
+			{hide = 2, t = 2.05},
+			{hide = 1, t = 2.43},
         },
     },
     ["reload_xmag"] = {
         Source = "reload_xmag",
-		MinProgress = 0.8,
+		MinProgress = 0.725,
+		MagSwapTime = 1.9,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 0, rhik = 0 },
@@ -488,10 +499,11 @@ SWEP.Animations = {
         },
     },
     ["reload_xmag_empty"] = {
-        Source = "reload_empty_xmag",
-		MinProgress = 0.9,
-		EjectAt = 0.35,
-		DropMagAt = 1.9,
+        Source = "reload_xmag_empty",
+		MinProgress = 0.85,
+		EjectAt = 0.5,
+		MagSwapTime = 2.7,
+		DropMagAt = 2.6,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 1, rhik = 0 },
@@ -511,12 +523,16 @@ SWEP.Animations = {
 			{s = path .. "p53_sn_india_reload_xmag_empty_boltclose.ogg", t = 136/30},
 			{s = path .. "p53_sn_india_reload_xmag_empty_boltlocked.ogg", t = 142/30},
 			{s = path .. "p53_sn_india_reload_xmag_empty_end.ogg", t = 145/30},
+			{hide = 1, t = 0},
+			{hide = 2, t = 2.6},
+			{hide = 1, t = 2.95},
         },
     },
     ["reload_xmag_fast"] = {
         Source = "reload_xmag_fast",
-		MinProgress = 0.8,
-		DropMagAt = 1.55,
+		MinProgress = 0.7,
+		MagSwapTime = 1.4,
+		DropMagAt = 1.3,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 0, rhik = 0 },
@@ -532,13 +548,17 @@ SWEP.Animations = {
 			{s = path .. "p53_sn_india_reload_xmag_fast_magin.ogg", t = 77/30},
 			{s = path .. "p53_sn_india_reload_xmag_fast_mvmnt.ogg", t = 83/30},
 			{s = path .. "p53_sn_india_reload_xmag_fast_end.ogg", t = 88/30},
+			{hide = 1, t = 0},
+			{hide = 2, t = 1.3},
+			{hide = 1, t = 1.65},
         },
     },
     ["reload_xmag_fast_empty"] = {
-        Source = "reload_empty_xmag_fast",
-		MinProgress = 0.9,
-		EjectAt = 0.35,
-		DropMagAt = 1.55,
+        Source = "reload_xmag_fast_empty",
+		MinProgress = 0.875,
+		EjectAt = 0.55,
+		MagSwapTime = 2.1,
+		DropMagAt = 2.075,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 1, rhik = 0 },
@@ -559,6 +579,9 @@ SWEP.Animations = {
 			{s = path .. "p53_sn_india_reload_xmag_fast_empty_boltlock.ogg", t = 127/30},
 			{s = path .. "p53_sn_india_reload_xmag_fast_empty_mvmnt2.ogg", t = 128/30},
 			{s = path .. "p53_sn_india_reload_xmag_fast_empty_end.ogg", t = 135/30},
+			{hide = 1, t = 0},
+			{hide = 2, t = 2.075},
+			{hide = 1, t = 2.45},
         },
     },
     ["ready"] = {
@@ -688,40 +711,66 @@ SWEP.Animations = {
 
 -------------------------- ATTACHMENTS
 
-SWEP.Hook_TranslateAnimation = function (wep, anim)
+--- 7 Round Mags ---
+
+local Translate_XMag = {
+    ["reload"] = "reload_xmag",
+    ["reload_empty"] = "reload_xmag_empty",
+	["inspect"] = "inspect_xmag",
+}
+local Translate_XMag_Fast = {
+    ["reload"] = "reload_xmag_fast",
+    ["reload_empty"] = "reload_xmag_fast_empty",
+	["inspect"] = "inspect_xmag",
+}
+
+--- Fast & Tac. Sprint ---
+local Translate_Fast = {
+    ["reload"] = "reload_fast",
+    ["reload_empty"] = "reload_fast_empty",
+}
+--local Translate_TacSprint = {
+--    ["idle_sprint"] = "super_sprint_idle",
+--    ["enter_sprint"] = "super_sprint_in",
+--    ["exit_sprint"] = "super_sprint_out",
+--}
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
     --local attached = self:GetElements()
 
-    if anim == "reload" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_extend") then
-        return "reload_xmag_fast"
-    elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_extend") then 
-        return "reload_xmag_fast_empty"
-    --------------------------------------------------------------------------------
-    elseif anim == "reload" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_xmag") then
-        return "reload_xmag_fast"
-    elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_xmag") then 
-        return "reload_xmag_fast_empty"
-    elseif anim == "inspect" and wep:HasElement("mag_xmag") then
-        return "inspect_xmag"
-    --------------------------------------------------------------------------------
-    elseif anim == "reload" and wep:HasElement("perk_speedreload") then
-        return "reload_fast"
-    elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") then 
-        return "reload_fast_empty"
-    --------------------------------------------------------------------------------
-    elseif anim == "reload" and wep:HasElement("mag_extend") then
-        return "reload_xmag"
-    elseif anim == "reload_empty" and wep:HasElement("mag_extend") then 
-        return "reload_xmag_empty"
-    --------------------------------------------------------------------------------
-    elseif anim == "inspect" and wep:HasElement("mag_extend") then
-        return "inspect_xmag"
-    --------------------------------------------------------------------------------
-    elseif anim == "reload" and wep:HasElement("mag_xmag") then
-        return "reload_xmag"
-    elseif anim == "reload_empty" and wep:HasElement("mag_xmag") then 
-        return "reload_xmag_empty"
-    elseif anim == "inspect" and wep:HasElement("mag_xmag") then
-        return "inspect_xmag"
+    local speedload = wep:HasElement("perk_speedreload")
+--    local super_sprint = wep:HasElement("perk_super_sprint")
+    local xmag = wep:HasElement("mag_xmag")
+	local magex = wep:HasElement("mag_extend")
+
+--    if super_sprint and Translate_TacSprint[anim] then
+--        return Translate_TacSprint[anim]
+--    end
+
+    if magex and speedload and Translate_XMag_Fast[anim] then
+        return Translate_XMag_Fast[anim]
+    elseif magex and Translate_XMag[anim] then
+        return Translate_XMag[anim]
+--    elseif super_sprint and Translate_TacSprint[anim] then
+--        return Translate_TacSprint[anim]
+    end
+
+    if speedload then
+        if xmag then
+            if Translate_XMag_Fast[anim] then
+                return Translate_XMag_Fast[anim]
+            end
+        else
+            if Translate_Fast[anim] then
+                return Translate_Fast[anim]
+            end
+        end
+    else 
+        if xmag then
+            if Translate_XMag[anim] then
+                return Translate_XMag[anim]
+            end
+        end
     end
 end
 
