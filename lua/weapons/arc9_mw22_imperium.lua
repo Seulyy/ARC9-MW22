@@ -53,10 +53,10 @@ SWEP.DamageMin = 54 -- Damage done at maximum range
 
 SWEP.Num = 1
 
-SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 2000 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 11000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMin = 70 / ARC9.HUToM -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 71 / ARC9.HUToM -- In Hammer units, how far bullets can travel before dealing DamageMin.
 
 SWEP.Penetration = 15 -- Units of wood that can be penetrated by this gun.
 SWEP.RicochetChance = 0.5
@@ -65,7 +65,7 @@ SWEP.ImpactForce = 15
 
 -------------------------- PHYS BULLET BALLISTICS
 
-SWEP.PhysBulletMuzzleVelocity = 2799 * 12
+SWEP.PhysBulletMuzzleVelocity = 780 / ARC9.HUToM
 SWEP.PhysBulletGravity = 2
 SWEP.PhysBulletDrag = 2.5
 
@@ -167,7 +167,7 @@ SWEP.SpreadAddSights = -0.5
 
 -------------------------- HANDLING
 
-SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.5 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.5 -- How long it takes to go from sprinting to being able to fire.
 
 -------------------------- MELEE
@@ -280,6 +280,7 @@ SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
+SWEP.ShootVolume = 167
 
 local path = ")weapons/mw22/imperium/"
 
@@ -475,7 +476,7 @@ SWEP.Animations = {
     },
     ["reload_xmag"] = {
         Source = "reload_xmag",
-		MinProgress = 0.725,
+		MinProgress = 0.7,
 		MagSwapTime = 1.9,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
