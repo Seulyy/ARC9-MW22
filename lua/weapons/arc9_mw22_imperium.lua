@@ -217,7 +217,7 @@ SWEP.SprintPos = Vector(0, -2, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(20, 45, 3)
+SWEP.CustomizePos = Vector(21, 45, 3)
 SWEP.CustomizeRotateAnchor = Vector(20, -4, -3)
 SWEP.CustomizeSnapshotFOV = 65
 SWEP.CustomizeNoRotate = false
@@ -632,6 +632,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
+		IKTimeLine = { { t = 0,  lhik = 1, rhik = 1} },
 		Mult = 2,
     },
     ["inspect"] = {
