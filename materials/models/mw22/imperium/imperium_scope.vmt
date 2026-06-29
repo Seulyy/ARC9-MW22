@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models\mw22\imperium\att_vm_p53_sn_india_barrel_3_v0_rgb"
-    "$bumpmap" "models\mw22\imperium\att_vm_p53_sn_india_barrel_3_v0_n"
-    "$phongexponenttexture" "models\mw22\imperium\att_vm_p53_sn_india_barrel_3_v0_e"
+    "$basetexture" "models\mw22\imperium\imperium_scope_rgb"
+    "$bumpmap" "models\mw22\imperium\imperium_scope_n"
+    "$phongexponenttexture" "models\mw22\imperium\imperium_scope_e"
 
     /////////////////
     "$color2" "[1 1 1]"                                     //do not touch this
@@ -20,19 +20,19 @@
     /////////////////
 
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.098 0.098 0.098]"                 
+    "$envmaptint" "[0.102 0.102 0.102]"                 
 
     "$detailblendmode" "4"
     "$detailblendfactor" "0.7"
 
     //remove this if not using MWB
-     "Proxies"
+    "Proxies"
      {
         "Arc9EnvMapTint"
         {
             "min" "0"
             "max" "0.2"
-            "color" "[0.098 0.098 0.098]"
+            "color" "[0.102 0.102 0.102]"
         }
         "CustomCamo" 
         {

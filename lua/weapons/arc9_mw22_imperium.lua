@@ -7,17 +7,15 @@ SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_sniper") or "Sniper Rifles"
 SWEP.ARC9WeaponCategory = 5
 
-SWEP.PrintName = "FJX Imperium"
+SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_imperium") or "FJX Imperium"
 
-SWEP.Class = "Sniper Rifle"
+SWEP.Class = ARC9:GetPhrase("mw19_class_weapon_sniper") or "Sniper Rifle"
 SWEP.Trivia = {
-    ["Country of Origin"] = "United Kingdom",
-    ["Manufacturer"] = "FJX",
-    ["Caliber"] = ".408 PACE",
-    ["Weight (Loaded)"] = "13 kg",
-    ["Projectile Weight"] = "290 gr",
-    ["Muzzle Velocity"] = "2,953 ft/s",
-    ["Muzzle Energy"] = "7,615 joules"
+    [ ARC9:GetPhrase("mw19_country") ] = ARC9:GetPhrase("mw19_country_usa"),
+    [ ARC9:GetPhrase("mw19_manufacturer") ] = ARC9:GetPhrase("mw22_manufacturer_fjx"),
+    [ ARC9:GetPhrase("mw19_caliber") ] = ARC9:GetPhrase("mw22_caliber_408c"),
+    [ ARC9:GetPhrase("mw19_weight") ] = string.format(ARC9:GetPhrase("mw19_weight_val"), 14, 14 * 2.20),
+    [ ARC9:GetPhrase("mw19_weight_projectile") ] = string.format(ARC9:GetPhrase("mw19_weight_projectile_val"), 305),
 }
 
 SWEP.Credits = {
@@ -25,7 +23,7 @@ SWEP.Credits = {
     Assets = "Infinity Ward/Sledgehammer Games/Activision"
 }
 
-SWEP.Description = [[Engineered destruction at its finest, this anti-personnel, bolt-action sniper rifle intervenes in tense situations with hard-hitting .408 rounds.]]
+SWEP.Description = ARC9:GetPhrase("mw22_weapon_imperium_desc") or [[Engineered destruction at its finest, this anti-personnel, bolt-action sniper rifle intervenes in tense situations with hard-hitting .408 rounds.]]
 
 SWEP.ViewModel = "models/weapons/mw22/c_snip_imperium.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
@@ -217,7 +215,7 @@ SWEP.SprintPos = Vector(0, -2, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(21, 45, 3)
+SWEP.CustomizePos = Vector(21, 45, 3.5)
 SWEP.CustomizeRotateAnchor = Vector(20, -4, -3)
 SWEP.CustomizeSnapshotFOV = 65
 SWEP.CustomizeNoRotate = false
@@ -922,11 +920,11 @@ SWEP.Attachments = {
         Bone = "tag_scope",
         Pos = Vector(1.5, 0, -0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"cod2019_optic","cod2019_optic_ax50"},
+        Category = {"cod2019_optic","mw2022_optic_imperium"},
         CorrectiveAng = Angle(0, 0, 0),
 		--InstalledElements = {""},
-		--Installed = "cod2019_optic_scope_ax50",
-        --Integral = "cod2019_optic_scope_ax50",
+		--Installed = "mw2022_optic_imperium",
+        --Integral = "mw2022_optic_imperium",
     },
     { -- 5
         PrintName = ARC9:GetPhrase("mw19_category_stock"),

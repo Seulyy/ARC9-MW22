@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models\mw22\imperium\att_wm_p53_sn_india_scope_v0_rgb"
-    "$bumpmap" "models\mw22\imperium\att_wm_p53_sn_india_scope_v0_n"
-    "$phongexponenttexture" "models\mw22\imperium\att_wm_p53_sn_india_scope_v0_e"
+    "$basetexture" "models\mw22\imperium\att_lens_scope_rgb"
+    "$bumpmap" "models\mw22\imperium\att_lens_scope_n"
+    "$phongexponenttexture" "models\mw22\imperium\att_lens_scope_e"
 
     /////////////////
     "$color2" "[0 0 0]"                                     //do not touch this
@@ -10,26 +10,29 @@
     /////////////////
 
     "$phong" "1"
-    "$phongboost" "1"
+    "$phongboost" "0.75"
     "$phongalbedotint" "1"
     "$phongalbedoboost" "10"                                //toy around with this
-    "$phongfresnelranges" "[1 0.1 0]"
-       
+    "$phongfresnelranges" "[1 0.5 0]"
+
+
+    //"$translucent" "1"
+
     /////////////////
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
 
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.098 0.098 0.098]"                 
+    "$envmaptint" "[0.008 0.008 0.008]"
 
     //remove this if not using MWB
     "Proxies"
-     {
+    {
         "Arc9EnvMapTint"
         {
-            "specularity" "0.5"
             "min" "0"
-            "max" "0.2"
+            "max" "1"
+            "color" "[0.008 0.008 0.008]"
         }
-     }
+    }
 }

@@ -30,9 +30,9 @@
      {
         "Arc9EnvMapTint"
         {
-            "specularity" "0.5"
             "min" "0"
             "max" "0.2"
+            "color" "[0.098 0.098 0.098]"
         }
         "CustomCamo" 
         {
