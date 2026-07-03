@@ -26,6 +26,7 @@ L["mw22_caliber_408c"] = ".408 Chey Tac" -- Imperium
 /////////// Manufacturer
 
 L["mw22_manufacturer_fjx"] = "FJX Defense" -- Imperium
+L["mw22_manufacturer_lachmeer"] = "Lachmann & Meer" -- Lachmann-556, Lachmann-762, RAPP H
 
 /////////// Weight -- UO
 

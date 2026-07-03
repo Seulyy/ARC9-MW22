@@ -119,7 +119,7 @@ SWEP.RecoilDissipationRateSights = 0
 SWEP.RecoilResetTime = 1 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
-SWEP.RecoilAutoControlSights = 0 -- Multiplier for automatic recoil control.
+--SWEP.RecoilAutoControlSights = 0 -- Multiplier for automatic recoil control.
 
 SWEP.RecoilKick = 4
 
@@ -128,14 +128,20 @@ SWEP.RecoilMultMove = 1.25
 SWEP.RecoilAutoControlMultHipFire = 1
 SWEP.RecoilMultSights = 1
 
+SWEP.RecoilPerShot = 1
+SWEP.RecoilMax = 1
+
 -------------------------- VISUAL RECOIL
 
 SWEP.UseVisualRecoil = true
+SWEP.VisualRecoilMultSights = 1
+SWEP.VisualRecoilPunchSights = 20
+SWEP.VisualRecoilRollSights = 15
+SWEP.VisualRecoilSideSights = 0
+SWEP.VisualRecoilUpSights = 0
+
 SWEP.VisualRecoilPunch = 3
 SWEP.VisualRecoilUp = 0.5
-
-SWEP.VisualRecoilMultSights = 1
-SWEP.VisualRecoilPunchSights = 25
 SWEP.VisualRecoilRoll = 5
 SWEP.VisualRecoilSide = 0.2
 
@@ -157,9 +163,9 @@ SWEP.Spread = 0.002
 
 SWEP.SpreadAddRecoil = 0.0002 -- Applied per unit of recoil.
 
-SWEP.SpreadMultMove = 2.5
---SWEP.SpreadAddMidAir = 0
 SWEP.SpreadAddHipFire = 0.05
+SWEP.SpreadMultMove = 2.5
+SWEP.SpreadAddMidAir = 0.03
 SWEP.SpreadAddCrouch = -0.01
 SWEP.SpreadAddSights = -0.5
 
@@ -167,6 +173,10 @@ SWEP.SpreadAddSights = -0.5
 
 SWEP.AimDownSightsTime = 0.5 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.5 -- How long it takes to go from sprinting to being able to fire.
+
+-------------------------- AIM ASSIST
+
+SWEP.NoAimAssist = true
 
 -------------------------- MELEE
 
@@ -183,7 +193,7 @@ SWEP.TracerColor = Color(255, 255, 155) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.665, -3.5, 0.65),
+    Pos = Vector(-4, -3.5, 0.7),
     Ang = Angle(0, 0, -2),
     Magnification = 1.1,
     ViewModelFOV = 56,
