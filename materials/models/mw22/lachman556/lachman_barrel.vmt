@@ -1,11 +1,11 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models\mw22\lachman556\lachman_barrel"
+    "$basetexture" "models\mw22\lachman556\lachman_barrel_rgb"
     "$bumpmap" "models\mw22\lachman556\lachman_barrel_n"
-    "$phongexponenttexture" "models\mw22\lachman556\lachman_barrel_exp"
+    "$phongexponenttexture" "models\mw22\lachman556\lachman_barrel_e"
 
     /////////////////
-    "$color2" "[0 0 0]"                                     //do not touch this
+    "$color2" "[1 1 1]"                                     //do not touch this
     "$blendtintbybasealpha" "1"                             //do not touch this
     /////////////////
 
@@ -19,18 +19,28 @@
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
 
-    "$envmap"					"env_cubemap"
-    "$envmaptint"				"[ .13 .13 .13 ]"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.098 0.098 0.098]"
     "$envmapfresnel"			".25"
     "$envmapcoefficient"		"[0.39 0.39 0.39]"                  
+
+    "$detailblendmode" "4"
+    "$detailblendfactor" "0.7"
 
      "Proxies"
      {
         "Arc9EnvMapTint"
         {
-            "specularity" "0.5"
             "min" "0"
             "max" "0.2"
+            "color" "[0.098 0.098 0.098]"
+        }
+        "CustomCamo" 
+        {
+	"camoTexture" $detail
+	"camoScale" $detailscale
+	"blend" $detailblendfactor
+	"color2" "[0.8 0.8 0.8]"
         }
      }
 }

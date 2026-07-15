@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models\mw22\lachman556\lachman_mag"
+    "$basetexture" "models\mw22\lachman556\lachman_mag_rgb"
     "$bumpmap" "models\mw22\lachman556\lachman_mag_n"
-    "$phongexponenttexture" "models\mw22\lachman556\lachman_mag_exp"
+    "$phongexponenttexture" "models\mw22\lachman556\lachman_mag_e"
 
     /////////////////
     "$color2" "[1 0 0]"                                     //do not touch this
@@ -20,8 +20,8 @@
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
 
-    "$envmap"					"env_cubemap"
-    "$envmaptint"				"[ .13 .13 .13 ]"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[.13 .13 .13]"
     "$envmapfresnel"			".25"
     "$envmapcoefficient"		"[0.39 0.39 0.39]"                  
 
@@ -29,9 +29,9 @@
      {
         "Arc9EnvMapTint"
         {
-            "specularity" "0.5"
             "min" "0"
             "max" "0.2"
+            "color" "[.13 .13 .13 ]"
         }
      }
 }

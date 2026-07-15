@@ -1,11 +1,11 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models\mw22\lachman556\lachman_mag_rgb"
-    "$bumpmap" "models\mw22\lachman556\lachman_mag_n"
-    "$phongexponenttexture" "models\mw22\lachman556\lachman_mag_e"
+    "$basetexture" "models\mw22\shared\ammo_556n_rgb"
+    "$bumpmap" "models\mw22\shared\ammo_556n_n"
+    "$phongexponenttexture" "models\mw22\shared\ammo_556n_e"
 
     /////////////////
-    "$color2" "[0 0 0]"                                     //do not touch this
+    "$color2" "[0.35 0.35 0.35]"                                     //do not touch this
     "$blendtintbybasealpha" "1"                             //do not touch this
     /////////////////
 
@@ -13,24 +13,23 @@
     "$phongboost" "1"
     "$phongalbedotint" "1"
     "$phongalbedoboost" "10"                                //toy around with this
-    "$phongfresnelranges" "[1 0.1 0]"
+    "$phongfresnelranges" "[1 0.5 0]"
        
     /////////////////
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
 
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.102 0.102 0.102]"
-    "$envmapfresnel"			".25"
-    "$envmapcoefficient"		"[0.39 0.39 0.39]"                  
+    "$envmaptint" "[0.576 0.455 0.212]"                 
 
-     "Proxies"
-     {
+    //remove this if not using MWB
+    "Proxies"
+    {
         "Arc9EnvMapTint"
         {
             "min" "0"
-            "max" "0.2"
-            "color" "[0.102 0.102 0.102]"
+            "max" "0.5"
+            "color" "[0.576 0.455 0.212]"
         }
-     }
+    }
 }

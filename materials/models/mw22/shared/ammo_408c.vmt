@@ -1,11 +1,11 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models\mw22\shared\shell_408c_rgb"
-    "$bumpmap" "models\mw22\shared\shell_408c_n"
-    "$phongexponenttexture" "models\mw22\shared\shell_408c_e"
+    "$basetexture" "models\mw22\shared\ammo_408c_rgb"
+    "$bumpmap" "models\mw22\shared\ammo_408c_n"
+    "$phongexponenttexture" "models\mw22\shared\ammo_408c_e"
 
     /////////////////
-    "$color2" "[0.45 0.45 0.45]"                                     //do not touch this
+    "$color2" "[0.4 0.4 0.4]"                                     //do not touch this
     "$blendtintbybasealpha" "1"                             //do not touch this
     /////////////////
 
@@ -20,7 +20,7 @@
     /////////////////
 
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.098 0.098 0.098]"                 
+    "$envmaptint" "[0.702 0.557 0.365]"
 
     //remove this if not using MWB
     "Proxies"
@@ -28,8 +28,8 @@
         "Arc9EnvMapTint"
         {
             "min" "0"
-            "max" "0.5"
-            "color" "[0.098 0.098 0.098]"
+            "max" "0.4"
+            "color" "[0.702 0.557 0.365]"
         }
      }
 }

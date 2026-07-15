@@ -2,7 +2,7 @@
 {
     "$basetexture" "models\mw22\lachman556\lachman_mag"
     "$bumpmap" "models\mw22\lachman556\lachman_mag_n"
-    "$phongexponenttexture" "models\mw22\lachman556\lachman_mag_exp"
+    "$phongexponenttexture" "models\mw22\lachman556\lachman_mag_e"
 
     /////////////////
     "$color2" "[1 .3 0]"                                     //do not touch this
@@ -20,8 +20,8 @@
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
 
-    "$envmap"					"env_cubemap"
-    "$envmaptint"				"[ 1 .3 0 ]"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[1 .3 0]"
     "$envmapfresnel"			".25"
     "$envmapcoefficient"		"[0.39 0.39 0.39]"                  
 
@@ -29,9 +29,9 @@
      {
         "Arc9EnvMapTint"
         {
-            "specularity" "0.5"
             "min" "0"
             "max" "0.2"
+            "color" "[1 .3 0]"
         }
      }
 }

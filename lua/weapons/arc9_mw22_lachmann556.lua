@@ -26,14 +26,14 @@ SWEP.Credits = {
 
 SWEP.Description = [[The Lachmann-556 is the keystone in the Lachmann Meer Arsenal. An adaptive 5.56 weapon system that bridges the gap between submachine guns and full powered rifles.]]
 
-SWEP.ViewModel = "models/weapons/mw22/c_rif_g3.mdl"
+SWEP.ViewModel = "models/weapons/mw22/c_rif_lach556.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 
 SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_g3.mdl"
+SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_lach556.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9.5, 6.2, -5.5),
     Ang = Angle(-7, 0, 180),
@@ -265,7 +265,7 @@ SWEP.ShellSounds = ARC9.COD2019_556_Table
 
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
-SWEP.DropMagazineModel = "models/weapons/mw22/mags/w_snip_lach556_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/mw22/mags/w_rif_lach556_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_metal_concrete_01.ogg",
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_metal_concrete_02.ogg",
@@ -444,7 +444,7 @@ SWEP.Animations = {
 		MagSwapTime = 2.9,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
-            { t = 0.2, lhik = 0, rhik = 0 },
+            { t = 0.1, lhik = 0, rhik = 0 },
             { t = 0.7, lhik = 0, rhik = 0 },
             { t = 0.95, lhik = 1, rhik = 1 },
         },
@@ -629,8 +629,8 @@ SWEP.Animations = {
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 0, rhik = 0 },
-            { t = 0.7, lhik = 0, rhik = 0 },
-            { t = 1, lhik = 1, rhik = 1 },
+            { t = 0.5, lhik = 0, rhik = 0 },
+            { t = 0.7, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 1/30},
@@ -643,7 +643,7 @@ SWEP.Animations = {
         Source = "draw_short",
         IKTimeLine = {
             { t = 0, lhik = 0, rhik = 0 },
-            { t = 0.7, lhik = 1, rhik = 1 },
+            { t = 0.5, lhik = 1, rhik = 1 },
         },
         EventTable = {
             {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 0/30},
