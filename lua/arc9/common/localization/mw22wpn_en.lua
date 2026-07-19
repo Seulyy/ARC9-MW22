@@ -26,7 +26,7 @@ L["mw22_caliber_408c"] = ".408 Chey Tac" -- Imperium
 /////////// Manufacturer
 
 L["mw22_manufacturer_fjx"] = "FJX Defense" -- Imperium
-L["mw22_manufacturer_lachmeer"] = "Lachmann & Meer" -- Lachmann-556, Lachmann-762, RAPP H
+L["mw22_manufacturer_lachmeer"] = "Lachmann & Meer" -- Lachmann-556, Lachmann-762, LM-S, RAPP H
 
 /////////// Weight -- UO
 
@@ -129,7 +129,7 @@ L["mw22_weapon_hurricane"] = "FSS Hurricane"
 --Handguns
 L["mw22_weapon_basilisk"] = "Basilisk"
 L["mw22_weapon_daemon"] = "9mm Daemon"
-L["mw22_weapon_ftacs"] = "FTAC Siege"
+L["mw22_weapon_siege"] = "FTAC Siege"
 L["mw22_weapon_p890"] = "P890"
 
 --Snipers
@@ -147,7 +147,7 @@ L["mw22_weapon_pickaxe"] = "Pickaxe"
 --ARs
 L["mw22_weapon_chimera_desc"] = "With an integrated suppressor and slow, high-energy subsonic .300 BLK rounds, the Chimera is adept at close-quarters combat."
 L["mw22_weapon_hemlock_desc"] = "This powerful and enhanced rifle from Expedite Firearms is designed to take both 5.56 and subsonic .300 BLK ammunition, providing battlefield-advantage in any situation."
-L["mw22_weapon_lach556_desc"] = "The Lachmann-556 is the keystone in the Lachmann Meer Arsenal. An adaptive 5.56 weapon system that bridges the gap between submachine guns and full powered rifles."
+L["mw22_weapon_lach556_desc"] = "The Lachmann-556 is the keystone in the Lachmann & Meer arsenal. An adaptive 5.56 weapon system that bridges the gap between submachine guns and full-powered rifles."
 L["mw22_weapon_m4_desc"] = "The flagship rifle of the M4 Platform. This reliable workhorse is a jack-of-all-trades that performs well in most combat scenarios."
 L["mw22_weapon_razorback_desc"] = "A masterclass in exceptional craftsmanship, this Tempus Armament assault rifle features a bullpup design and frame vibration control resulting in remarkable handling and accuracy for a full-auto 5.56 weapon."
 L["mw22_weapon_geist_desc"] = "A hard-hitting bullpup assault rifle chambered in 7.62x39mm. Highly modular, this weapon system can be adapted to fit a wide range of tactics and combat scenarios."
@@ -179,7 +179,7 @@ L["mw22_weapon_hurricane_desc"] = "The FSS Hurricane sacrifices range and stoppi
 --Handguns
 L["mw22_weapon_basilisk_desc"] = "A double-action revolver firing .500 Cal rounds, the Basilisk kicks hard but hits harder. Unstoppable in the right hands."
 L["mw22_weapon_daemon_desc"] = "This modern, tactical pistol chambered in 9mm is deadly from the hip and features best-in-class semi-automatic fire rate."
-L["mw22_weapon_ftacs_desc"] = "Designed to be compact and maneuverable, this SMG has a jaw-dropping fire rate and rapid swap speed. A trusted secondary for up-close engagements."
+L["mw22_weapon_siege_desc"] = "Designed to be compact and maneuverable, this machine pistol has a jaw-dropping fire rate and rapid swap speed. A trusted secondary for up-close engagements."
 L["mw22_weapon_p890_desc"] = "For close-quarters situations, the P890 semi-auto pistol takes advantage of accuracy, reliability, and a hard-hitting .45 Auto round. Subsonic Ammo hides kill skulls from the enemy team."
 
 --Snipers
@@ -231,7 +231,7 @@ L["mw22_weapon_true_hurricane"] = "AR-57"
 --Handguns
 L["mw22_weapon_true_basilisk"] = "Smith & Wesson Model 500"
 L["mw22_weapon_true_daemon"] = "Staccato P"
-L["mw22_weapon_true_ftacs"] = "Interdynamic KG-9"
+L["mw22_weapon_true_siege"] = "Interdynamic KG-9"
 L["mw22_weapon_true_p890"] = "SIG Sauer P220"
 
 --Snipers

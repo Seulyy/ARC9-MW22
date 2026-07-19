@@ -3,6 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
+--SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_ar") or "Assault Rifles"
 SWEP.ARC9WeaponCategory = 4
@@ -10,7 +11,6 @@ SWEP.ARC9WeaponCategory = 4
 SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_lach556") or "Lachmann-556"
 
 SWEP.Class = ARC9:GetPhrase("mw19_class_weapon_ar") or "Assault Rifle"
-
 SWEP.Trivia = {
     [ ARC9:GetPhrase("mw19_country") ] = ARC9:GetPhrase("mw19_country_germany"),
     [ ARC9:GetPhrase("mw19_manufacturer") ] = ARC9:GetPhrase("mw22_manufacturer_lachmeer"),
@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "Infinity Ward/Valve/New World Interactive"
 }
 
-SWEP.Description = [[The Lachmann-556 is the keystone in the Lachmann Meer Arsenal. An adaptive 5.56 weapon system that bridges the gap between submachine guns and full powered rifles.]]
+SWEP.Description = ARC9:GetPhrase("mw22_weapon_lach556_desc") or [[The Lachmann-556 is the keystone in the Lachmann & Meer arsenal. An adaptive 5.56 weapon system that bridges the gap between submachine guns and full-powered rifles.]]
 
 SWEP.ViewModel = "models/weapons/mw22/c_rif_lach556.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
@@ -675,7 +675,7 @@ SWEP.Animations = {
     },
     ["inspect"] = {
         Source = "lookat01",
-		MinProgress = 0.1,
+		MinProgress = 0.9,
 		FireASAP = true,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },

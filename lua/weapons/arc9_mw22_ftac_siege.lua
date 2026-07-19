@@ -8,17 +8,15 @@ SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_handgun") or "Handguns"
 SWEP.ARC9WeaponCategory = 1
 
-SWEP.PrintName = "FTAC Siege"
+SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_siege") or "FTAC Siege"
 
-SWEP.Class = "Submachine Gun"
+SWEP.Class = ARC9:GetPhrase("mw19_class_weapon_handgun") or "Handgun"
 SWEP.Trivia = {
-    ["Country of Origin"] = "Germany",
-    ["Manufacturer"] = "FORGE TAC",
-    ["Caliber"] = "4.6×30mm HK",
-    ["Weight (Loaded)"] = "2.1 kg",
-    ["Projectile Weight"] = "31 gr",
-    ["Muzzle Velocity"] = "2,411 ft/s",
-    ["Muzzle Energy"] = "543 joules"
+    [ ARC9:GetPhrase("mw19_country") ] = ARC9:GetPhrase("mw19_country_usa"),
+    [ ARC9:GetPhrase("mw19_manufacturer") ] = ARC9:GetPhrase("mw19_manufacturer_forgetac"),
+    [ ARC9:GetPhrase("mw19_caliber") ] = ARC9:GetPhrase("mw19_caliber_919"),
+    [ ARC9:GetPhrase("mw19_weight") ] = string.format(ARC9:GetPhrase("mw19_weight_val"), 3.1, 3.1 * 2.20),
+    [ ARC9:GetPhrase("mw19_weight_projectile") ] = string.format(ARC9:GetPhrase("mw19_weight_projectile_val"), 124),
 }
 
 SWEP.Credits = {
@@ -26,7 +24,7 @@ SWEP.Credits = {
     Assets = "Infinity Ward/Valve/New World Interactive"
 }
 
-SWEP.Description = [[Designed to be compact and maneuverable, this SMG has a jaw-dropping fire rate and rapid swap speed. A trusted secondary for up-close engagements.]]
+SWEP.Description = ARC9:GetPhrase("mw22_weapon_siege_desc") or [[Designed to be compact and maneuverable, this machine pistol has a jaw-dropping fire rate and rapid swap speed. A trusted secondary for up-close engagements.]]
 
 SWEP.ViewModel = "models/weapons/mw22/c_smg_ftac_siege.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
@@ -277,6 +275,7 @@ SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
+SWEP.ShootVolume = 155
 
 local path = ")weapons/mw22/ftacsiege/"
 
@@ -586,7 +585,7 @@ SWEP.Animations = {
     },
     ["inspect"] = {
         Source = "lookat01",
-        MinProgress = 0.1,
+        MinProgress = 0.95,
         FireASAP = true,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
@@ -609,7 +608,7 @@ SWEP.Animations = {
     },
     ["inspect_empty"] = {
         Source = "lookat01_empty",
-        MinProgress = 0.1,
+        MinProgress = 0.95,
         FireASAP = true,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },

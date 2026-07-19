@@ -8,17 +8,15 @@ SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_smg") or "Submachine Guns"
 SWEP.ARC9WeaponCategory = 3
 
-SWEP.PrintName = "FSS Hurricane"
+SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_hurricane") or  "FSS Hurricane"
 
 SWEP.Class = ARC9:GetPhrase("mw19_class_weapon_smg") or "Submachine Gun"
 SWEP.Trivia = {
-    ["Country of Origin"] = "United States",
-    ["Manufacturer"] = "Tempus Armament",
-    ["Caliber"] = "5.7×28mm FN",
-    ["Weight (Loaded)"] = "3.5 kg",
-    ["Projectile Weight"] = "31 gr",
-    ["Muzzle Velocity"] = "2,350 ft/s",
-    ["Muzzle Energy"] = "515 joules"
+    [ ARC9:GetPhrase("mw19_country") ] = ARC9:GetPhrase("mw19_country_usa"),
+    [ ARC9:GetPhrase("mw19_manufacturer") ] = ARC9:GetPhrase("mw19_manufacturer_fss"),
+    [ ARC9:GetPhrase("mw19_caliber") ] = ARC9:GetPhrase("mw19_caliber_57x28"),
+    [ ARC9:GetPhrase("mw19_weight") ] = string.format(ARC9:GetPhrase("mw19_weight_val"), 3.4, 3.4 * 2.20),
+    [ ARC9:GetPhrase("mw19_weight_projectile") ] = string.format(ARC9:GetPhrase("mw19_weight_projectile_val"), 27),
 }
 
 SWEP.Credits = {
@@ -26,7 +24,7 @@ SWEP.Credits = {
     Assets = "Infinity Ward/Sledgehammer Games/Activision"
 }
 
-SWEP.Description = [[The FSS Hurricane sacrifices range and stopping power for increased ammo capacity and enhanced stabililty.]]
+SWEP.Description = ARC9:GetPhrase("mw22_weapon_hurricane_desc") or [[The FSS Hurricane sacrifices range and stopping power for increased ammo capacity and enhanced stability.]]
 
 SWEP.ViewModel = "models/weapons/mw22/c_rif_fss.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
@@ -275,6 +273,7 @@ SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
+SWEP.ShootVolume = 152
 
 local path = ")weapons/mw22/fss/"
 local path2 = ")weapons/mw22/m4/"
@@ -463,7 +462,7 @@ SWEP.Animations = {
     },
     ["inspect"] = {
         Source = "lookat01",
-        MinProgress = 0.1,
+        MinProgress = 0.925,
         FireASAP = true,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
@@ -507,13 +506,31 @@ SWEP.Animations = {
 
 -- SWEP.Hook_Think	= ARC9.COD2019.BlendSights2
 
-SWEP.Hook_TranslateAnimation = function (wep, anim)
+--- Fast & Tac. Sprint ---
+local Translate_Fast = {
+    ["reload"] = "reload_fast",
+    ["reload_empty"] = "reload_fast_empty",
+}
+--local Translate_TacSprint = {
+--    ["idle_sprint"] = "super_sprint_idle",
+--    ["enter_sprint"] = "super_sprint_in",
+--    ["exit_sprint"] = "super_sprint_out",
+--}
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
     --local attached = self:GetElements()
 
-    if anim == "reload" and wep:HasElement("perk_speedreload") then
-        return "reload_fast"
-    elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") then 
-        return "reload_fast_empty"
+    local speedload = wep:HasElement("perk_speedreload")
+--    local super_sprint = wep:HasElement("perk_super_sprint")
+
+--    if super_sprint and Translate_TacSprint[anim] then
+--        return Translate_TacSprint[anim]
+--    end
+
+    if speedload then
+        if Translate_Fast[anim] then
+            return Translate_Fast[anim]
+        end
     end
 end
 
