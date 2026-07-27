@@ -520,7 +520,6 @@ SWEP.Animations = {
 		MinProgress = 0.675,
 		MagSwapTime = 2.6,
 		DropMagAt = 1.1,
-		MagSwapTime = 0.85,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.1, lhik = 0, rhik = 0 },
@@ -957,7 +956,7 @@ SWEP.Attachments = {
     {
         PrintName = ARC9:GetPhrase("mw19_category_skins"),
         --Bone = "v_weapon.Clip",
-        Category = "cod2019_g3a3_skins",
+        Category = "mw22_lachmann_skins",
 		CosmeticOnly = true,
     },
     {

@@ -763,7 +763,7 @@ SWEP.Attachments = {
     { -- 2
 		PrintName = ARC9:GetPhrase("mw19_category_barrel"),
 		DefaultIcon = Material("entities/defattachs/barrel-ar.png", "mips smooth"),
-		Category = "cod2019_ftacs_barrel",
+		Category = "mw22_ftacs_barrel",
 		Bone = "tag_barrel_attach",
 		Pos = Vector(0, 0, 0),
 		Ang = Angle(0, 0, 0),
@@ -781,7 +781,7 @@ SWEP.Attachments = {
 		PrintName = ARC9:GetPhrase("mw19_category_optic"),
 		DefaultIcon = Material("entities/defattachs/optic.png", "mips smooth"),
 		Bone = "tag_holo",
-		Pos = Vector(-4.5, 0, -0.1),
+		Pos = Vector(1, 0, -0.1),
 		Ang = Angle(0, 0, 0),
 		Category = {"cod2019_optic",},
 		CorrectiveAng = Angle(0, 0, 0),
@@ -812,6 +812,16 @@ SWEP.Attachments = {
 		Pos = Vector(0, 0, -1.5),
 		Ang = Angle(0, 0, 0),
     },
+--    { -- 9
+--        PrintName = ARC9:GetPhrase("mw19_category_reargrip"),
+--		DefaultIcon = Material("entities/defattachs/reargrip-ar.png", "mips smooth"),
+--        Category = "mw22_ftacs_pstgrip",
+--        Bone = "tag_pistolgrip_attach",
+--        Pos = Vector(0, 0, 0),
+--        Ang = Angle(0, 0, 0),
+--		Icon_Offset = Vector(0, 0, 0),
+--		Scale = 1,
+--    },
 
 	-- Unofficial
     { -- 10
