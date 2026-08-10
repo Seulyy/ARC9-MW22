@@ -8,9 +8,9 @@ sound.Add( {
     volume = 1,
     pitch = {100},
     sound = {
-		")weapons/mw22/lachmann556/lynx_fire1.wav",
-		")weapons/mw22/lachmann556/lynx_fire2.wav",
-		")weapons/mw22/lachmann556/lynx_fire3.wav",
+		")weapons/mw22/lachmann556/weap_kilo53_fire_plr_shot_01.wav",
+		")weapons/mw22/lachmann556/weap_kilo53_fire_plr_shot_02.wav",
+		")weapons/mw22/lachmann556/weap_kilo53_fire_plr_shot_03.wav",
     }
 } )
 
