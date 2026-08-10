@@ -292,17 +292,17 @@ SWEP.ShootSoundSilencedIndoor = "MW22.L556.Fire.S"
 
 -- Non-Silenced
 SWEP.LayerSound = "Layer_AR.Outside"
-SWEP.DistantShootSound = "Distant_AR.Outside"
+SWEP.DistantShootSound = "Distant_AR10.Outside"
 -- Inside
 SWEP.LayerSoundIndoor = "Layer_AR.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_AR.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_AR.Inside2"
 ---------------------------------------------------
 -- Silenced
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_AR_Sup.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_AR4_Sup.Outside"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside2"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = path2 .. "wfoly_ar_mike4_ads_up.ogg"
@@ -645,7 +645,7 @@ SWEP.Animations = {
             { t = 0.5, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_raise_quick.ogg", t = 0/30},
         },
     },
     ["holster"] = {

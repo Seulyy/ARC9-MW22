@@ -289,17 +289,17 @@ SWEP.ShootSoundSilencedIndoor = "COD2019.M4A1.Fire.S"
 
 -- Non-Silenced
 SWEP.LayerSound = "Layer_AR.Outside"
-SWEP.DistantShootSound = "Distant_AR3.Outside"
+SWEP.DistantShootSound = "Distant_AR14.Outside"
 -- Inside
 SWEP.LayerSoundIndoor = "Layer_AR.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_AR.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_AR.Inside2"
 ---------------------------------------------------
 -- Silenced
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_AR_Sup.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_AR3_Sup.Outside"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside2"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = path .. "wfoly_ar_mike4_ads_up.ogg"
