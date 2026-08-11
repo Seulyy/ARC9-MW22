@@ -283,17 +283,17 @@ SWEP.ShootSoundSilencedIndoor = "MW22.P890.Fire.S"
 
 -- Non-Silenced Outside
 SWEP.LayerSound = "Layer_Pistol.Outside"
-SWEP.DistantShootSound = "Distant_Pistol_Alt.Outside"
+SWEP.DistantShootSound = "Distant_Handgun.Outside2"
 -- Non-Silenced Inside
 SWEP.LayerSoundIndoor = "Layer_Pistol.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_Pistol2.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_Handgun.Inside2"
 ---------------------------------------------------
 -- Silenced Outside
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_Pistol_Sup2.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_Handgun_Sup.Outside3"
 -- Silenced Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup_Sub.Inside"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = ")weapons/cod2019/wfoly_pi_mike1911_ads_up.ogg"

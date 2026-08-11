@@ -287,17 +287,17 @@ SWEP.ShootSoundSilencedIndoor = "MW22.FTACS.Fire.S"
 
 -- Non-Silenced
 SWEP.LayerSound = "Layer_Pistol.Outside"
-SWEP.DistantShootSound = "Distant_Pistol2.Outside"
+SWEP.DistantShootSound = "Distant_Handgun.Outside4"
 -- Inside
 SWEP.LayerSoundIndoor = "Layer_Pistol.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_Pistol2.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_Handgun.Inside3"
 ---------------------------------------------------
 -- Silenced
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_SMG_Sup2.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_SMG_Sup.Outside2"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_Handgun_Sup.Inside2"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = path .. "p26_pi_swhiskey_raise_quick_rattle.ogg"

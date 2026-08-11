@@ -308,17 +308,17 @@ SWEP.ShootSoundSilencedIndoor = "MW22.MG38.Fire.S"
 
 -- Non-Silenced Outside
 SWEP.LayerSound = "Layer_AR.Outside"
-SWEP.DistantShootSound = "Distant_LMG.Outside"
+SWEP.DistantShootSound = "Distant_BR2.Outside"
 -- Inside
 SWEP.LayerSoundIndoor = "Layer_Shotgun.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_LMG.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_BR.Inside"
 ---------------------------------------------------
 -- Silenced Outside
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_AR_Sup.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_DMR_Sup.Outside3"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_BR_Sup.Inside"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = ")weapons/cod2019/wfoly_lm_slima_ads_up.ogg"
