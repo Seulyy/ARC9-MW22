@@ -286,17 +286,17 @@ SWEP.ShootSoundSilencedIndoor = "MW22.FSS.Fire.S"
 
 -- Non-Silenced
 SWEP.LayerSound = "Layer_Pistol.Outside"
-SWEP.DistantShootSound = "Distant_SMG.Outside"
+SWEP.DistantShootSound = "Distant_SMG7.Outside"
 -- Inside
 SWEP.LayerSoundIndoor = "Layer_Pistol.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_SMG.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_SMG.Inside1"
 ---------------------------------------------------
 -- Silenced
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_SMG_Sup.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_SMG_Sup.Outside3"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_Handgun_Sup.Inside"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = path2 .. "wfoly_ar_mike4_ads_up.ogg"

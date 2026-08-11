@@ -300,18 +300,18 @@ SWEP.ShootSoundSilenced = "MW22.Imperium.Fire.S"
 SWEP.ShootSoundSilencedIndoor = "MW22.Imperium.Fire.S"
 
 -- Non-Silenced Outside
-SWEP.LayerSound = "layer_Sniper.Outside"
-SWEP.DistantShootSound = "distant_Sniper.Outside"
+SWEP.LayerSound = "Layer_Sniper.Outside"
+SWEP.DistantShootSound = "Distant_Sniper8.Outside"
 -- Inside
-SWEP.LayerSoundIndoor = "layer_Shotgun.Inside"
-SWEP.DistantShootSoundIndoor = "distant_Shotgun.Inside"
+SWEP.LayerSoundIndoor = "Layer_Sniper.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_Sniper.Inside3"
 ---------------------------------------------------
 -- Silenced Outside
-SWEP.LayerSoundSilenced = "layer_Sniper.Outside"
-SWEP.DistantShootSoundSilenced = "distant_Sniper_Sup.Outside"
+SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_Sniper_Sup.Outside7"
 -- Inside
-SWEP.LayerSoundSilencedIndoor = "layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "distant_DMR_Sup.Inside"
+SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_Sniper_Sup.Inside"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = ")weapons/cod2019/wfoly_sn_alpha50_ads_up.ogg"

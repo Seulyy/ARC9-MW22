@@ -303,17 +303,17 @@ SWEP.ShootSoundSilencedIndoor = "MW22.Expedite.Fire.S"
 
 -- Non-Silenced Outside
 SWEP.LayerSound = "Layer_Shotgun.Outside"
-SWEP.DistantShootSound = "Distant_Shotgun_2.Outside"
+SWEP.DistantShootSound = "Distant_Shotgun.Outside2"
 -- Inside
 SWEP.LayerSoundIndoor = "Layer_Shotgun.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_LMG.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_Shotgun.Inside2"
 ---------------------------------------------------
 -- Silenced Outside
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_Shotgun_Sub.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_Shotgun_Sup.Outside2"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ShotgunSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_ShotgunSUP.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_Shotgun_Sup.Inside"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = ")weapons/cod2019/weap_sh_oscar12_ads_up.ogg"
