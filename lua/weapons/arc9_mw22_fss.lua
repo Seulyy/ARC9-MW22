@@ -5,10 +5,10 @@ SWEP.Base = "arc9_cod2019_base"
 SWEP.Spawnable = true
 --SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_smg") or "Submachine Guns"
+SWEP.SubCategory = ARC9:GetPhrase("mw22_category_weapon_smg") or "Submachine Guns"
 SWEP.ARC9WeaponCategory = 3
 
-SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_hurricane") or  "FSS Hurricane"
+SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_hurricane") or "FSS Hurricane"
 
 SWEP.Class = ARC9:GetPhrase("mw19_class_weapon_smg") or "Submachine Gun"
 SWEP.Trivia = {

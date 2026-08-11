@@ -5,7 +5,7 @@ SWEP.Base = "arc9_cod2019_base"
 SWEP.Spawnable = true
 --SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_sniper") or "Sniper Rifles"
+SWEP.SubCategory = ARC9:GetPhrase("mw22_category_weapon_sniper") or "Sniper Rifles"
 SWEP.ARC9WeaponCategory = 5
 
 SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_imperium") or "FJX Imperium"

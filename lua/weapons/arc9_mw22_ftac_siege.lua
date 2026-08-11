@@ -5,7 +5,7 @@ SWEP.Base = "arc9_cod2019_base"
 SWEP.Spawnable = true
 --SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_handgun") or "Handguns"
+SWEP.SubCategory = ARC9:GetPhrase("mw22_category_weapon_handgun") or "Handguns"
 SWEP.ARC9WeaponCategory = 1
 
 SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_siege") or "FTAC Siege"

@@ -5,7 +5,7 @@ SWEP.Base = "arc9_cod2019_base"
 SWEP.Spawnable = true
 --SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = ARC9:GetPhrase("mw19_category_weapon_ar") or "Assault Rifles"
+SWEP.SubCategory = ARC9:GetPhrase("mw22_category_weapon_br") or "Battle Rifles"
 SWEP.ARC9WeaponCategory = 4
 
 SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_lach762") or "Lachmann-762"

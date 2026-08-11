@@ -38,7 +38,17 @@ L["mw22_manufacturer_lachmeer"] = "Lachmann & Meer" -- Lachmann-556, Lachmann-76
 
 
 /////////// Weapon Categories
+L["mw22_category_weapon_ar"] = "Assault Rifles"
+L["mw22_category_weapon_br"] = "Battle Rifles"
+L["mw22_category_weapon_smg"] = "SMGs"
+L["mw22_category_weapon_shotgun"] = "Shotguns"
+L["mw22_category_weapon_lmg"] = "LMGs"
+L["mw22_category_weapon_marksman"] = "Marksman Rifles"
+L["mw22_category_weapon_sniper"] = "Sniper Rifles"
 
+L["mw22_category_weapon_handgun"] = "Handguns"
+L["mw22_category_weapon_launcher"] = "Launchers"
+L["mw22_category_weapon_melee"] = "Melee"
 
 /////////// Weapon Classes
 
