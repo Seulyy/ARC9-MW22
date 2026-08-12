@@ -59,7 +59,7 @@ sound.Add({
 	channel = ARC9.CHAN_DISTANT or 136,
 	level = 140,
 	pitch = { 80, 110 },
-	volume = 0.5,
+	volume = 0.2,
 	sound = {
 		"^weapons/mw22/shared/atmo/br/weap_br2_fire_plr_atmo_ext1_01.wav",
 		"^weapons/mw22/shared/atmo/br/weap_br2_fire_plr_atmo_ext1_02.wav",
