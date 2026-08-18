@@ -27,6 +27,7 @@ L["mw22_caliber_408c"] = ".408 Chey Tac" -- Imperium
 
 L["mw22_manufacturer_fjx"] = "FJX Defense" -- Imperium
 L["mw22_manufacturer_lachmeer"] = "Lachmann & Meer" -- Lachmann-556, Lachmann-762, LM-S, RAPP H
+L["mw22_manufacturer_sakin"] = "Sakin Arms" -- MX Guardian, SAKIN MG38, Tonfa
 
 /////////// Weight -- UO
 
