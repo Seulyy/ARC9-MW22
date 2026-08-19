@@ -928,13 +928,13 @@ SWEP.Attachments = {
     { -- 4
         PrintName = ARC9:GetPhrase("mw19_category_optic"),
 		DefaultIcon = Material("entities/defattachs/optic.png", "mips smooth"),
+        Category = {"cod2019_optic","mw2022_optic_imperium"},
         Bone = "tag_scope",
         Pos = Vector(1.5, 0, -0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"cod2019_optic","mw2022_optic_imperium"},
         CorrectiveAng = Angle(0, 0, 0),
 		--InstalledElements = {""},
-		--Installed = "mw2022_optic_imperium",
+		Installed = "mw2022_optic_default_imperium",
         --Integral = "mw2022_optic_imperium",
     },
     { -- 5

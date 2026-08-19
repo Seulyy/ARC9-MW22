@@ -762,13 +762,13 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, -1.5),
         Ang = Angle(0, 0, 0),
     },
---    { -- 9
---		PrintName = ARC9:GetPhrase("mw19_category_reargrip"),
---		DefaultIcon = Material("entities/defattachs/reargrip-ar.png", "mips smooth"),
---		Category = "cod2019_pistolgrip",
---		Bone = "tag_pistolgrip_attach",
---		Pos = Vector(0, 0, 0),
---    },
+    { -- 9
+		PrintName = ARC9:GetPhrase("mw19_category_reargrip"),
+		DefaultIcon = Material("entities/defattachs/reargrip-ar.png", "mips smooth"),
+		Category = "cod2019_pistolgrip",
+		Bone = "tag_pistolgrip_attach",
+		Pos = Vector(0, 0, 0),
+    },
     { -- 10
         PrintName = ARC9:GetPhrase("mw19_category_perk"),
         Category = {"cod2019_perks","cod2019_perks_soh"},
