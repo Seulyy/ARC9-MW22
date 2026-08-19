@@ -5,18 +5,18 @@ SWEP.Base = "arc9_cod2019_base"
 SWEP.Spawnable = true
 --SWEP.NotForNPCs = false
 SWEP.Category = "ARC9 - MWII"
-SWEP.SubCategory = ARC9:GetPhrase("mw22_category_weapon_br") or "Battle Rifles"
+SWEP.SubCategory = ARC9:GetPhrase("mw22_category_weapon_ar") or "Assault Rifles"
 SWEP.ARC9WeaponCategory = 4
 
-SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_lach762") or "Lachmann-762"
+SWEP.PrintName = ARC9:GetPhrase("mw22_weapon_lach556") or "Lachmann-556"
 
 SWEP.Class = ARC9:GetPhrase("mw19_class_weapon_ar") or "Assault Rifle"
 SWEP.Trivia = {
     [ ARC9:GetPhrase("mw19_country") ] = ARC9:GetPhrase("mw19_country_germany"),
-    [ ARC9:GetPhrase("mw19_manufacturer") ] = ARC9:GetPhrase("mw22_manufacturer_lachmeer"),
-    [ ARC9:GetPhrase("mw19_caliber") ] = ARC9:GetPhrase("mw19_caliber_762"),
-    [ ARC9:GetPhrase("mw19_weight") ] = string.format(ARC9:GetPhrase("mw19_weight_val"), 4.38, 4.38 * 2.20),
-    [ ARC9:GetPhrase("mw19_weight_projectile") ] = string.format(ARC9:GetPhrase("mw19_weight_projectile_val"), 144),
+    [ ARC9:GetPhrase("mw19_manufacturer") ] = ARC9:GetPhrase("mw22_manufacturer_lm"),
+    [ ARC9:GetPhrase("mw19_caliber") ] = ARC9:GetPhrase("mw19_caliber_556"),
+    [ ARC9:GetPhrase("mw19_weight") ] = string.format(ARC9:GetPhrase("mw19_weight_val"), 4.28, 4.28 * 2.20),
+    [ ARC9:GetPhrase("mw19_weight_projectile") ] = string.format(ARC9:GetPhrase("mw19_weight_projectile_val"), 62),
 }
 
 SWEP.Credits = {
@@ -24,35 +24,35 @@ SWEP.Credits = {
     Assets = "Infinity Ward/Valve/New World Interactive"
 }
 
-SWEP.Description = ARC9:GetPhrase("mw22_weapon_lach762_desc") or [[A delayed blowback 7.62 receiver with equal parts power and control. Select fire allows precise semi-auto shots and short bursts of devastating full-auto firepower.]]
+SWEP.Description = ARC9:GetPhrase("mw22_weapon_lach556_desc") or [[The Lachmann-556 is the keystone in the Lachmann & Meer arsenal. An adaptive 5.56 weapon system that bridges the gap between submachine guns and full-powered rifles.]]
 
-SWEP.ViewModel = "models/weapons/mw22/c_rif_lachmann762.mdl"
+SWEP.ViewModel = "models/weapons/mw22/c_rif_lach556.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 
 SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_lachmann762.mdl"
+SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_lach556.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9.5, 6.2, -5.5),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-8, 4, -3.5),
+    TPIKPos = Vector(-8.5, 4, -3.5),
     TPIKAng = Angle(-9, 0, 175),
     Scale = 1,
-
-	TPIKPosSightOffset = Vector(1.5, 1.75, -2.5),
+	
+	TPIKPosSightOffset = Vector(2, 1.5, -2.5),
 }
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 36 -- Damage done at point blank range
-SWEP.DamageMin = 24 -- Damage done at maximum range
+SWEP.DamageMax = 28 -- Damage done at point blank range
+SWEP.DamageMin = 18 -- Damage done at maximum range
 
 SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 25 / ARC9.HUToM -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 43 / ARC9.HUToM -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMin = 20 / ARC9.HUToM -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 35 / ARC9.HUToM -- In Hammer units, how far bullets can travel before dealing DamageMin.
 
 SWEP.Penetration = 11 -- Units of wood that can be penetrated by this gun.
 SWEP.RicochetChance = 0.25
@@ -61,7 +61,7 @@ SWEP.ImpactForce = 11
 
 -------------------------- PHYS BULLET BALLISTICS
 
-SWEP.PhysBulletMuzzleVelocity = 624 / ARC9.HUToM
+SWEP.PhysBulletMuzzleVelocity = 590 / ARC9.HUToM
 SWEP.PhysBulletGravity = 1.5
 SWEP.PhysBulletDrag = 1.2
 
@@ -70,7 +70,7 @@ SWEP.PhysBulletDrag = 1.2
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 20 -- Self-explanatory.
+SWEP.ClipSize = 30 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 6 -- Amount of reserve UBGL magazines you can take.
 
@@ -80,7 +80,7 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 522
+SWEP.RPM = 723
 
 SWEP.Firemodes = {
     {
@@ -90,7 +90,7 @@ SWEP.Firemodes = {
     },
     {
         Mode = 1,
-		RPM = 492,
+		RPM = 450,
 		PoseParam = 1,
         -- add other attachment modifiers
     }
@@ -98,7 +98,7 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1.3
+SWEP.Recoil = 1.25
 
 SWEP.RecoilSeed = 213654
 
@@ -118,7 +118,7 @@ SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern s
 
 SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1.5
+SWEP.RecoilKick = 1
 
 SWEP.RecoilMultCrouch = 0.85
 SWEP.RecoilMultMove = 1.25
@@ -131,7 +131,7 @@ SWEP.VisualRecoilPunch = 2
 SWEP.VisualRecoilUp = 0.2
 
 SWEP.VisualRecoilMultSights = 1
-SWEP.VisualRecoilPunchSights = 5
+SWEP.VisualRecoilPunchSights = 15
 SWEP.VisualRecoilSideSights = 0
 
 SWEP.VisualRecoilRoll = 5
@@ -170,7 +170,7 @@ SWEP.SpreadAddSights = -0.5
 
 -------------------------- HANDLING
 
-SWEP.AimDownSightsTime = 0.246 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.24 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.31 -- How long it takes to go from sprinting to being able to fire.
 
 -------------------------- MELEE
@@ -189,17 +189,14 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.79, -2, 0.9),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.45, -2, 1),
+    Ang = Angle(0, 0, 1),
     Magnification = 1.15,
 	ViewModelFOV = 54,
 	CrosshairInSights = false
 }
 
 SWEP.ViewModelFOVBase = 65
-
-SWEP.SprintPos = Vector(1, -1, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.SprintMidPoint = {
     Pos = Vector(0, -1.5, -0.15),
@@ -220,15 +217,21 @@ SWEP.MovingAng = Angle(0, 0, -8)
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
+SWEP.SprintPos = Vector(-2, 0, 0)
+SWEP.SprintAng = Angle(0, 0, 0)
+
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(15, 41, 3)
-SWEP.CustomizeRotateAnchor = Vector(14, -3, -4)
+SWEP.CustomizePos = Vector(13, 37, 3.5)
+SWEP.CustomizeRotateAnchor = Vector(14, -2.25, -4)
 SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeSnapshotPos = Vector(0, 13, 3)
 SWEP.CustomizeNoRotate = false
 
 SWEP.PeekPos = Vector(-1, 1, -3.5)
 SWEP.PeekAng = Angle(0, 0, -45)
+
+SWEP.PeekPosReloading = Vector(0, 4, -2)
+SWEP.PeekAngReloading = Angle(-0.3, 0, -10)
 
 -------------------------- HoldTypes
 
@@ -254,7 +257,7 @@ SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 4
 SWEP.CamQCA_Mult = 1
 
-SWEP.ShellModel = "models/weapons/cod2019/shared/shell_ar_762n.mdl"
+SWEP.ShellModel = "models/weapons/cod2019/shared/shell_ar_556.mdl"
 SWEP.ShellCorrectAng = Angle(0, -90, 0)
 SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
@@ -262,7 +265,7 @@ SWEP.ShellSounds = ARC9.COD2019_556_Table
 
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
-SWEP.DropMagazineModel = "models/weapons/mw22/mags/w_rif_lach762_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/mw22/mags/w_rif_lach556_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_metal_concrete_01.ogg",
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_metal_concrete_02.ogg",
@@ -277,30 +280,29 @@ SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -90, -90)
 
 -------------------------- SOUNDS
-SWEP.ShootVolume = 155
 
-local path = ")weapons/mw22/lachmann762/"
+local path = ")weapons/mw22/lachmann556/"
 local path2 = ")weapons/mw22/m4/"
 
-SWEP.ShootSound = "MW22.L762.Fire"
-SWEP.ShootSoundIndoor = "MW22.L762.Fire"
+SWEP.ShootSound = "MW22.L556.Fire"
+SWEP.ShootSoundIndoor = "MW22.L556.Fire"
 
-SWEP.ShootSoundSilenced = "MW22.Lachmann.Fire.S"
-SWEP.ShootSoundSilencedIndoor = "MW22.Lachmann.Fire.S"
+SWEP.ShootSoundSilenced = "MW22.L556.Fire.S"
+SWEP.ShootSoundSilencedIndoor = "MW22.L556.Fire.S"
 
 -- Non-Silenced
 SWEP.LayerSound = "Layer_AR.Outside"
-SWEP.DistantShootSound = "Distant_BR2.Outside"
+SWEP.DistantShootSound = "Distant_AR10.Outside"
 -- Inside
 SWEP.LayerSoundIndoor = "Layer_AR.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_BR.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_AR.Inside2"
 ---------------------------------------------------
 -- Silenced
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_DMR_Sup.Outside2"
+SWEP.DistantShootSoundSilenced = "Distant_AR4_Sup.Outside"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_BR_Sup.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside2"
 ---------------------------------------------------
 
 SWEP.EnterSightsSound = path2 .. "wfoly_ar_mike4_ads_up.ogg"
@@ -310,7 +312,34 @@ SWEP.BulletBones = {
     [1] = "j_ammo_01",
     [2] = "j_ammo_02",
     [3] = "j_ammo_03",
-    [4] = "j_ammo_04"
+    [4] = "j_ammo_04",
+    [5] = "j_ammo_05",
+    [6] = "j_ammo_06",
+    [7] = "j_ammo_07",
+    [8] = "j_ammo_08",
+    [9] = "j_ammo_09",
+    [10] = "j_ammo_10",
+    [11] = "j_ammo_11",
+    [12] = "j_ammo_12",
+    [13] = "j_ammo_13",
+    [14] = "j_ammo_14",
+    [15] = "j_ammo_15",
+    [16] = "j_ammo_16",
+    [17] = "j_ammo_17",
+    [18] = "j_ammo_18",
+    [19] = "j_ammo_19",
+    [20] = "j_ammo_20",
+    [21] = "j_ammo_21",
+    [22] = "j_ammo_22",
+    [23] = "j_ammo_23",
+    [24] = "j_ammo_24",
+    [25] = "j_ammo_25",
+    [26] = "j_ammo_26",
+    [27] = "j_ammo_27",
+    [28] = "j_ammo_28",
+    [29] = "j_ammo_29",
+    [30] = "j_ammo_30",
+    [31] = "j_ammo_31"
 }
 
 --SWEP.ReloadHideBonesFirstPerson = true
@@ -328,25 +357,79 @@ SWEP.ReloadHideBoneTables = {
 		"j_ammo_01",
 		"j_ammo_02",
 		"j_ammo_03",
-		"j_ammo_04"
+		"j_ammo_04",
+		"j_ammo_05",
+		"j_ammo_06",
+		"j_ammo_07",
+		"j_ammo_08",
+		"j_ammo_09",
+		"j_ammo_10",
+		"j_ammo_11",
+		"j_ammo_12",
+		"j_ammo_13",
+		"j_ammo_14",
+		"j_ammo_15",
+		"j_ammo_16",
+		"j_ammo_17",
+		"j_ammo_18",
+		"j_ammo_19",
+		"j_ammo_20",
+		"j_ammo_21",
+		"j_ammo_22",
+		"j_ammo_23",
+		"j_ammo_24",
+		"j_ammo_25",
+		"j_ammo_26",
+		"j_ammo_27",
+		"j_ammo_28",
+		"j_ammo_29",
+		"j_ammo_30",
+		"j_ammo_31"
     },
     [3] = {
         "j_mag2",
-		"j_mag1",
+        "j_mag1",
 		"j_follower",
 		"j_ammo_01",
 		"j_ammo_02",
 		"j_ammo_03",
-		"j_ammo_04"
-    },
+		"j_ammo_04",
+		"j_ammo_05",
+		"j_ammo_06",
+		"j_ammo_07",
+		"j_ammo_08",
+		"j_ammo_09",
+		"j_ammo_10",
+		"j_ammo_11",
+		"j_ammo_12",
+		"j_ammo_13",
+		"j_ammo_14",
+		"j_ammo_15",
+		"j_ammo_16",
+		"j_ammo_17",
+		"j_ammo_18",
+		"j_ammo_19",
+		"j_ammo_20",
+		"j_ammo_21",
+		"j_ammo_22",
+		"j_ammo_23",
+		"j_ammo_24",
+		"j_ammo_25",
+		"j_ammo_26",
+		"j_ammo_27",
+		"j_ammo_28",
+		"j_ammo_29",
+		"j_ammo_30",
+		"j_ammo_31"
+    }
 }
 
 SWEP.TriggerDelay = 0.01 -- Set to > 0 to play the "trigger" animation before shooting. Delay time is based on this value.
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.01 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = path .. "weap_kilo53_fcg_deadtrig_plr_01.ogg"
-SWEP.TriggerUpSound = path .. "weap_kilo53_fcg_disconnector_plr_01.ogg"
+SWEP.TriggerDownSound = ")weapons/cod2019/weap_mcharlie_fire_first_plr_01.ogg"
+SWEP.TriggerUpSound = ")weapons/cod2019/weap_mike4_fire_plr_disconnector_01.ogg"
 
 SWEP.Animations = {
     ["fire"] = {
@@ -358,7 +441,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
 		MinProgress = 0.825,
-		MagSwapTime = 2.7,
+		MagSwapTime = 2.9,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.1, lhik = 0, rhik = 0 },
@@ -366,22 +449,25 @@ SWEP.Animations = {
             { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_golf3_reload_carrierback.ogg", t = 0/30},
-            {s = path .. "vm_p02_ar_golf3_reload_magout.ogg", t = 21/30},
-            {s = path .. "vm_p02_ar_golf3_reload_magin.ogg", t = 50/30},
-			{s = path .. "vm_p02_ar_golf3_reload_carrierrelease.ogg", t = 73/30},
-			{s = path .. "vm_p02_ar_golf3_reload_shoulder.ogg", t = 85/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_bolt_back.ogg", t = 6/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_pivot.ogg", t = 17/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_grab_mag.ogg", t = 24/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_mag_out.ogg", t = 34/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_mag_in.ogg", t = 50/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_turn.ogg", t = 70/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_bolt_release.ogg", t = 78/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 83/30},
 			{hide = 1, t = 0},
-			{hide = 0, t = 1.05},
+			{hide = 0, t = 0.9},
 			{hide = 2, t = 2.38},
-			{hide = 1, t = 2.72},
+			{hide = 1, t = 2.955},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-		MinProgress = 0.75,
-		MagSwapTime = 1.2,
 		DropMagAt = 1.2,
+		MinProgress = 0.75,
+		MagSwapTime = 3.4,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.1, lhik = 0, rhik = 0 },
@@ -389,66 +475,73 @@ SWEP.Animations = {
             { t = 0.9, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_golf3_reload_empty_carrierback.ogg", t = 0/30},
-            {s = path .. "vm_p02_ar_golf3_reload_empty_magout.ogg", t = 17/30},
-            {s = path .. "vm_p02_ar_golf3_reload_empty_magwell.ogg", t = 45/30},
-			{s = path .. "vm_p02_ar_golf3_reload_empty_magin.ogg", t = 64/30},
-			{s = path .. "vm_p02_ar_golf3_reload_empty_slap.ogg", t = 75.5/30},
-			{s = path .. "vm_p02_ar_golf3_reload_empty_shoulder.ogg", t = 90/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_tilt.ogg", t = 1/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_bolt_back.ogg", t = 3/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_raise.ogg", t = 14/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_mag_out.ogg", t = 22/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_grab_mag.ogg", t = 41/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_mag_in.ogg", t = 51/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_mag_bang.ogg", t = 71/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_arm_chop.ogg", t = 74/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_bolt_release.ogg", t = 85/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_end.ogg", t = 96/30},
 			{hide = 1, t = 0},
 			{hide = 3, t = 1.2},
-			{hide = 1, t = 1.4},
+			{hide = 2, t = 1.4},
+			{hide = 1, t = 3.4},
         },
     },
     ["reload_fast"] = {
         Source = "reload_fast",
 		MinProgress = 0.625,
-		MagSwapTime = 1.7,
-		DropMagAt = 0.9,
-		FireASAP = true,
+		MagSwapTime = 2,
+		DropMagAt = 1.1,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 0, rhik = 0 },
-            { t = 0.5, lhik = 0, rhik = 0 },
-            { t = 0.9, lhik = 1, rhik = 1 },
+            { t = 0.5,lhik = 0,rhik = 0 },
+            { t = 0.9,lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_golf3_reload_quick_mvt.ogg", t = 0/30},
-			{s = path .. "vm_p02_ar_golf3_reload_quick_magout.ogg", t = 14/30},
-			{s = path .. "vm_p02_ar_golf3_reload_quick_magwell.ogg", t = 25/30},
-			{s = path .. "vm_p02_ar_golf3_reload_quick_magin.ogg", t = 36/30},
-			{s = path .. "vm_p02_ar_golf3_reload_quick_shoulder.ogg", t = 48/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_roll.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_grab_mag.ogg", t = 11/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_out.ogg", t = 20/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_hit.ogg", t = 36/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_in.ogg", t = 44/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_end.ogg", t = 47/30},
 			{hide = 1, t = 0},
-			{hide = 0, t = 0.4},
-			{hide = 2, t = 0.9},
-			{hide = 1, t = 1.71},
+			{hide = 0, t = 0.45},
+			{hide = 2, t = 1.1},
+			{hide = 1, t = 2.033},
         },
     },
     ["reload_fast_empty"] = {
         Source = "reload_fast_empty",
-		MinProgress = 0.75,
-		MagSwapTime = 0.85,
-		DropMagAt = 0.9,
+		MinProgress = 0.675,
+		MagSwapTime = 2.6,
+		DropMagAt = 1.1,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.1, lhik = 0, rhik = 0 },
-            { t = 0.6, lhik = 0, rhik = 0 },
+            { t = 0.5, lhik = 0, rhik = 0 },
             { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_golf3_reload_empty_quick_magout.ogg", t = 1/30},
-            {s = path .. "vm_p02_ar_golf3_reload_empty_quick_magwell.ogg", t = 20/30},
-			{s = path .. "vm_p02_ar_golf3_reload_empty_quick_magin.ogg", t = 32/30},
-			{s = path .. "vm_p02_ar_golf3_reload_empty_quick_charge.ogg", t = 51/30},
-			{s = path .. "vm_p02_ar_golf3_reload_empty_quick_shoulder.ogg", t = 72/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_empty_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_empty_grab_mag.ogg", t = 11/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_mag_out.ogg", t = 20/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_maghit.ogg", t = 37/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_magin.ogg", t = 45/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_bolt_charge.ogg", t = 56/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_end.ogg", t = 68/30},
 			{hide = 1, t = 0},
-			{hide = 0, t = 0.4},
-			{hide = 2, t = 0.9},
-			{hide = 1, t = 1.715},
+			{hide = 0, t = 0.45},
+			{hide = 2, t = 1.1},
+			{hide = 1, t = 2.56},
         },
     },
     ["reload_xmag"] = {
-        Source = "reload_xmag",
+        Source = "reload",
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 0, rhik = 0 },
@@ -456,17 +549,20 @@ SWEP.Animations = {
             { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_xmag_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_xmag_rattle.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magout_01.ogg", t = 17/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magin_v2_01.ogg", t = 37/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magin_v2_02.ogg", t = 45/30},
-			{s = path .. "wfoly_plr_ar_falima_raise_start.ogg", t = 61/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_end.ogg", t = 63/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_bolt_back.ogg", t = 6/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_raise.ogg", t = 15/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_grab_mag.ogg", t = 25/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_mag_hit.ogg", t = 35/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_mag_out.ogg", t = 40/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_mag_find_well.ogg", t = 54/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_xmag_mag_in.ogg", t = 60/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_tilt.ogg", t = 84/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_bolt_release.ogg", t = 90/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_xmag_end.ogg", t = 96/30},
         },
     },
-    ["reload_xmag_empty"] = {
-        Source = "reload_xmag_empty",
+    ["reload_xmag_xmags"] = {
+        Source = "reload_empty_xmags",
 		DropMagAt = 1.4,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
@@ -475,18 +571,23 @@ SWEP.Animations = {
             { t = 0.9, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_start.ogg", t = 0/30},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 6/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magout_01.ogg", t = 25/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_rattle.ogg", t = 44/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magin_v2_01.ogg", t = 52/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_magin_v2_02.ogg", t = 63/30},
-			{s = path .. "g3_boltpullreleasesoh.ogg", t = 78/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_end.ogg", t = 94/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_tilt.ogg", t = 1/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_bolt_back.ogg", t = 7/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_raise.ogg", t = 15/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_hand_on_mag.ogg", t = 22/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_mag_out.ogg", t = 28/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_roll.ogg", t = 41/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_grab_mag.ogg", t = 41/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_mag_find_well.ogg", t = 57/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_mag_in.ogg", t = 64/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_mag_bang.ogg", t = 83/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_arm_chop.ogg", t = 87/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_bolt_release.ogg", t = 97/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_empty_xmag_end.ogg", t = 105/30},
         },
     },
     ["reload_xmag_fast"] = {
-        Source = "reload_xmag_fast",
+        Source = "reload_fast_xmags",
 		DropMagAt = 0.9,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
@@ -495,16 +596,16 @@ SWEP.Animations = {
             { t = 0.85, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_rattle.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magout_01.ogg", t = 9/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magin_v2_01.ogg", t = 30/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magin_v2_02.ogg", t = 38/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_end.ogg", t = 48/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_grab_mag.ogg", t = 17/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_mag_out.ogg", t = 27/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_maghit.ogg", t = 44/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_magin.ogg", t = 55/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_xmag_end.ogg", t = 63/30},
         },
     },
     ["reload_xmag_fast_empty"] = {
-        Source = "reload_xmag_fast_empty",
+        Source = "reload_fast_empty_xmags",
 		DropMagAt = 0.9,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
@@ -513,13 +614,13 @@ SWEP.Animations = {
             { t = 0.95, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_start.ogg", t = 0},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 0.13},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magout_01.ogg", t = 0.7},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magin_v2_01.ogg", t = 1.37},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_magin_v2_02.ogg", t = 1.57},
-			{s = path .. "g3_boltpullrelease.ogg", t = 2.0},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_fast_xmag_end.ogg", t = 2.3},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_grab_mag.ogg", t = 17/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_mag_out.ogg", t = 26/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_maghit.ogg", t = 43/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_magin.ogg", t = 55/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_bolt_charge.ogg", t = 68/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_empty_xmag_end.ogg", t = 80/30},
         },
     },
     ["ready"] = {
@@ -527,23 +628,24 @@ SWEP.Animations = {
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.2, lhik = 0, rhik = 0 },
-            { t = 0.4, lhik = 0, rhik = 0 },
+            { t = 0.5, lhik = 0, rhik = 0 },
             { t = 0.7, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_golf3_raise_first_carrierback.ogg", t = 9/30},
-            {s = path .. "vm_p02_ar_golf3_raise_first_carrierrelease.ogg", t = 16/30},
-            {s = path .. "vm_p02_ar_golf3_raise_first_shoulder.ogg", t = 28/30},
+            {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 1/30},
+            {s = path .. "vm_p02_ar_kilo53_inspect_bolt_back.ogg", t = 6/30},
+            {s = path .. "vm_p02_ar_kilo53_inspect_bolt_release.ogg", t = 22/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 30/30}
         },
     },
     ["draw"] = {
         Source = "draw_short",
         IKTimeLine = {
             { t = 0, lhik = 0, rhik = 0 },
-            { t = 0.7, lhik = 1, rhik = 1 },
+            { t = 0.5, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_golf3_raise_first_shoulder.ogg", t = 1/30},
+            {s = path .. "vm_p02_ar_kilo53_raise_quick.ogg", t = 0/30},
         },
     },
     ["holster"] = {
@@ -553,7 +655,7 @@ SWEP.Animations = {
             { t = 0.7, lhik = 0, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_golf3_raise_up.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_drop.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -564,29 +666,32 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1.2,
+        Time = 1,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 1.2,
+        Time = 1,
     },
     ["inspect"] = {
         Source = "lookat01",
-        MinProgress = 0.9,
+		MinProgress = 0.9,
 		FireASAP = true,
         IKTimeLine = {
             { t = 0, lhik = 1, rhik = 0 },
             { t = 0.1, lhik = 0, rhik = 0 },
             { t = 0.7, lhik = 0, rhik = 0 },
-            { t = 1.1, lhik = 1, rhik = 1 },
+            { t = 0.9, lhik = 1, rhik = 1 },
         },
         EventTable = {
-            {s = path .. "vm_p02_ar_golf3_inspect_magout.ogg", t = 0/30},
-			{s = path .. "vm_p02_ar_golf3_inspect_magwellin.ogg", t = 42/30},
-			{s = path .. "vm_p02_ar_golf3_inspect_magclick.ogg", t = 64/30},
-			{s = path .. "vm_p02_ar_golf3_inspect_charginghandle.ogg", t = 82/30},
-			{s = path .. "vm_p02_ar_golf3_inspect_carrierrelease.ogg", t = 108/30},
-			{s = path .. "vm_p02_ar_golf3_inspect_shoulder.ogg", t = 121/30},
+            {s = path .. "vm_p02_ar_kilo53_inspect_raise.ogg", t = 0/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_mag_out.ogg", t = 12/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_mvmnt.ogg", t = 45/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_mag_in.ogg", t = 47/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_rotate.ogg", t = 61/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_bolt_back.ogg", t = 70/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_chest.ogg", t = 78/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_bolt_release.ogg", t = 90/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_end.ogg", t = 99/30},
         },
     },
     ["bash"] = {
@@ -601,19 +706,22 @@ SWEP.Animations = {
     ["firemode_1"] = {
         Source = "semi_on",
         EventTable = {
-            {s = path .. "weap_ar_golf3_selector_on.ogg", t = 4/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_on_mvmnt.ogg", t = 2/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_on_switch.ogg", t = 5/30},
         },
     },
     ["firemode_2"] = {
         Source = "semi_off",
         EventTable = {
-            {s = path .. "weap_ar_golf3_selector_off.ogg", t = 4/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_off_mvmnt.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_off_switch.ogg", t = 6/30},
         },
     },
     ["switchsights"] = {
         Source = "semi_on",
         EventTable = {
-            {s = path .. "weap_ar_golf3_selector_on.ogg", t = 4/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_on_mvmnt.ogg", t = 2/30},
+            {s = path .. "vm_p02_ar_kilo53_fire_switch_on_switch.ogg", t = 5/30},
         },
     },
 }
@@ -700,34 +808,34 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
-    ["barrel_none"] = {
+    ["muzzle_none"] = {
         Bodygroups = {
             {2,1},
         },
     },
-    ["muzzle_none"] = {
+    ["barrel_none"] = {
         Bodygroups = {
             {3,1},
         },
     },
-    ["pistol_grip_none"] = {
+    ["stock_none"] = {
         Bodygroups = {
             {4,1},
         },
     },
-    ["stock_attach"] = {
+    ["pistolgrip_none"] = {
         Bodygroups = {
             {5,1},
         },
     },
-    ["stock_none"] = {
+    ["sight_rear_none"] = {
         Bodygroups = {
-            {5,2},
+            {6,1},
         },
     },
     ["sight_rail"] = {
         Bodygroups = {
-            {6,1},
+            {7,1},
         },
     },
 }
@@ -753,7 +861,7 @@ SWEP.Attachments = {
     { -- 2
         PrintName = ARC9:GetPhrase("mw19_category_barrel"),
 		DefaultIcon = Material("entities/defattachs/barrel-ar.png", "mips smooth"),
-        Category = {"mw22_lach762_barrel"},
+        Category = {"mw22_lachmann_barrel"},
         Bone = "tag_barrel_attach",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -771,32 +879,32 @@ SWEP.Attachments = {
     { -- 4
         PrintName = ARC9:GetPhrase("mw19_category_optic"),
 		DefaultIcon = Material("entities/defattachs/optic.png", "mips smooth"),
-		Category = {"cod2019_optic",},
         Bone = "tag_holo",
         Pos = Vector(1, 0, -0.1),
         Ang = Angle(0, 0, 0),
+        Category = {"cod2019_optic",},
         CorrectiveAng = Angle(0, 0, 0),
-		InstalledElements = {"sight_rail","sights_none"},
+		InstalledElements = {"sight_rail"},
 		Scale = 1,
     },
     { -- 5
         PrintName = ARC9:GetPhrase("mw19_category_stock"),
 		DefaultIcon = Material("entities/defattachs/stock-ar.png", "mips smooth"),
-        Category = {"mw22_lach762_stock","cod2019_tube"},
+        Category = "mw22_lachmann_stock",
         Bone = "tag_stock_attach",
-        Pos = Vector(0.45, 0, 0),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+		InstalledElements = {"stock_none"},
 		Scale = 1,
-		InstalledElements = {"stock_attach"},
     },
     { -- 6
         PrintName = ARC9:GetPhrase("mw19_category_underbarrel"),
 		DefaultIcon = Material("entities/defattachs/grip.png", "mips smooth"),
         Category = "cod2019_grip",
         Bone = "tag_grip_attach",
-        Pos = Vector(0.5, 0, 0),
+        Pos = Vector(1.5, 0, 0),
         Ang = Angle(0, 0, 180),
-		Icon_Offset = Vector(0, 0, 1.5),
+		Icon_Offset = Vector(0, 0, 1),
 		Scale = 1,
 		InstalledElements = {"rail_grip"},
     },
@@ -804,7 +912,7 @@ SWEP.Attachments = {
         PrintName = ARC9:GetPhrase("mw19_category_magazine"),
 		DefaultIcon = Material("entities/defattachs/magazine-ar.png", "mips smooth"),
 		Bone = "j_mag1",
-        Category = {"cod2019_mag","mw22_lach762_mag"},
+        Category = {"cod2019_mag","mw22_lachmann_mag"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
@@ -813,19 +921,19 @@ SWEP.Attachments = {
 		DefaultIcon = Material("arc9/def_att_icons/ammotype.png", "mips smooth"),
         Bone = "j_mag1",
         Category = {"cod2019_ammo"},
-        Pos = Vector(0, 0, 1.5),
+        Pos = Vector(0, 0, -1.5),
         Ang = Angle(0, 0, 0),
     },
     { -- 9
         PrintName = ARC9:GetPhrase("mw19_category_reargrip"),
 		DefaultIcon = Material("entities/defattachs/reargrip-ar.png", "mips smooth"),
-        Category = "mw22_lach762_pstgrip",
+        Category = "mw22_lachmann_pstgrip",
         Bone = "tag_pistolgrip_attach",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
 		Icon_Offset = Vector(1, 0, -3),
 		Scale = 1,
-		InstalledElements = {"pistol_grip_none"},
+		InstalledElements = {"pistolgrip_none"},
     },
     { -- 10
         PrintName = ARC9:GetPhrase("mw19_category_perk"),
@@ -833,21 +941,22 @@ SWEP.Attachments = {
         Bone = "tag_pistolgrip_attach",
 		Pos = Vector(4, 0, -4),
     },
+	
     -- Unofficial
 --    { -- 11
 --        PrintName = ARC9:GetPhrase("mw19_category_receiver"),
---        Category = {"mw22_lach762_reciever"},
---        Bone = "tag_sling",
+--        Category = {"mw22_lachmann_reciever"},
+--        Bone = "tag_barrel_attach",
 --        Pos = Vector(0, 0, 0),
 --        Ang = Angle(0, 0, 0),
---		Icon_Offset = Vector(5, 0, -2),
+--		Icon_Offset = Vector(-7.5, 0, -2.5),
 --    },
-
+	
     -- Cosmetics
     {
         PrintName = ARC9:GetPhrase("mw19_category_skins"),
         --Bone = "v_weapon.Clip",
-        Category = "mw22_lach762_skins",
+        Category = "mw22_lachmann_skins",
 		CosmeticOnly = true,
     },
     {
@@ -857,22 +966,27 @@ SWEP.Attachments = {
     },
     {
         PrintName = ARC9:GetPhrase("mw19_category_sticker"),
-        StickerModel = "models/weapons/mw22/stickers/rif_lachmann762_decal_a.mdl",
+        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_a.mdl",
         Category = "stickers",
     },
     {
         PrintName = ARC9:GetPhrase("mw19_category_sticker"),
-        StickerModel = "models/weapons/mw22/stickers/rif_lachmann762_decal_b.mdl",
+        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_b.mdl",
         Category = "stickers",
     },
     {
         PrintName = ARC9:GetPhrase("mw19_category_sticker"),
-        StickerModel = "models/weapons/mw22/stickers/rif_lachmann762_decal_c.mdl",
+        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_c.mdl",
         Category = "stickers",
     },
     {
         PrintName = ARC9:GetPhrase("mw19_category_sticker"),
-        StickerModel = "models/weapons/mw22/stickers/rif_lachmann762_decal_d.mdl",
+        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_d.mdl",
+        Category = "stickers",
+    },
+    {
+        PrintName = ARC9:GetPhrase("mw19_category_sticker"),
+        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_e.mdl",
         Category = "stickers",
     },
     {
@@ -895,5 +1009,5 @@ SWEP.Attachments = {
 
 SWEP.GripPoseParam = 3
 SWEP.GripPoseParam2 = 0.3
-SWEP.CodAngledGripPoseParam = 25.8
+SWEP.CodAngledGripPoseParam = 8
 SWEP.CodStubbyGripPoseParam = 6.1

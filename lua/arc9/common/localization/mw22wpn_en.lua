@@ -24,10 +24,13 @@ L["mw22_caliber_408c"] = ".408 Chey Tac" -- Imperium
 
 
 /////////// Manufacturer
-
+L["mw22_manufacturer_exf"] = "Expedite Firearms" -- ISO Hemlock, ISO 45, ISO 9mm, Expedite 12, RAAL MG
+L["mw22_manufacturer_lm"] = "Lachmann & Meer" -- Lachmann-556, Lachmann-762, Lachmann Shroud, Lachmann Sub, LM-S, RAPP H, VEL 46
 L["mw22_manufacturer_fjx"] = "FJX Defense" -- Imperium
-L["mw22_manufacturer_lachmeer"] = "Lachmann & Meer" -- Lachmann-556, Lachmann-762, LM-S, RAPP H
-L["mw22_manufacturer_sakin"] = "Sakin Arms" -- MX Guardian, SAKIN MG38, Tonfa
+L["mw22_manufacturer_fss"] = "FSS" -- Bryson 890, Combat Knife, FSS Hurricane, Holger 556, Lachmann-556, LM-S, Signal 50, Throwing Knife
+L["mw22_manufacturer_sa"] = "Sakin Arms" -- MX Guardian, SAKIN MG38, Tonfa
+L["mw22_manufacturer_sa2"] = "Singuard Arms" -- Expedite 12
+L["mw22_manufacturer_ta"] = "Tempus Armament" -- DTIR 30-06, FSS Hurricane, FTac Recon, M4, M16, Tempus Razorback, Tempus Torrent
 
 /////////// Weight -- UO
 
