@@ -83,9 +83,9 @@ L["mw22_category_weapon_melee"] = "Melee"
 -- Stats
 
 ////////////////////  Default Scopes
-L["mw2022_optic_default_imperium.printname"] = "Imperium 12x"
-L["mw2022_optic_default_imperium.compactname"] = ARC9:GetPhrase("cod2019_optic_default_svd.compactname") or "Default" -- UO
-L["mw2022_optic_default_imperium.description"] = "Manufactured for the FJX Imperium's impressive range, this <color=100,255,100>12x</color> scope will help you take down targets from staggering distances."
+L["mw22_optic_default_imperium.printname"] = "Imperium 12x"
+L["mw22_optic_default_imperium.compactname"] = ARC9:GetPhrase("cod2019_optic_default_svd.compactname") or "Default" -- UO
+L["mw22_optic_default_imperium.description"] = "Manufactured for the FJX Imperium's impressive range, this <color=100,255,100>12x</color> scope will help you take down targets from staggering distances."
 
 ////////////////////  Ammo
 

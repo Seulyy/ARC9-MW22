@@ -15,7 +15,7 @@ ATT.SortOrder = 4
 ATT.Free = false
 
 ATT.MenuCategory = "ARC9 - MW2022 Attachments"
-ATT.Category = {"mw2022_optic_imperium"}
+ATT.Category = {"mw22_optic_imperium"}
 ATT.ActivateElements = {"scope_imperium"}
 
 ATT.Model = "models/weapons/mw22/attachs/scopes/scope_imperium.mdl"
@@ -55,4 +55,4 @@ else -- Warzone Stats
 	ATT.RecoilMult = 0.99
 end
 
-ARC9.LoadAttachment(ATT, "mw2022_optic_default_imperium")
+ARC9.LoadAttachment(ATT, "mw22_optic_default_imperium")
